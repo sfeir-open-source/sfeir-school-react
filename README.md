@@ -1,26 +1,71 @@
-# About
-Template repository for Sfeir School, this template could be use to start a school with revealJS and sfeir school theme
+# React 200
 
-Don't forget to replace all xxx by your techno
+A SFEIR School
 
-## Files to changes
+![logo](https://www.sfeir.com/img/school/formations/React%20200.png)
 
-* `docs/scss/xxx.scss` the entry point for your custom styles.
-* `docs/package.json` you should change the tasks `sass` and `sass-once` to reference your scss file
-* `docs/index.html` you should reference your markdown files and the the correct css file
-
-# Content of README
-
-The text below is the template you could use for your readme
-
-# XXX 
-
-A [SFEIR School](https://www.sfeir.com/formation/school/)
-
-![logo](https://www.sfeir.com/img/school/formations/xxx.png)
-
-[Planning, trainers and other details](https://www.sfeir.com/formation/school/xxx/)
+[Planning, trainers and other details](https://www.sfeir.com/school/react-200/)
 
 # Slides
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-xxx/).
+You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/).
+
+# Plan & Exercises
+
+## Fundamentals
+
+### Intro JSX, Elements, Components as functions, Props
+
+- ex01 - HandsOn (JSX and props)
+
+### Component composition, Component Tree, Elements as Props, Children
+
+- ex02 - Components (composition and children)
+
+### Local State and Simple Events
+
+- ex03 - Local state and clicks (get interactive)
+- ex03bis -> use useState
+
+### Lists, Conditional rendering, more about children
+
+- ex04 - Conditional, Lists (show 'em all)
+
+## More advanced concepts
+
+### Input / Refs / controlled and uncontrolled components
+
+- ex05 - Controlled Components - Input (search)
+
+### Lifecycle, Effects and lifting state up
+
+- ex06 - Lifecycle and Effects (async ftw)
+
+### Routing and Context
+
+- ex07 - Navigation
+- ex08 - Context
+
+### Forms - the problem statement - Reuse component logic
+
+- ex09 - Reuse logic and forms
+
+## React 300 - Managing state with Redux
+
+### Adding Redux - reduce and connect
+
+- ex10 - put people into redux state
+
+### Encapsulating Redux - selectors and action creators
+
+- ex11 - build a public state API
+
+### Embracing Redux
+
+- ex12 - leverage application state
+
+### Redux All The Things
+
+- ex13 - add async processing to state API
+
+

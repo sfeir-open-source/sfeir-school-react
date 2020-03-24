@@ -1,26 +1,21 @@
-##==##
 <!-- .slide: class="first-slide"  sfeir-level="1"  sfeir-techno="" -->
 
 # React - 200
  
 # Welcome to SFEIR SchoolReact
- 
-# 
+  
  
 ![](../assets/images/school_Badge_blanc.png)
 
 ##==##
-<!-- .slide:-->
+<!-- .slide: -->
 
-React - Redux
+# React - Redux
 
 
 Welcome to SfeirSchoolReact - Redux
 
-
-
-
-
+~~~~
 ![](../assets/images/school_Badge_blanc.png)
 
 ##==##

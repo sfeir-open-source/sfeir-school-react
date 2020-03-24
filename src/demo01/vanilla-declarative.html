@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Demo 1 - Introducing React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let root = document.getElementById("root");
+      let count = 0;
+
+      function buttonClicked() {
+        count++;
+        render();
+      }
+
+      function render() {
+        const countStyle = count % 3 === 0 ? "color: green" : "";
+        const buttonStyle = count % 5 === 0 ? "border-color: red" : "";
+
+        const html = `
+          <button onclick="buttonClicked()" style="${buttonStyle}">
+            clicked
+            <span style="${countStyle}">${count}</span>
+            times
+          </button>
+        `;
+
+        root.innerHTML = html;
+      }
+
+      render();
+    </script>
+  </body>
+</html>

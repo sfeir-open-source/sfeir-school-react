@@ -1,8 +1,9 @@
 <!-- .slide: class="speaker-slide" -->
 
-# Présentation
+# Presentation
 
 ![speaker](./assets/images/speakers/RTO.jpg)
+![company](./assets/images/logo_sfeir_bleu_orange.png)
 
 ## Romain Torond
 
@@ -11,5 +12,3 @@
 ### @rtorond
 
 ### torond.r@sfeir.com
-
-![company](./assets/images/logo_sfeir_bleu_orange.png)

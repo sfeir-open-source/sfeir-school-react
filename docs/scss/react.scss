@@ -1,5 +1,5 @@
 .reveal .slides section {
-  .center {
+  &.center, .center {
     text-align: center;
   }
   .big-text {
@@ -35,16 +35,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-  }
-
-  &.speaker-slide {
-    h2 {
-      margin-top: 200px !important;
-    }
-
-    img[alt='company'] {
-      top: 250px !important;
-    }
   }
 }
 

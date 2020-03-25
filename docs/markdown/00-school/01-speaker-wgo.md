@@ -1,8 +1,9 @@
 <!-- .slide: class="speaker-slide" -->
 
-# Présentation
+# Presentation
 
 ![speaker](./assets/images/speakers/WGO.jpg)
+![company](./assets/images/logo_sfeir_bleu_orange.png)
 
 ## Wolfgang Goedel
 
@@ -11,5 +12,3 @@
 ### @wgoedel
 
 ### goedel.w@sfeir.com
-
-![company](./assets/images/logo_sfeir_bleu_orange.png)

@@ -1,4 +1,4 @@
-.reveal .slides section .center {
+.reveal .slides section.center, .reveal .slides section .center {
   text-align: center; }
 
 .reveal .slides section .big-text {
@@ -25,12 +25,6 @@
   position: absolute;
   bottom: 0;
   left: 0; }
-
-.reveal .slides section.speaker-slide h2 {
-  margin-top: 200px !important; }
-
-.reveal .slides section.speaker-slide img[alt='company'] {
-  top: 250px !important; }
 
 /**
 Specifics

@@ -1,3 +1,7 @@
-<!-- .slide: class="transition-white sfeir-bg-red" -->
+<!-- .slide: class="first-slide sfeir-bg-red" sfeir-techno="React-Redux" -->
 
-# TODO forms-reuse-logic
+# Hang on... take control of your state
+
+## #sfeirschool #react
+
+@sfeir @wgoedel

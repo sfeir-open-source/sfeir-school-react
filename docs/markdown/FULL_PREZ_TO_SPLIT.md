@@ -1,10 +1,10 @@
 <!-- .slide: class="first-slide"  sfeir-level="1"  sfeir-techno="" -->
 
 # React - 200
- 
+
 # Welcome to SFEIR SchoolReact
-  
- 
+
+
 ![](../assets/images/school_Badge_blanc.png)
 
 ##==##
@@ -36,7 +36,7 @@ MDP : GUEST$2014
 
 Wolfgang Goedel
 Head of Engineering - Factory Paris
-@wgoedel	
+@wgoedel
 goedel.w@sfeir.com
 
 
@@ -78,7 +78,7 @@ weber.r@sfeir.com
 
 ![speaker company](../assets/images/g33d4225ed8_1_4.png)
 
-## 
+##
 ### Romain Torond
 Developer & Team leader
 @rtorond
@@ -93,7 +93,7 @@ torond.r@sfeir.com
 
 ![speaker company](../assets/images/g75586ccf83_1_8.png)
 
-## 
+##
 ### Stéphane Eintrazi
 Developer
 eintrazi.s@sfeir.com
@@ -224,7 +224,7 @@ the V of MVC ?
 something completely different ?
 
 With React you describe the Document (html)
-e.g. the state of elements at a given time, 
+e.g. the state of elements at a given time,
 and you re-describe it entirely when it should change
 
 React-DOM will take care of creating
@@ -579,7 +579,7 @@ let's write a real application...
 
 
 
-… but before you may need to disable the “safe write” of your IDE 
+… but before you may need to disable the “safe write” of your IDE
 
 
 https://parceljs.org/hmr.html#safe-write
@@ -979,7 +979,7 @@ class Button extends React.Component {
       clickCount: 0
     };
   }
-  
+
   render() {
     return (
       <button>
@@ -1026,7 +1026,7 @@ class Button extends React.Component {
       clickCount: 0
     };
   }
-  
+
   render() {
     return (
       <button>
@@ -1085,7 +1085,7 @@ handling events
 
 ```
 const Action = () => {
-  const doIt = () => {    
+  const doIt = () => {
     console.log('did it');
     // this?
   }
@@ -1218,7 +1218,7 @@ class Button extends React.Component {
       foo: "bar"
     };
   }
-  
+
   render() {
     return (
       <button onClick={
@@ -1848,7 +1848,7 @@ Exercise 04: lists of persons
 
 Change App so you can switch between a List and a Carousel of PersonCards
 use the action item in Header to toggle the views
-sure, this is normally done with a router… patience… 
+sure, this is normally done with a router… patience…
 
 Create the Carousel component displaying anything you pass as children
 there must not remain any reference to PersonCard
@@ -1870,7 +1870,7 @@ SOLUTION...
 ##==##
 <!-- .slide:-->
 
-# ...recap 
+# ...recap
 
 
 
@@ -1909,7 +1909,7 @@ use events.jsx
 # This was just the beginning ...
 
 
-# #sfeirschool #react 
+# #sfeirschool #react
 @sfeir @wgoedel
 
 
@@ -1924,7 +1924,7 @@ use events.jsx
 # This was just the beginning ...
 
 
-# #sfeirschool #react 
+# #sfeirschool #react
 @sfeir @wgoedel
 
 
@@ -1934,7 +1934,7 @@ use events.jsx
 <!-- .slide:-->
 
 # input,
-controlled components 
+controlled components
 
 
 
@@ -2133,7 +2133,7 @@ Implement the SearchableList component
 manage a query state holding the value of the search input
 display the filtered list on change
 connect the clear icon
-	
+
 Expose an imperative next method on the Carousel in Player
 call it via a ref when the play button is clicked
 
@@ -2570,7 +2570,7 @@ use events.jsx
 ##==##
 <!-- .slide: class="with-code"  class="with-code" -->
 
-render: func 
+render: func
 
 
 Route props...
@@ -2588,7 +2588,7 @@ Route props...
 
 ```
 
-exact: bool 
+exact: bool
 
 
 ```
@@ -2885,705 +2885,3 @@ use the useContext hook
 <!-- .slide:-->
 
 solution...
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-
-
-
-# Hang on...take control of your state
-
-
-# #sfeirschool #react 
-@sfeir @wgoedel
-
-
-![](../assets/images/g58c0f8e4d1_0_7.png)
-
-##==##
-<!-- .slide:-->
-
-# reuse logic
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# render props
-what if "children" was a function
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# higher order components
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# custom hooks
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# ...forms
-
-
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-
-
-
-```
-class MyForm extends Component {
-  state = {
-    value: this.props.initialValue
-  };
-
-  handleChange = event => {
-    this.setState({
-      value: event.target.value
-    });
-  };
-
-  render() {
-    return (
-      <input
-        value={this.state.value}
-        onChange={this.handleChange}
-      />
-    );
-  }
-}
-
-```
-
-forms in React docs
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-
-
-
-```
-const MyForm = ({ initialValue }) => {
-  const [value, setValue] = useState(initialValue);
-  const handleChange = event => 
-    setValue(event.target.value);
-
-  return (
-    <input
-      value={value}
-      onChange={handleChange}
-    />
-  );
-}
-
-```
-
-forms in React docs
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-
-
-
-```
-class MyForm extends Component {
-  // init
-
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
-
-  render() {
-    return (
-      <>
-        <input
-          name="firstname"
-          value={this.state.firstname}
-          onChange={this.handleChange}
-        />
-        <input
-          name="lastname"
-          value={this.state.lastname}
-          onChange={this.handleChange}
-        />
-      </>
-    );
-  }
-}
-
-```
-
-forms in React docs
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-
-
-
-```
-const MyForm = ({ initialValue }) => {
-  const [values, setValues] = useState(initialValue);
-  const handleChange = event => setValues({
-    ...values,
-    [event.target.name]: event.target.value
-  }); 
-
-  return (
-    <>
-      <input
-        name="firstname"
-        value={values.firstname}
-        onChange={handleChange}     />
-      <input
-        name="lastname"
-        value={values.lastname}
-        onChange={handleChange}
-      />
-    </>
-  );
-}
-
-```
-
-forms in React docs
-
-
-
-##==##
-<!-- .slide:-->
-
-# ...there are no "react-forms" :(
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-forms
-
-
-
-
-
-A form component typically should manage:
-the edited model
-input validation
-its state (valid, disabled, dirty, ...)
-
-We already know everything to do this...
-Should we implement it?
-
-
-Notes:
-use events.jsx
-
-
-
-##==##
-<!-- .slide:-->
-
-Exercice 09: reuse form logic
-
-
-9
-
-
-
-
-
-formik and custom hooks
-
-
-Implement PersonForm using the Formik library
-use the Formik component or withFormik HOC
-use Field components or useField hooks
-
-Expose a people service through a custom usePeople hook
-
-
-##==##
-<!-- .slide:-->
-
-SOLUTION...
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-
-
-
-# Thank you
-
-
-# #sfeirschool #react 
-@sfeir @wgoedel goedel.w@sfeir.com
-
-
-![](../assets/images/g1d56f98f78_0_105.png)
-
-##==##
-<!-- .slide:-->
-
-# FLUX - Redux
-
-
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-FLUX
-
-
-
-
-
-![](../assets/images/flux-simple-f8-diagram-with-client-action-1300w.png)
-
-##==##
-<!-- .slide:-->
-
-redux
-
-
-
-
-
-reducer = pure function
-
-(currentState, action) => newState
-
-action = plain object
-
-{	type: string
-  	…other properties
-}
-
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-redux
-
-
-
-
-
-```
-
-store
-
-{	
-dispatch(action) => void
-  	getState() => state
-	subscribe(() => void) => (() => void)
-}
-
-
-
-```
-
-##==##
-<!-- .slide:-->
-
-# React + Redux
-
-
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-react-redux
-
-
-
-
-
-![](../assets/images/Screen Shot 2017-05-14 at 17.21.11.png)
-
-##==##
-<!-- .slide:-->
-
-connect ...
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-
-
-
-mapStateToProps:
-(state, ownProps) => propsFromState
-
-mapDispatchToProps:
-(dispatch, ownProps) => handler
-
-  	connect(mapStateToProps, mapDispatchToProps)  	=> higher order component
-
-
-
-
-connect
-
-
-##==##
-<!-- .slide:-->
-
-Exercice 10 : add redux
-
-
-10
-
-
-
-
-
-separate your state and react
-
-
-Write reducer in state.js  to handle actions that update people and person 
-
-Write connectors in connect.js for :
-One for people state (and an action to load people)
-One for loading state
-One to find a person in people state 
-(and an action to update a specific person into people statte
-
-
-##==##
-<!-- .slide:-->
-
-Exercice 11 : encapsulate redux
-
-
-11
-
-
-
-
-
-a public interface for your state
-
-
-Normalize people state (should be an object containing “map” and “all”)
-
-Add “query” in state to handle filtered people in SearchableList
-
-Implement new connectors in connect.js=>	And Use them to connect components who might need them
-
-
-##==##
-<!-- .slide:-->
-
-Exercice 12 : embrace redux
-
-
-12
-
-
-
-
-
-everything is connected
-
-
-Add “current” in state to handle state of Carousel in redux
-
-And Create connectors
-
-
-##==##
-<!-- .slide:-->
-
-Exercice 13 : redux all the things
-
-
-13
-
-
-
-
-
-more than just state - your business layer
-
-
-##==##
-<!-- .slide:-->
-
-
-
-
-# Thank you
-
-
-# #sfeirschool #react 
-@sfeir @wgoedel goedel.w@sfeir.com
-
-
-![](../assets/images/g5531171877_15_107.png)
-
-##==##
-<!-- .slide:-->
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# higher order components
-recompose
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# a word on performance
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-rappel...
-
-
-
-
-
-![](../assets/images/vdom1.png)
-
-![](../assets/images/setState.png)
-
-Notes:
-async setState - batch update
-
-
-
-##==##
-<!-- .slide:-->
-
-memo / shouldComponentUpdate
-
-
-
-
-
-![](../assets/images/shouldUpdate.png)
-
-Notes:
-ex: write simple function addadd null/NaN checksex: check params for NaN/null -> return NaNtest with multshow util with Math.min (0 if null)
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-memo / shouldComponentUpdate
-
-
-
-
-
-demo
-
-
-Notes:
-track render
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-# a bit about functions
-
-
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-composition
-
-
-```
-f :: a -> b
-g :: b -> c
-
-(g . f) (x) = g(f(x))
-h = (g . f)
-
-h :: a -> c
-
-```
-
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-composition
-
-
-```
-two HOCs:
-
-hoc1 :: c1 -> c2
-hoc2 :: c2 -> c3
-
-compose(hoc2, hoc1) :: c1 -> c3
-
-```
-
-
-
-
-##==##
-<!-- .slide: class="with-code" -->
-
-partial application
-
-
-
-
-
-```
-signature of an HOC:
-c1 -> c2
-
-to build an HOC:
-hocFactory :: conf -> c1 -> c2
-
-hoc = hocFactory (conf)
-
-
-
-```
-
-##==##
-<!-- .slide: class="with-code" -->
-
-re-compose
-
-
-
-
-
-```
-
-https://github.com/acdlite/recompose
-
-
-
-```
-
-##==##
-<!-- .slide:-->
-
-# Tests !!!
-
-
-
-
-
-
-
-##==##
-<!-- .slide:-->
-
-
-
-
-JEST
-
-
-![](../assets/images/jest.png)
-
-##==##
-<!-- .slide:-->
-
-
-
-
-JEST
-
-
-executes in NodeJS directly
-parallel execution
-does not require bundling (webpack not involved)
-can be used with Babel or TypeScript
-
-jsdom
-jasmine matchers
-jest spies / mocks
-nyc coverage (lcov)
-
-

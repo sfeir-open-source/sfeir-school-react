@@ -24,3 +24,5 @@
 /.angular-cli.json
 /package-lock.json
 /yarn.lock
+
+/docs/markdown/FULL_PREZ_TO_SPLIT.md

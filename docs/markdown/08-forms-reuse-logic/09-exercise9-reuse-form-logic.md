@@ -1,4 +1,4 @@
-# Exercice 09: reuse form logic
+# Exercise 09: reuse form logic
 
 ## formik and custom hooks
 

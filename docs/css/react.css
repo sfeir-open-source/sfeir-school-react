@@ -5,7 +5,8 @@
   font-size: 3em; }
 
 .reveal .slides section code {
-  padding: 40px 0; }
+  padding: 40px 0;
+  max-height: unset !important; }
 
 .reveal .slides section.sfeir-basic-slide .center-big {
   text-align: center;

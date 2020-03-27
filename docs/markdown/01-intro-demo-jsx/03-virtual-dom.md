@@ -2,4 +2,4 @@
 
 # Virtual DOM
 
-![](../assets/images/vdom2.png)
+![](./assets/images/vdom2.png)

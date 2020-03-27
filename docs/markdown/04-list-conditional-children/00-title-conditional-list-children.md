@@ -1,3 +1,3 @@
 <!-- .slide: class="transition-white sfeir-bg-red" -->
 
-# TODO list-conditional-children
+# conditionals, lists <br/> and more about children

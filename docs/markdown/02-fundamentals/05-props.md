@@ -2,7 +2,7 @@
 
 # Props
 
-![center](../assets/images/02-fundamentals_05-props-1.png)
+![center](./assets/images/02-fundamentals_05-props-1.png)
 
 <br/>
 
@@ -14,7 +14,7 @@
 
 # Props
 
-![center](../assets/images/02-fundamentals_05-props-2.png)
+![center](./assets/images/02-fundamentals_05-props-2.png)
 
 <br/>
 

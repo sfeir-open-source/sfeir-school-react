@@ -15,7 +15,7 @@ Imported from google slide, but not used in reveal version, for now
 
 FLUX
 
-![](../assets/images/flux-simple-f8-diagram-with-client-action-1300w.png)
+![](./assets/images/flux-simple-f8-diagram-with-client-action-1300w.png)
 
 ##==##
 
@@ -65,7 +65,7 @@ dispatch(action) => void
 
 react-redux
 
-![](../assets/images/Screen Shot 2017-05-14 at 17.21.11.png)
+![](./assets/images/Screen Shot 2017-05-14 at 17.21.11.png)
 
 ##==##
 
@@ -155,7 +155,7 @@ more than just state - your business layer
 
 @sfeir @wgoedel goedel.w@sfeir.com
 
-![](../assets/images/g5531171877_15_107.png)
+![](./assets/images/g5531171877_15_107.png)
 
 ##==##
 
@@ -181,9 +181,9 @@ recompose
 
 rappel...
 
-![](../assets/images/vdom1.png)
+![](./assets/images/vdom1.png)
 
-![](../assets/images/setState.png)
+![](./assets/images/setState.png)
 
 Notes:
 async setState - batch update
@@ -194,7 +194,7 @@ async setState - batch update
 
 memo / shouldComponentUpdate
 
-![](../assets/images/shouldUpdate.png)
+![](./assets/images/shouldUpdate.png)
 
 Notes:
 ex: write simple function addadd null/NaN checksex: check params for NaN/null -> return NaNtest with multshow util with Math.min (0 if null)
@@ -294,7 +294,7 @@ https://github.com/acdlite/recompose
 
 JEST
 
-![](../assets/images/jest.png)
+![](./assets/images/jest.png)
 
 ##==##
 

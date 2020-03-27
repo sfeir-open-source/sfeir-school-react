@@ -34,7 +34,7 @@ onTodoDone(todo)
 onTodoDone(todo)
 
 
-![](../assets/images/cmptree.png)
+![](./assets/images/cmptree.png)
 
 Notes:
 use events.jsx
@@ -401,7 +401,7 @@ use events.jsx
 lists
 
 
-![](../assets/images/keys.png)
+![](./assets/images/keys.png)
 
 Notes:
 use events.jsx
@@ -564,7 +564,7 @@ use events.jsx
 @sfeir @wgoedel
 
 
-![](../assets/images/g156f47c483_0_105.png)
+![](./assets/images/g156f47c483_0_105.png)
 
 ##==##
 <!-- .slide:-->
@@ -579,7 +579,7 @@ use events.jsx
 @sfeir @wgoedel
 
 
-![](../assets/images/g5531171877_15_7.png)
+![](./assets/images/g5531171877_15_7.png)
 
 ##==##
 <!-- .slide:-->

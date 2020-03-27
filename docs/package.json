@@ -8,7 +8,8 @@
     "sass-once": "node-sass scss/react.scss -o ./css/ --source-map=true ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown/\"",
-    "start": "parallelshell \"npm run serve\" \"npm run sass\""
+    "start": "parallelshell \"npm run serve\" \"npm run sass\"",
+    "update-theme": "rm -rf ./sfeir-school-theme ./_tmp && git clone git@github.com:sfeir-open-source/sfeir-school-theme.git ./_tmp && cp -R ./_tmp/dist sfeir-school-theme && rm -rf ./_tmp"
   },
   "repository": {
     "type": "git",

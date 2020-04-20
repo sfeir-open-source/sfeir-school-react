@@ -8,4 +8,4 @@ $ npm install
 $ npm start
 ```
 
-Will open browser at http://locahost:4242
+Will open browser at http://localhost:4242

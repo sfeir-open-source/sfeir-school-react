@@ -68,4 +68,14 @@ You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-
 
 - ex13 - add async processing to state API
 
+# runtime
 
+```shell
+$ npm start
+```
+
+Launches 3 servers :
+
+- demos and index at http://localhost:8080, in watch mode
+- exercises at http://localhost:1234, in watch mode
+- API at http://localhost:3000/people

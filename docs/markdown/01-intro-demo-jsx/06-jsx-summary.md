@@ -12,6 +12,6 @@
 
 - why not **template literals** ?
 
-## Notes
+Notes:
 
 - reviewer : yes, why not template literals ?

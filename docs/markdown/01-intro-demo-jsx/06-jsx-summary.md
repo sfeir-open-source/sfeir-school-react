@@ -2,15 +2,16 @@
 
 # Hello JSX
 
-- JavaScript with some XML like syntax
+- **J**ava**S**cript with some **X**ML like syntax
 
-- translates to simple expressions (object graphs)
+- translates to **simple expressions (object graphs)**
 
-- it is not a template language
+- it is **not a template language**
 
-- it is not compiled (like Angular or Vue templates)
+- it is **not compiled** (like Angular or Vue templates)
 
-- why not template literals ?
+- why not **template literals** ?
 
+## Notes
 
-
+- reviewer : yes, why not template literals ?

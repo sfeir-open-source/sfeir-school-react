@@ -1,20 +1,26 @@
+// allFiles : canonical structure for ordered 2-levels filesystem tree
+// array of [directory, [file]] pairs
+
 const allFiles = [
-  {
-    dir: '00-school',
-    files: [
+  [
+    '00-school',
+    [
       '00-TITLE',
+      // professor
       '01-speaker-wgo',
-      '01-speaker-rto',
+      // speakers, uncomment as needed
+      //'01-speaker-rto',
+      //'01-speaker-fsa',
       '02-introduce-yourself',
       '03-repository',
       '04-these-slides',
       '05-app-screenshot',
       '06-what-we-will-do',
     ],
-  },
-  {
-    dir: '01-intro-demo-jsx',
-    files: [
+  ],
+  [
+    '01-intro-demo-jsx',
+    [
       '00-title-hello-world',
       '01-demo-hello-world',
       '02-what-is-react',
@@ -23,10 +29,10 @@ const allFiles = [
       '05-jsx',
       '06-jsx-summary',
     ],
-  },
-  {
-    dir: '02-fundamentals',
-    files: [
+  ],
+  [
+    '02-fundamentals',
+    [
       '00-title-components',
       '01-components',
       '02-components-exercise',
@@ -37,10 +43,10 @@ const allFiles = [
       '07-composition-summary',
       '08-tree-exercise',
     ],
-  },
-  {
-    dir: '03-states-and-events',
-    files: [
+  ],
+  [
+    '03-states-and-events',
+    [
       '00-title-state',
       '01-01-class-component-syntax',
       '01-02-class-component-state',
@@ -63,10 +69,10 @@ const allFiles = [
       '16-demo-hooks',
       '17-exercise-hook',
     ],
-  },
-  {
-    dir: '04-list-conditional-children',
-    files: [
+  ],
+  [
+    '04-list-conditional-children',
+    [
       '00-title-conditional-list-children',
       '01-01-conditionals-if-switch',
       '01-02-conditionals-variable',
@@ -82,10 +88,10 @@ const allFiles = [
       '06-title-summary',
       '07-react-summary',
     ],
-  },
-  {
-    dir: '05-input-refs',
-    files: [
+  ],
+  [
+    '05-input-refs',
+    [
       '00-TITLE',
       '01-demo3',
       '02-input-controlled-component',
@@ -94,10 +100,10 @@ const allFiles = [
       '05-exercise5-input-and-refs',
       '06-solution',
     ],
-  },
-  {
-    dir: '06-lifecycle-effects',
-    files: [
+  ],
+  [
+    '06-lifecycle-effects',
+    [
       '00-TITLE',
       '01-component-lifecycle-01',
       '01-component-lifecycle-02',
@@ -115,10 +121,10 @@ const allFiles = [
       '11-application-state',
       '12-persistent-state',
     ],
-  },
-  {
-    dir: '07-routing-and-context',
-    files: [
+  ],
+  [
+    '07-routing-and-context',
+    [
       '00-TITLE',
       '01-SPA-and-routes',
       '02-react-router-presentation',
@@ -136,10 +142,10 @@ const allFiles = [
       '13-exercise8-context',
       '14-solution',
     ],
-  },
-  {
-    dir: '08-forms-reuse-logic',
-    files: [
+  ],
+  [
+    '08-forms-reuse-logic',
+    [
       '00-TITLE',
       '01-reuse-logic',
       '02-render-props',
@@ -155,9 +161,9 @@ const allFiles = [
       '10-solution',
       '11-thank-you',
     ],
-  },
+  ],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
-const pathReducer = (acc, { dir, files }) => [...acc, ...files.map(makeSlide(dir))];
+const pathReducer = (acc, [dir, files]) => [...acc, ...files.map(makeSlide(dir))];
 export const slides = allFiles.reduce(pathReducer, []);

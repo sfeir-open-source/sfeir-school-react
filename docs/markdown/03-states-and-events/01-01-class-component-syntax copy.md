@@ -1,8 +1,8 @@
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout with-code" -->
 
 # Component flavours
 
-## function component
+##--##
 
 ```javascript
 const Hello = ({ name }) => <h1>Hello, {name}</h1>;
@@ -10,7 +10,9 @@ const Hello = ({ name }) => <h1>Hello, {name}</h1>;
 
 <!-- .element: class="big-code" -->
 
-## class component
+function component <!-- .element: class="center " -->
+
+##--##
 
 ```javascript
 class Hello extends React.Component {
@@ -21,3 +23,5 @@ class Hello extends React.Component {
 ```
 
 <!-- .element: class="big-code" -->
+
+class component <!-- .element: class="center" -->

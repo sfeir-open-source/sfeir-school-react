@@ -2,17 +2,17 @@
 
 # Repository
 
-<!-- .slide: class="center" -->
-
 https://github.com/sfeir-open-source/sfeir-school-react
 
 Git clone!
 
-# Run exercises
+## Run exercises
 
 ```shell
   $ npm install
   $ npm start
 ```
+
+<!-- .element: class="big-code" -->
 
 browse http://localhost:8080

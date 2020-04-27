@@ -1,5 +1,6 @@
 .reveal .slides section {
-  &.center, .center {
+  &.center,
+  .center {
     text-align: center;
   }
   .big-text {
@@ -7,8 +8,8 @@
   }
 
   code {
-    padding: 40px 0;
-    max-height: unset !important;
+    //padding: 40px 0;
+    max-height: unset !important; // avoid scrollbar
   }
 
   &.sfeir-basic-slide {
@@ -41,6 +42,15 @@
     bottom: 0;
     left: 0;
   }
+
+  // a PR on sfeir-school-theme has been submitted
+  // https://github.com/sfeir-open-source/sfeir-school-theme/pull/40
+  // TODO remove this patch rule when merged and published
+  &[data-background].speaker-slide {
+    h3.icon-mail > a {
+      color: white;
+    }
+  }
 }
 
 /**
@@ -48,4 +58,3 @@ Specifics
 */
 
 //@import './speaker.scss';
-

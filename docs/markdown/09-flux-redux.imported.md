@@ -5,21 +5,15 @@ Imported from google slide, but not used in reveal version, for now
 
 ##==##
 
-<!-- .slide:-->
-
 # FLUX - Redux
 
 ##==##
-
-<!-- .slide:-->
 
 FLUX
 
 ![](./assets/images/flux-simple-f8-diagram-with-client-action-1300w.png)
 
 ##==##
-
-<!-- .slide:-->
 
 redux
 
@@ -55,13 +49,9 @@ dispatch(action) => void
 
 ##==##
 
-<!-- .slide:-->
-
 # React + Redux
 
 ##==##
-
-<!-- .slide:-->
 
 react-redux
 
@@ -69,13 +59,9 @@ react-redux
 
 ##==##
 
-<!-- .slide:-->
-
 connect ...
 
 ##==##
-
-<!-- .slide:-->
 
 mapStateToProps:
 (state, ownProps) => propsFromState
@@ -88,8 +74,6 @@ connect(mapStateToProps, mapDispatchToProps) => higher order component
 connect
 
 ##==##
-
-<!-- .slide:-->
 
 Exercice 10 : add redux
 
@@ -107,8 +91,6 @@ One to find a person in people state
 
 ##==##
 
-<!-- .slide:-->
-
 Exercice 11 : encapsulate redux
 
 11
@@ -123,8 +105,6 @@ Implement new connectors in connect.js=> And Use them to connect components who
 
 ##==##
 
-<!-- .slide:-->
-
 Exercice 12 : embrace redux
 
 12
@@ -137,8 +117,6 @@ And Create connectors
 
 ##==##
 
-<!-- .slide:-->
-
 Exercice 13 : redux all the things
 
 13
@@ -147,23 +125,17 @@ more than just state - your business layer
 
 ##==##
 
-<!-- .slide:-->
-
 # Thank you
 
 # #sfeirschool #react
 
 @sfeir @wgoedel goedel.w@sfeir.com
 
-![](./assets/images/g5531171877_15_107.png)
+![](./assets/images/twitter.png)
 
 ##==##
 
-<!-- .slide:-->
-
 ##==##
-
-<!-- .slide:-->
 
 # higher order components
 
@@ -171,13 +143,9 @@ recompose
 
 ##==##
 
-<!-- .slide:-->
-
 # a word on performance
 
 ##==##
-
-<!-- .slide:-->
 
 rappel...
 
@@ -190,8 +158,6 @@ async setState - batch update
 
 ##==##
 
-<!-- .slide:-->
-
 memo / shouldComponentUpdate
 
 ![](./assets/images/shouldUpdate.png)
@@ -201,8 +167,6 @@ ex: write simple function addadd null/NaN checksex: check params for NaN/null 
 
 ##==##
 
-<!-- .slide:-->
-
 memo / shouldComponentUpdate
 
 demo
@@ -211,8 +175,6 @@ Notes:
 track render
 
 ##==##
-
-<!-- .slide:-->
 
 # a bit about functions
 
@@ -284,21 +246,15 @@ https://github.com/acdlite/recompose
 
 ##==##
 
-<!-- .slide:-->
-
 # Tests !!!
 
 ##==##
-
-<!-- .slide:-->
 
 JEST
 
 ![](./assets/images/jest.png)
 
 ##==##
-
-<!-- .slide:-->
 
 JEST
 

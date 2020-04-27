@@ -1,11 +1,11 @@
-.reveal .slides section.center, .reveal .slides section .center {
+.reveal .slides section.center,
+.reveal .slides section .center {
   text-align: center; }
 
 .reveal .slides section .big-text {
   font-size: 3em; }
 
 .reveal .slides section code {
-  padding: 40px 0;
   max-height: unset !important; }
 
 .reveal .slides section.sfeir-basic-slide .center-big {
@@ -29,6 +29,9 @@
   position: absolute;
   bottom: 0;
   left: 0; }
+
+.reveal .slides section[data-background].speaker-slide h3.icon-mail > a {
+  color: white; }
 
 /**
 Specifics

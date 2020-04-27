@@ -1,5 +1,3 @@
-<!-- .slide:-->
-
 # Exercise 07: navigation
 
 ## use a router

@@ -1,5 +1,3 @@
-<!-- .slide:-->
-
 # Component trees
 
 ## a classic todo app

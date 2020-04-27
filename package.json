@@ -4,7 +4,9 @@
   "description": "SfeirSchool React v2019",
   "author": "Wolfgang Goedel <goedel.w@sfeir.com>",
   "contributors": [
-    "Rudy Weber <weber.r@sfeir.com>"
+    "Rudy Weber <weber.r@sfeir.com>",
+    "Romain Torond <torond.r@sfeir.com>",
+    "Frédéric Sarron <sarron.f@sfeir.com>"
   ],
   "private": true,
   "license": "SEE LICENSE IN LICENSE.md",

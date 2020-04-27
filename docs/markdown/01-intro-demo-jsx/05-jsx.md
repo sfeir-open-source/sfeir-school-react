@@ -9,7 +9,7 @@ transform jsbin to use JSX
 
 ##==##
 
-<!-- .slide: class="with-code-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Hello JSX
 
@@ -35,7 +35,7 @@ Notes:
 
 ##==##
 
-<!-- .slide: class="with-code-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Hello JSX
 
@@ -54,7 +54,7 @@ you can receive them as parameter
 
 ##==##
 
-<!-- .slide: class="with-code-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Hello JSX
 
@@ -75,7 +75,7 @@ Notes:
 
 ##==##
 
-<!-- .slide: class="with-code-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Hello JSX
 
@@ -104,7 +104,7 @@ Notes:
 
 ##==##
 
-<!-- .slide: class="with-code-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Hello JSX
 

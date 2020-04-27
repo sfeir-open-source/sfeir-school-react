@@ -1,5 +1,3 @@
-<!-- .slide:-->
-
 # component lifecycle
 
 ![full-width](./assets/images/01-component-lifecycle-01.png)

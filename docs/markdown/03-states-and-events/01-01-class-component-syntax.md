@@ -1,27 +1,23 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Component flavours
 
-##--##
+## function component
 
 ```javascript
-  const Hello = ({ name }) => (
-    <h1>Hello, {name}</h1>
-  );
+const Hello = ({ name }) => <h1>Hello, {name}</h1>;
 ```
 
-function component <!-- .element: class="center" -->
+<!-- .element: class="big-code" -->
 
-##--##
+## class component
 
 ```javascript
-  class Hello extends React.Component {
-    render() {
-      return (
-        <h1>Hello, {this.props.name}</h1>
-      );
-    }
+class Hello extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
   }
+}
 ```
 
-class component <!-- .element: class="center" -->
+<!-- .element: class="big-code" -->

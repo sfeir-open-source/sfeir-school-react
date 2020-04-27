@@ -51,9 +51,9 @@
     <p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system</p>
 </blockquote>
 <cite>
-**the DRY principle**
+<strong>the DRY principle</strong>
 <br><br>
-**The Pragmatic Programmer** (Andy Hunt, Dave Thomas)
+<strong>The Pragmatic Programmer</strong> (Andy Hunt, Dave Thomas)
 </cite>
 </div>
 

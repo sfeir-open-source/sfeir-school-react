@@ -74,4 +74,4 @@ docs/test.html
 
 # Misc
 .cache/
-dist/
+/dist/

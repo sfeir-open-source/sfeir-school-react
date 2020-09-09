@@ -37,7 +37,7 @@
     <div class="special-02-input-controlled-component--box special-02-input-controlled-component--component"><br>Component</div>
     <div class="fragment fade-in">
         sync
-        <img src="../assets/images/05-input-refs_02-input-controlled-component_double-arrow.svg" />
+        <img src="../../assets/images/05-input-refs_02-input-controlled-component_double-arrow.svg" />
     </div>
     <div class="special-02-input-controlled-component--box special-02-input-controlled-component--dom"><br>DOM<br>(input)</div>
     <div><br>state = { value, disabled, … }</div>

@@ -14,7 +14,7 @@ type AppProps = {
 
 export const App: React.FC<AppProps> = ({ people }) => {
   const [showList, setShowList] = useState(true);
-  const toggleView = () => setShowList(x => !x);
+  const toggleView = () => setShowList((x) => !x);
   const toggleIcon = showList ? "view_carousel" : "view_module";
   const CurrentView = showList ? SearchableList : Player;
 

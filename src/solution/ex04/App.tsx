@@ -11,9 +11,9 @@ type AppProps = {
 
 export const App: React.FC<AppProps> = ({ people }) => {
   const [showCarousel, setShowCarousel] = useState(false);
-  const toggleView = () => setShowCarousel(x => !x);
+  const toggleView = () => setShowCarousel((x) => !x);
 
-  const personCards = people.map(person => (
+  const personCards = people.map((person) => (
     <PersonCard person={person} key={person.id} />
   ));
 

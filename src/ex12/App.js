@@ -12,7 +12,7 @@ import {
   withPersonFromPersonId,
   withPersonHandlers,
   withFilteredPeopleIds,
-  withPeopleTriptych
+  withPeopleTriptych,
 } from "./connect";
 // } from "../solution/ex12/connect";
 

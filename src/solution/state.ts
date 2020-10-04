@@ -29,11 +29,11 @@ export type Action =
 const initialState = (patch: Partial<State> = {}): State => ({
   people: {
     map: {},
-    all: null
+    all: null,
   },
   query: "",
   current: null,
-  ...patch
+  ...patch,
 });
 
 const SESSION_STORAGE_KEY = "people-state";
@@ -51,8 +51,8 @@ export const saveToSession = ({ query, current }: State): void => {
 };
 
 const onSetPeople = (state: State, { people }: { people: People }): State => {
-  const map = Object.assign({}, ...people.map(p => ({ [p.id]: p })));
-  const all = people.map(p => p.id);
+  const map = Object.assign({}, ...people.map((p) => ({ [p.id]: p })));
+  const all = people.map((p) => p.id);
   const current =
     all.length > 0
       ? all.includes(state.current)
@@ -63,7 +63,7 @@ const onSetPeople = (state: State, { people }: { people: People }): State => {
   return {
     ...state,
     people: { map, all },
-    current
+    current,
   };
 };
 
@@ -73,9 +73,9 @@ const onSetPerson = (state: State, { person }: { person: Person }): State => ({
     ...state.people,
     map: {
       ...state.people.map,
-      [person.id]: person
-    }
-  }
+      [person.id]: person,
+    },
+  },
 });
 
 export const reducer = (
@@ -90,25 +90,25 @@ export const reducer = (
     case "SET_QUERY":
       return {
         ...state,
-        query: action.query
+        query: action.query,
       };
     case "SET_CURRENT_PERSON":
       return state.people.all.includes(action.personId) &&
         state.current !== action.personId
         ? {
             ...state,
-            current: action.personId
+            current: action.personId,
           }
         : state;
     case "SET_NEXT_PERSON":
       return {
         ...state,
-        current: toRing(state.people.all, state.current).next
+        current: toRing(state.people.all, state.current).next,
       };
     case "SET_PREV_PERSON":
       return {
         ...state,
-        current: toRing(state.people.all, state.current).prev
+        current: toRing(state.people.all, state.current).prev,
       };
     default:
       return state;
@@ -145,9 +145,9 @@ export const getFilteredPeopleIds = createSelector(
   getQuery,
   (pids, dict, query) =>
     pids
-      .map(pid => dict[pid])
+      .map((pid) => dict[pid])
       .filter(nameContains(query))
-      .map(p => p.id)
+      .map((p) => p.id)
 );
 
 //////////////////////////////////////////////
@@ -172,9 +172,9 @@ export const useFilteredPeople = () => {
   return useMemo(
     () =>
       ids
-        .map(id => map[id])
+        .map((id) => map[id])
         .filter(nameContains(query))
-        .map(p => p.id),
+        .map((p) => p.id),
     [ids, map, query]
   );
 };
@@ -184,16 +184,16 @@ export const useStateApi = () => {
   return useMemo(
     () => ({
       loadPeople: () =>
-        loadPeople().then(people => dispatch({ type: "SET_PEOPLE", people })),
+        loadPeople().then((people) => dispatch({ type: "SET_PEOPLE", people })),
       savePerson: (person: Person) =>
-        savePerson(person).then(person =>
+        savePerson(person).then((person) =>
           dispatch({ type: "SET_PERSON", person })
         ),
       setCurrent: (personId: string) =>
         dispatch({ type: "SET_CURRENT_PERSON", personId }),
       setNext: () => dispatch({ type: "SET_NEXT_PERSON" }),
       setPrev: () => dispatch({ type: "SET_PREV_PERSON" }),
-      setQuery: (query: string) => dispatch({ type: "SET_QUERY", query })
+      setQuery: (query: string) => dispatch({ type: "SET_QUERY", query }),
     }),
     [dispatch]
   );

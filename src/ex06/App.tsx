@@ -10,7 +10,7 @@ import { Player } from "./Player";
 
 export const App: React.FC = () => {
   const [showList, setShowList] = useState(true);
-  const toggleView = () => setShowList(x => !x);
+  const toggleView = () => setShowList((x) => !x);
   const toggleIcon = showList ? "view_carousel" : "view_module";
 
   // get people from http://localhost:3000/people

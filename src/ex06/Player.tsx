@@ -15,7 +15,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const cards: [number, string][] = [
     [succ(currentIndex), "next"],
     [currentIndex, "current"],
-    [pred(currentIndex), "prev"]
+    [pred(currentIndex), "prev"],
   ];
 
   return (
@@ -40,7 +40,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
     <>
       <main>
         <Carousel>
-          {people.map(person => (
+          {people.map((person) => (
             <PersonCard person={person} key={person.id} />
           ))}
         </Carousel>

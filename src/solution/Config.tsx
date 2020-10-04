@@ -6,12 +6,12 @@ type ConfigProps = {
 };
 
 const ConfigContext = createContext<ConfigProps>({
-  useRouter: false
+  useRouter: false,
 });
 
 export const Config: React.FC<ConfigProps> = ({
   useRouter = false,
-  children
+  children,
 }) => (
   <ConfigContext.Provider value={{ useRouter }}>
     {useRouter ? <Router>{children}</Router> : children}

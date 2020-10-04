@@ -11,29 +11,29 @@ import {} from "./state";
 // action creators
 
 // the former ones for reference:
-const withPeople = connect(state => ({
-  people: state.people || []
+const withPeople = connect((state) => ({
+  people: state.people || [],
 }));
 
 const withLoading = connect(
-  state => ({
-    loading: state.people === null
+  (state) => ({
+    loading: state.people === null,
   }),
-  dispatch => ({
+  (dispatch) => ({
     loadPeople: () =>
-      loadPeople().then(people => dispatch({ type: "SET_PEOPLE", people }))
+      loadPeople().then((people) => dispatch({ type: "SET_PEOPLE", people })),
   })
 );
 
 const withPerson = connect(
   (state, { personId }) => ({
-    person: state.people && state.people.find(p => p.id === personId)
+    person: state.people && state.people.find((p) => p.id === personId),
   }),
-  dispatch => ({
-    onUpdate: person =>
-      savePerson(person).then(person =>
+  (dispatch) => ({
+    onUpdate: (person) =>
+      savePerson(person).then((person) =>
         dispatch({ type: "SET_PERSON", person })
-      )
+      ),
   })
 );
 

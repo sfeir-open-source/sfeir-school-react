@@ -15,7 +15,7 @@ const PersonFields: React.FC = () => {
           "Developer",
           "Product Owner",
           "Sales",
-          "Human Resources"
+          "Human Resources",
         ]}
       />
       <TextField label="phone" />

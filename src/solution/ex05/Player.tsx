@@ -3,7 +3,7 @@ import React, {
   forwardRef,
   useState,
   useImperativeHandle,
-  cloneElement
+  cloneElement,
 } from "react";
 import { Fab } from "@rmwc/fab";
 import { range } from "../../utils";
@@ -25,13 +25,13 @@ const Carousel = forwardRef<CarouselApi, CarouselProps>(({ children }, ref) => {
   const onNext = () => setCurrentIndex(succ);
 
   useImperativeHandle(ref, () => ({
-    next: onNext
+    next: onNext,
   }));
 
   const cards: [number, string][] = [
     [succ(currentIndex), "next"],
     [currentIndex, "current"],
-    [pred(currentIndex), "prev"]
+    [pred(currentIndex), "prev"],
   ];
 
   return (
@@ -61,7 +61,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
     <>
       <main>
         <Carousel ref={carousel}>
-          {people.map(person => (
+          {people.map((person) => (
             <PersonCard person={person} key={person.id} />
           ))}
         </Carousel>

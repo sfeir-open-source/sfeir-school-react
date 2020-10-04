@@ -21,11 +21,11 @@ const validate = ({ phone, email }) => {
 const PersonFields: React.FC = () => {
   const firstname = useField<string>("firstname", {
     label: "first name",
-    validate: required
+    validate: required,
   });
   const lastname = useField<string>("lastname", {
     label: "last name",
-    validate: required
+    validate: required,
   });
   const position = useField<string>("position");
   const phone = useField<string>("phone");
@@ -41,7 +41,7 @@ const PersonFields: React.FC = () => {
           "Developer",
           "Product Owner",
           "Sales",
-          "Human Resources"
+          "Human Resources",
         ]}
         {...position}
       />
@@ -60,7 +60,7 @@ type PersonFormProps = {
 export const PersonForm: React.FC<PersonFormProps> = ({
   person,
   onSubmit,
-  onReset
+  onReset,
 }) => {
   return (
     <Card>

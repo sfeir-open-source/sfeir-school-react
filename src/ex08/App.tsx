@@ -33,7 +33,7 @@ export const App: React.FC = () => {
           <Route
             path="/person/:id"
             render={({ match }: RouteComponentProps<{ id: string }>) => (
-              <Person person={people.find(p => p.id === match.params.id)} />
+              <Person person={people.find((p) => p.id === match.params.id)} />
             )}
           />
           <Redirect to="/list" />

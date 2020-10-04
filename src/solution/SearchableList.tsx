@@ -5,7 +5,7 @@ import {
   useQuery,
   useCurrentId,
   useFilteredPeople,
-  useStateApi
+  useStateApi,
 } from "./state";
 import { toPersonCard } from "./PersonCard";
 
@@ -20,7 +20,7 @@ export const SearchableList: React.FC<{ people: People }> = ({ people }) => {
   return SearchableListView({
     people: filteredPeople,
     query,
-    setQuery
+    setQuery,
   });
 };
 
@@ -43,7 +43,7 @@ export const SearchableListView: React.FC<{
     if (currentCard)
       currentCard.scrollIntoView({
         behavior: "smooth",
-        block: "center"
+        block: "center",
       });
   }, [currentId]);
 
@@ -55,7 +55,7 @@ export const SearchableListView: React.FC<{
           icon="search"
           trailingIcon={{
             icon: "close",
-            onClick: () => setQuery("")
+            onClick: () => setQuery(""),
           }}
           label="search by name"
           value={query}

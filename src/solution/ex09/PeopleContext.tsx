@@ -3,7 +3,7 @@ import React, {
   useState,
   useEffect,
   useContext,
-  useMemo
+  useMemo,
 } from "react";
 
 import { loadPeople, savePerson } from "../../utils";
@@ -19,14 +19,14 @@ const PeopleContext = createContext<PeopleContext>({
   people: [],
   loading: true,
   getPersonById: () => undefined,
-  updatePerson: () => undefined
+  updatePerson: () => undefined,
 });
 
 export const PeopleProvider: React.FC = ({ children }) => {
   const [people, setPeople] = useState<People | null>(null);
 
   useEffect(() => {
-    loadPeople().then(data => {
+    loadPeople().then((data) => {
       setPeople(data);
     });
   }, []);
@@ -36,11 +36,11 @@ export const PeopleProvider: React.FC = ({ children }) => {
       ({
         people: people || [],
         loading: people === null,
-        getPersonById: id => people.find(p => p.id === id),
-        updatePerson: person =>
-          savePerson(person).then(person =>
-            setPeople(people.map(p => (p.id === person.id ? person : p)))
-          )
+        getPersonById: (id) => people.find((p) => p.id === id),
+        updatePerson: (person) =>
+          savePerson(person).then((person) =>
+            setPeople(people.map((p) => (p.id === person.id ? person : p)))
+          ),
       } as PeopleContext),
     [people]
   );
@@ -55,7 +55,7 @@ export const usePeople = () => useContext(PeopleContext);
 export function withPeople<P = {}>(
   Component: React.FC<P & { people: People }>
 ) {
-  return (props => {
+  return ((props) => {
     const { people } = usePeople();
     return <Component {...props} people={people} />;
   }) as React.FC<P>;

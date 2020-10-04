@@ -7,7 +7,7 @@ import {
   CardInfo,
   CardContent,
   CardActions,
-  CardAction
+  CardAction,
 } from "./Card";
 import { useConfig } from "./Config";
 import { usePerson } from "./state";
@@ -21,7 +21,7 @@ type PersonCardProps = {
 const PersonCard: React.FC<PersonCardProps> = ({
   person,
   actions,
-  className
+  className,
 }) => {
   const { useRouter } = useConfig();
 

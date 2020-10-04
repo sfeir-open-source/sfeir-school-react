@@ -7,7 +7,7 @@ const InputWithRef = ({ init }, ref) => {
   React.useImperativeHandle(ref, () => ({
     focusInput() {
       inputRef.current.focus();
-    }
+    },
   }));
 
   return (
@@ -18,7 +18,7 @@ const InputWithRef = ({ init }, ref) => {
           ref={inputRef}
           type="text"
           value={value}
-          onChange={e => setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value)}
         />
       </div>
     </div>

@@ -10,7 +10,7 @@ const App = () => {
   const [score, setScore] = React.useState(0);
   const incrementScore = React.useCallback(() => {
     console.count("hits");
-    setScore(score => score + 1);
+    setScore((score) => score + 1);
   }, []);
 
   return (

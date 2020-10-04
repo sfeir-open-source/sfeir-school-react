@@ -4,7 +4,7 @@ import {
   TopAppBarRow,
   TopAppBarSection,
   TopAppBarActionItem,
-  TopAppBarFixedAdjust
+  TopAppBarFixedAdjust,
 } from "@rmwc/top-app-bar";
 import { Route, RouteChildrenProps } from "react-router-dom";
 

@@ -12,7 +12,7 @@ type PersonProps = {
 export const Person: React.FC<PersonProps> = ({
   person,
   onUpdate,
-  onDisplay = () => {}
+  onDisplay = () => {},
 }) => {
   const [editing, setEditing] = useState(false);
   useEffect(() => void onDisplay(person.id), [person.id, onDisplay]);
@@ -21,7 +21,7 @@ export const Person: React.FC<PersonProps> = ({
     <PersonForm
       person={person}
       onReset={() => setEditing(false)}
-      onSubmit={p => onUpdate(p).then(() => setEditing(false))}
+      onSubmit={(p) => onUpdate(p).then(() => setEditing(false))}
     />
   ) : (
     <PersonCard
@@ -34,7 +34,7 @@ export const Person: React.FC<PersonProps> = ({
 };
 
 export const ConnectedPerson: React.FC<{ personId: string }> = ({
-  personId
+  personId,
 }) => {
   const person = usePerson(personId);
   const { setCurrent: onDisplay, savePerson: onUpdate } = useStateApi();

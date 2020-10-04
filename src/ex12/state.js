@@ -3,10 +3,10 @@ import { createSelector } from "reselect";
 const initialState = {
   people: {
     map: {},
-    all: null
+    all: null,
   },
   query: "",
-  current: null // this one is new
+  current: null, // this one is new
 };
 
 // manage transitions for the `current` state property
@@ -20,9 +20,9 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         people: {
-          map: Object.assign({}, ...action.people.map(p => ({ [p.id]: p }))),
-          all: action.people.map(p => p.id)
-        }
+          map: Object.assign({}, ...action.people.map((p) => ({ [p.id]: p }))),
+          all: action.people.map((p) => p.id),
+        },
       };
     case "SET_PERSON":
       return {
@@ -31,14 +31,14 @@ export const reducer = (state = initialState, action) => {
           ...state.people,
           map: {
             ...state.people.map,
-            [action.person.id]: action.person
-          }
-        }
+            [action.person.id]: action.person,
+          },
+        },
       };
     case "SET_QUERY":
       return {
         ...state,
-        query: action.query
+        query: action.query,
       };
     default:
       return state;
@@ -47,21 +47,21 @@ export const reducer = (state = initialState, action) => {
 
 export const getPersonById = (state, personId) => state.people.map[personId];
 
-export const getPeopleIds = state => state.people.all || [];
-export const getPeopleMap = state => state.people.map;
-export const getPeopleLoading = state => state.people.all === null;
+export const getPeopleIds = (state) => state.people.all || [];
+export const getPeopleMap = (state) => state.people.map;
+export const getPeopleLoading = (state) => state.people.all === null;
 
-export const getQuery = state => state.query;
+export const getQuery = (state) => state.query;
 
 // this one is already done
-export const getCurrent = state => state.current;
+export const getCurrent = (state) => state.current;
 // but define another getter returning the triple
 // [previous, current, next]
 //
 
-const nameContains = query => {
+const nameContains = (query) => {
   const re = new RegExp(query, "i");
-  return p => re.test(p.firstname) || re.test(p.lastname);
+  return (p) => re.test(p.firstname) || re.test(p.lastname);
 };
 
 export const getFilteredPeopleIds = createSelector(
@@ -70,14 +70,14 @@ export const getFilteredPeopleIds = createSelector(
   getQuery,
   (pids, dict, query) =>
     pids
-      .map(pid => dict[pid])
+      .map((pid) => dict[pid])
       .filter(nameContains(query))
-      .map(p => p.id)
+      .map((p) => p.id)
 );
 
 export const SetPeople = (people = []) => ({
   type: "SET_PEOPLE",
-  people
+  people,
 });
-export const SetPerson = person => ({ type: "SET_PERSON", person });
-export const SetQuery = query => ({ type: "SET_QUERY", query });
+export const SetPerson = (person) => ({ type: "SET_PERSON", person });
+export const SetQuery = (query) => ({ type: "SET_QUERY", query });

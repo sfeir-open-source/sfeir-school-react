@@ -32,14 +32,11 @@ export const withPersonFromPersonId = connect((state, { personId }) => ({
   person: getPersonById(state, personId)
 }));
 
-export const withPersonHandlers = connect(
-  undefined,
-  dispatch => ({
-    onUpdate: person =>
-      savePerson(person).then(person => dispatch(SetPerson(person))),
-    onDisplay: personId => dispatch(SetCurrentPerson(personId))
-  })
-);
+export const withPersonHandlers = connect(undefined, dispatch => ({
+  onUpdate: person =>
+    savePerson(person).then(person => dispatch(SetPerson(person))),
+  onDisplay: personId => dispatch(SetCurrentPerson(personId))
+}));
 
 export const withFilteredPeopleIds = connect(
   state => ({

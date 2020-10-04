@@ -75,6 +75,9 @@ export const getFilteredPeopleIds = createSelector(
       .map(p => p.id)
 );
 
-export const SetPeople = (people = []) => ({ type: "SET_PEOPLE", people });
+export const SetPeople = (people = []) => ({
+  type: "SET_PEOPLE",
+  people
+});
 export const SetPerson = person => ({ type: "SET_PERSON", person });
 export const SetQuery = query => ({ type: "SET_QUERY", query });

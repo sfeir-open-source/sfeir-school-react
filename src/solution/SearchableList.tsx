@@ -17,7 +17,11 @@ const nameContains = (query: string) => {
 export const SearchableList: React.FC<{ people: People }> = ({ people }) => {
   const [query, setQuery] = useState("");
   const filteredPeople = people.filter(nameContains(query));
-  return SearchableListView({ people: filteredPeople, query, setQuery });
+  return SearchableListView({
+    people: filteredPeople,
+    query,
+    setQuery
+  });
 };
 
 export const ConnectedList: React.FC = () => {
@@ -37,7 +41,10 @@ export const SearchableListView: React.FC<{
   useLayoutEffect(() => {
     const currentCard = currentId && document.getElementById(`p-${currentId}`);
     if (currentCard)
-      currentCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      currentCard.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
   }, [currentId]);
 
   return (

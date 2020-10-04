@@ -1,28 +1,18 @@
-# angular gitignore
-# see https://github.com/prettier/prettier/issues/2294
-
 ## compiled output
+/.cache
 /dist
-/tmp
-/out-tsc
 
 ## dependencies
 /node_modules
 
 ## IDEs and editors
 /.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-.vscode/*
+/.vscode
 
 # auto-generated files
-/angular.json
-/.angular-cli.json
+/package.json
 /package-lock.json
 /yarn.lock
 
-/docs/markdown/FULL_PREZ_TO_SPLIT.md
+# sub projects
+/docs

@@ -81,11 +81,7 @@ export const getQuery = state => state.query;
 export const getCurrent = state => state.current;
 export const getTriptych = createSelector(
   getCurrent,
-  createSelector(
-    getPeopleIds,
-    getCurrent,
-    toRing
-  ),
+  createSelector(getPeopleIds, getCurrent, toRing),
   (curr, { next, prev }) => [prev, curr, next]
 );
 
@@ -105,7 +101,10 @@ export const getFilteredPeopleIds = createSelector(
       .map(p => p.id)
 );
 
-export const SetPeople = (people = []) => ({ type: "SET_PEOPLE", people });
+export const SetPeople = (people = []) => ({
+  type: "SET_PEOPLE",
+  people
+});
 export const SetPerson = person => ({ type: "SET_PERSON", person });
 export const SetQuery = query => ({ type: "SET_QUERY", query });
 export const SetCurrentPerson = personId => ({

@@ -11,9 +11,9 @@ import { Loading } from "../Loading";
 const ContextualList = withPeople(SearchableList);
 const ContextualPlayer = withPeople(Player);
 
-const ContextualPerson: React.FC<RouteComponentProps<{ id: string }>> = ({
-  match
-}) => {
+const ContextualPerson: React.FC<RouteComponentProps<{
+  id: string;
+}>> = ({ match }) => {
   const { getPersonById, updatePerson } = usePeople();
   const person = getPersonById(match.params.id);
   return <Person person={person} onUpdate={updatePerson} />;

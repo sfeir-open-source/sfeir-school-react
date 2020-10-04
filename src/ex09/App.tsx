@@ -19,9 +19,9 @@ const ContextualPlayer: React.FC = () => {
   return <Player people={people} />;
 };
 
-const ContextualPerson: React.FC<RouteComponentProps<{ id: string }>> = ({
-  match
-}) => {
+const ContextualPerson: React.FC<RouteComponentProps<{
+  id: string;
+}>> = ({ match }) => {
   const people = useContext(PeopleContext);
   const person = people.find(p => p.id === match.params.id);
   return <Person person={person} />;

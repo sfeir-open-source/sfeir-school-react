@@ -9,7 +9,7 @@ import { loadPeople } from "../../utils";
 
 export const App: React.FC = () => {
   const [showList, setShowList] = useState(false);
-  const toggleView = () => setShowList(x => !x);
+  const toggleView = () => setShowList((x) => !x);
   const toggleIcon = showList ? "view_carousel" : "view_module";
 
   const [people, setPeople] = useState<People>([]);

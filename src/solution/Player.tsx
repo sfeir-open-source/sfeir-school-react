@@ -17,7 +17,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
   const onNext = () => setCurrentIndex(succ);
   const onPrev = () => setCurrentIndex(pred);
   const triptych = [pred(currentIndex), currentIndex, succ(currentIndex)].map(
-    i => people[i]
+    (i) => people[i]
   );
 
   return PlayerView({ triptych, onNext, onPrev });
@@ -38,7 +38,7 @@ type PlayerViewProps = {
 export const PlayerView: React.FC<PlayerViewProps> = ({
   triptych = [],
   onNext = () => {},
-  onPrev = () => {}
+  onPrev = () => {},
 }) => {
   const { running, toggleRunning } = useScheduler(onNext, 1000);
 

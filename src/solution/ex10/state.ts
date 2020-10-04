@@ -10,7 +10,7 @@ export type Action =
   | { type: "SET_PERSON"; person: Person };
 
 const initialState: State = {
-  people: null
+  people: null,
 };
 
 export const reducer: Reducer<State, Action> = (
@@ -20,13 +20,13 @@ export const reducer: Reducer<State, Action> = (
   switch (action.type) {
     case "SET_PEOPLE":
       return {
-        people: action.people
+        people: action.people,
       };
     case "SET_PERSON":
       return {
-        people: state.people.map(p =>
+        people: state.people.map((p) =>
           p.id === action.person.id ? action.person : p
-        )
+        ),
       };
     default:
       return state;

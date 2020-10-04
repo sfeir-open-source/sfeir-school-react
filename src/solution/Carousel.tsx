@@ -10,7 +10,7 @@ type CarouselProps = {
 export const Carousel: React.FC<CarouselProps> = ({
   children,
   onNext = () => {},
-  onPrev = () => {}
+  onPrev = () => {},
 }) => {
   const childArray = React.Children.toArray(children) as React.ReactElement[];
 
@@ -25,7 +25,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   const childrenWithClass = ([
     [next, "next"],
     [current, "current"],
-    [prev, "prev"]
+    [prev, "prev"],
   ] as [React.ReactElement, string][]).map(([child, className]) =>
     cloneElement(child, { className })
   );

@@ -20,7 +20,7 @@ class Input extends React.Component {
             ref={this.inputRef}
             type="text"
             value={this.state.value}
-            onChange={e => this.setState({ value: e.target.value })}
+            onChange={(e) => this.setState({ value: e.target.value })}
           />
         </div>
       </div>

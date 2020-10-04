@@ -20,8 +20,8 @@ const ContextualPlayer: React.FC = () => (
 
 const ContextualPerson = ({ match }: RouteComponentProps<{ id: string }>) => (
   <WithPeople>
-    {people => {
-      const person = people.find(p => p.id === match.params.id);
+    {(people) => {
+      const person = people.find((p) => p.id === match.params.id);
       return <Person person={person} />;
     }}
   </WithPeople>
@@ -35,7 +35,7 @@ export const App: React.FC = () => {
         <HeaderActionItem to="/list" icon="view_module" />
       </Header>
       <WithPeople>
-        {people =>
+        {(people) =>
           people.length === 0 ? (
             <Loading />
           ) : (

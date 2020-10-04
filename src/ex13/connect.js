@@ -12,7 +12,7 @@ import {
   SetQuery,
   SetNextPerson,
   SetPrevPerson,
-  SetCurrentPerson
+  SetCurrentPerson,
 } from "./state";
 
 // replace async calls to loadPeople and savePerson and their
@@ -20,44 +20,42 @@ import {
 // action creators defined in ./state
 
 export const withLoadPeople = connect(
-  state => ({
-    loading: getPeopleLoading(state)
+  (state) => ({
+    loading: getPeopleLoading(state),
   }),
-  dispatch => ({
-    loadPeople: () => loadPeople().then(people => dispatch(SetPeople(people)))
+  (dispatch) => ({
+    loadPeople: () =>
+      loadPeople().then((people) => dispatch(SetPeople(people))),
   })
 );
 
 export const withPersonFromPersonId = connect((state, { personId }) => ({
-  person: getPersonById(state, personId)
+  person: getPersonById(state, personId),
 }));
 
-export const withPersonHandlers = connect(
-  undefined,
-  dispatch => ({
-    onUpdate: person =>
-      savePerson(person).then(person => dispatch(SetPerson(person))),
-    onDisplay: personId => dispatch(SetCurrentPerson(personId))
-  })
-);
+export const withPersonHandlers = connect(undefined, (dispatch) => ({
+  onUpdate: (person) =>
+    savePerson(person).then((person) => dispatch(SetPerson(person))),
+  onDisplay: (personId) => dispatch(SetCurrentPerson(personId)),
+}));
 
 export const withFilteredPeopleIds = connect(
-  state => ({
+  (state) => ({
     people: getFilteredPeopleIds(state),
     currentId: getCurrent(state),
-    query: getQuery(state)
+    query: getQuery(state),
   }),
-  dispatch => ({
-    setQuery: query => dispatch(SetQuery(query))
+  (dispatch) => ({
+    setQuery: (query) => dispatch(SetQuery(query)),
   })
 );
 
 export const withPeopleTriptych = connect(
-  state => ({
-    triptych: getTriptych(state)
+  (state) => ({
+    triptych: getTriptych(state),
   }),
-  dispatch => ({
+  (dispatch) => ({
     onNext: () => dispatch(SetNextPerson()),
-    onPrev: () => dispatch(SetPrevPerson())
+    onPrev: () => dispatch(SetPrevPerson()),
   })
 );

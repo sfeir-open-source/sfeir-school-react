@@ -15,7 +15,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
   const onNext = () => setCurrentIndex(succ);
   const onPrev = () => setCurrentIndex(pred);
   const triptych = [pred(currentIndex), currentIndex, succ(currentIndex)].map(
-    i => people[i]
+    (i) => people[i]
   );
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -35,7 +35,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
     <>
       <main>
         <Carousel onNext={onNext} onPrev={onPrev}>
-          {triptych.map(person => (
+          {triptych.map((person) => (
             <PersonCard person={person} key={person.id} />
           ))}
         </Carousel>

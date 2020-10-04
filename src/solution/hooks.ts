@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import {
   useField as formikUseField,
   useFormikContext,
-  FieldConfig
+  FieldConfig,
 } from "formik";
 
 export const useScheduler = (callback: () => void, interval: number) => {
@@ -43,7 +43,7 @@ export const useField = <T>(
     invalid: !!meta.error,
     helpText: {
       validationMsg: true,
-      children: meta.error
-    }
+      children: meta.error,
+    },
   };
 };

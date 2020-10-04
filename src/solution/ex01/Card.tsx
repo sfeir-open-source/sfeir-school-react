@@ -4,7 +4,7 @@ type CardProps = {
   title: string;
 };
 
-export const Card: React.FunctionComponent<CardProps> = props => {
+export const Card: React.FunctionComponent<CardProps> = (props) => {
   return (
     <section className="mdc-card" style={{ width: 480 }}>
       <div style={{ padding: "1rem" }}>

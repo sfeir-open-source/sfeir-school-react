@@ -15,7 +15,7 @@ export const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const cards: [number, string][] = [
     [succ(currentIndex), "next"],
     [currentIndex, "current"],
-    [pred(currentIndex), "prev"]
+    [pred(currentIndex), "prev"],
   ];
 
   return (

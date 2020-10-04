@@ -16,14 +16,14 @@ const setPrevIndex = (
   { currentIndex }: CarouselState,
   { people }: CarouselProps
 ) => ({
-  currentIndex: range(0, people.length - 1).pred(currentIndex)
+  currentIndex: range(0, people.length - 1).pred(currentIndex),
 });
 
 const setNextIndex = (
   { currentIndex }: CarouselState,
   { people }: CarouselProps
 ) => ({
-  currentIndex: range(0, people.length - 1).succ(currentIndex)
+  currentIndex: range(0, people.length - 1).succ(currentIndex),
 });
 
 export class Carousel extends React.Component<CarouselProps, CarouselState> {

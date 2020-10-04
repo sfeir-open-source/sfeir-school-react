@@ -4,7 +4,7 @@ import {
   TopAppBarRow,
   TopAppBarSection,
   TopAppBarActionItem,
-  TopAppBarFixedAdjust
+  TopAppBarFixedAdjust,
 } from "@rmwc/top-app-bar";
 import { Route, RouteChildrenProps } from "react-router-dom";
 
@@ -24,10 +24,10 @@ export const Header: React.FC = ({ children }) => (
   </>
 );
 
-export const HeaderActionItem: React.FC<{ to: string; icon: string }> = ({
-  to,
-  icon
-}) => (
+export const HeaderActionItem: React.FC<{
+  to: string;
+  icon: string;
+}> = ({ to, icon }) => (
   <Route path={to}>
     {({ history, match }: RouteChildrenProps) => (
       <TopAppBarActionItem

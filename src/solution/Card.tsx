@@ -3,7 +3,7 @@ import {
   Card as MdcCard,
   CardActions as MdcCardActions,
   CardActionButton,
-  CardActionButtons
+  CardActionButtons,
 } from "@rmwc/card";
 import { Typography } from "@rmwc/typography";
 import { Icon } from "@rmwc/icon";
@@ -11,7 +11,7 @@ import { Icon } from "@rmwc/icon";
 export const Card: React.FC<{
   id?: string;
   className?: string;
-}> = props => <MdcCard {...props} tag="section" />;
+}> = (props) => <MdcCard {...props} tag="section" />;
 
 export const CardContent: React.FC<{
   type: string;

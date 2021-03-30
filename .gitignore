@@ -71,6 +71,7 @@ docs/test.html
 
 # IDE
 .idea/
+*.iml
 
 # Misc
 .cache/

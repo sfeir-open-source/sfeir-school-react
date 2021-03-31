@@ -36,7 +36,6 @@ export const CardHeader: React.FC<CardHeaderProps> = ({ title, subTitle}) => (
 interface CardInfoProps {
   icon: string;
   desc?: string;
-  children: React.ReactNode;
 }
 
 export const CardInfo: React.FC<CardInfoProps> = ({ icon, children, desc }) => (

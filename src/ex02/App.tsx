@@ -17,7 +17,7 @@ export const App: React.FC<AppProps> = ({ people }) => {
     <>
       <Header />
       <main>
-        <PersonCard />
+        <PersonCard person={randomPerson} />
         <PersonCardModel />
         <pre style={{ fontSize: 12 }}>
           {JSON.stringify(randomPerson, null, 2)}

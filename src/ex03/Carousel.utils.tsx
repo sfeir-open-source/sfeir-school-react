@@ -1,7 +1,7 @@
-export const setNextIndex = (state, props) => ({
-  currentIndex: state.currentIndex === props.people.length - 1 ? 0 : state.currentIndex + 1
-});
+export const setNextIndex = maxLength => (currentIndex: number) => {
+  return currentIndex === maxLength ? 0 : currentIndex + 1;
+}
 
-export const setPreviousIndex = (state, props) => ({
-  currentIndex: state.currentIndex === 0 ? props.people.length - 1 : state.currentIndex - 1
-});
+export const setPreviousIndex = maxLength => (currentIndex: number) => (
+  currentIndex === 0 ? maxLength : currentIndex - 1
+);

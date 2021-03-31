@@ -1,7 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { PersonCard } from "../solution/PersonCard";
-import {setNextIndex, setPreviousIndex} from "./Carousel.utils";
 
 type FabProps = {
   icon: string;
@@ -18,36 +17,24 @@ type CarouselProps = {
   people: People;
 };
 
-type CarouselState = {
-  currentIndex: number;
-}
+export const CarouselComponent: React.FC<CarouselProps> = (props) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-export class CarouselComponent extends React.Component<CarouselProps, CarouselState> {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentIndex: 0
-    };
-  }
-
-  onNext = () => {
-    this.setState(setNextIndex);
+  const onNext = () => {
+    setCurrentIndex(currentIndex === props.people.length-1 ? 0 : currentIndex + 1);
+  };
+  const onPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? props.people.length-1 : currentIndex - 1);
   };
 
-  onPrevious = () => {
-    this.setState(setPreviousIndex);
-  };
-
-  render() {
-    return (
-        <div className="flex-row">
-          <Fab icon="skip_previous" clickEvent={this.onPrevious} />
-          <div className="carousel">
-            <PersonCard person={this.props.people[this.state.currentIndex]} className="current" />
-          </div>
-          <Fab icon="skip_next" clickEvent={this.onNext} />
+  return (
+      <div className="flex-row">
+        <Fab icon="skip_previous" clickEvent={onPrevious} />
+        <div className="carousel">
+          <PersonCard person={props.people[currentIndex]} className="current" />
         </div>
-    );
-  }
+        <Fab icon="skip_next" clickEvent={onNext} />
+      </div>
+  );
 }
+

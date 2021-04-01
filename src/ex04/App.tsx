@@ -4,28 +4,28 @@ import { TopAppBarActionItem } from "@rmwc/top-app-bar";
 import { Header } from "../solution/Header";
 import { PersonCard } from "../solution/PersonCard";
 
-import { Carousel } from "./Carousel";
+import { Carousel } from "../ex03/Carousel";
 
 type AppProps = {
   people: People;
 };
 
 export const App: React.FC<AppProps> = ({ people }) => {
+  const [isListPage, setListPage] = useState(true);
+
+  const list = people.map(person => <PersonCard key={person.id} person={person} />);
+  const carousel = <Carousel people={people} />;
+
   return (
     <>
       <Header>
-        <TopAppBarActionItem icon="view_carousel" />
-        {/* use "view_module" as icon for showing the list */}
+        <TopAppBarActionItem icon="view_carousel" onClick={() => setListPage(false)} />
+        <TopAppBarActionItem icon="view_module" onClick={() => setListPage(true)} />
       </Header>
       <main>
-        Switch between a List view and a Carousel view to display all the
-        people. Use TopAppBarActionItems in the Header to do so.
-        <br />
-        <br />
-        Omit the manager icon in PersonCard when there is none.
-        <br />
-        <br />
-        Rewrite the Carousel so it has no dependency on PersonCard.
+
+        {isListPage ? list : carousel }
+
       </main>
     </>
   );

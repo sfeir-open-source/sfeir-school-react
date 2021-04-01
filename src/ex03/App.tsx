@@ -2,7 +2,7 @@ import React from "react";
 
 import { Header } from "../solution/Header";
 
-import { CarouselComponent } from "./Carousel.component";
+import { Carousel } from "./Carousel";
 // import { Carousel } from "../solution/ex03/Carousel.class";
 // import { Carousel } from "../solution/ex03/Carousel.hooks";
 
@@ -14,7 +14,7 @@ export const App: React.FC<AppProps> = ({ people }) => (
   <>
     <Header />
     <main>
-      <CarouselComponent people={people} />
+      <Carousel people={people} />
     </main>
   </>
 );

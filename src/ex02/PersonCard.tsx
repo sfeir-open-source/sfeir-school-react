@@ -18,11 +18,7 @@ export const PersonCard: React.FC<PersonCardProps> = ({person}) => {
     photo
   } = person;
 
-  const managerInfo = managerId !== "" ? (
-      <CardInfo icon="supervisor_account" desc="manager">
-        <a href={`/person/${managerId}`}>{manager}</a>
-      </CardInfo>
-  ) : null;
+  const managerInfo = <div>hello</div>;
 
   return (
       <Card>
@@ -30,7 +26,7 @@ export const PersonCard: React.FC<PersonCardProps> = ({person}) => {
             url={photo}
             desc={`face of ${firstname}`}
         />
-        
+
         <CardHeader
             title={<a href={`/person/${id}`}>{firstname} {lastname}</a>}
             subTitle={position}
@@ -44,7 +40,13 @@ export const PersonCard: React.FC<PersonCardProps> = ({person}) => {
           <a href={`tel:${phone}`}>{phone}</a>
         </CardInfo>
 
-        {managerInfo}
+        {
+          managerInfo || (
+              <CardInfo icon="supervisor_account" desc="manager">
+                <a href={`/person/${managerId}`}>{manager}</a>
+              </CardInfo>
+          )
+        }
 
       </Card>
   );

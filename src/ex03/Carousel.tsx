@@ -17,7 +17,7 @@ type CarouselProps = {
   people: People;
 };
 
-export const CarouselComponent: React.FC<CarouselProps> = (props) => {
+export const Carousel: React.FC<CarouselProps> = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const onNext = () => {

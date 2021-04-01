@@ -12,6 +12,7 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
     "start": "run-p watch:exos api serve",
+    "test": "jest --env=jsdom",
     "watch:exos": "parcel src/ex*/index.html src/solution/index.html src/favicon.ico",
     "api": "json-server --quiet --delay=500 ./data/peopleServed.json",
     "serve": "live-server --quiet --watch=\"demo01/,demo02/,demo03/\" --mount=/modules:./node_modules --no-browser ./src",
@@ -50,5 +51,13 @@
     "rmwc": "^5.7.2",
     "typescript": "^4.0.3",
     "utility-types": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "react-test-renderer": "^17.0.2"
+  },
+  "jest": {
+    "rootDir": "./src"
   }
 }

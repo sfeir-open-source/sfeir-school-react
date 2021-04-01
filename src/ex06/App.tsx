@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { TopAppBarActionItem } from "@rmwc/top-app-bar";
 
 import { Header } from "../solution/Header";
@@ -6,6 +6,7 @@ import { Loading } from "../solution/Loading";
 import { SearchableList } from "../solution/SearchableList";
 
 import { Player } from "./Player";
+import {loadPeople} from "../utils";
 // import { Player } from "../solution/Player";
 
 export const App: React.FC = () => {
@@ -13,9 +14,11 @@ export const App: React.FC = () => {
   const toggleView = () => setShowList((x) => !x);
   const toggleIcon = showList ? "view_carousel" : "view_module";
 
-  // get people from http://localhost:3000/people
-  // you can use loadPeople in ../utils.js
-  const people = [];
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+    loadPeople().then(setPeople);
+  }, []);
 
   const CurrentView: React.ComponentType<{ people: People }> =
     people.length === 0 ? Loading : showList ? SearchableList : Player;

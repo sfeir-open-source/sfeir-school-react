@@ -4,12 +4,13 @@ import { range } from "../utils";
 import { PersonCard } from "../solution/PersonCard";
 
 type CarouselProps = {
+  currentIndex: number;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
   children: React.ReactElement[];
 };
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
+const Carousel: React.FC<CarouselProps> = ({ children, currentIndex, setCurrentIndex }) => {
   const childArray = React.Children.toArray(children) as React.ReactElement[];
-  const [currentIndex, setCurrentIndex] = useState(0);
   const { pred, succ } = range(0, childArray.length - 1);
 
   const cards: [number, string][] = [
@@ -36,17 +37,21 @@ type PlayerProps = {
 };
 
 export const Player: React.FC<PlayerProps> = ({ people }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const skipNext = () => setCurrentIndex(currentIndex === people.length-1 ? 0 : currentIndex + 1);
+
   return (
     <>
       <main>
-        <Carousel>
+        <Carousel currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}>
           {people.map((person) => (
             <PersonCard person={person} key={person.id} />
           ))}
         </Carousel>
       </main>
       <footer>
-        <Fab icon="skip_next" />
+        <Fab icon="skip_next" onClick={skipNext} />
       </footer>
     </>
   );

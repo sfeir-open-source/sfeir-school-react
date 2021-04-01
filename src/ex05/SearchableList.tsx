@@ -36,6 +36,8 @@ export const filterPeople =
           containsSubstring(person.lastname, search);
     }
 
+
+
 export const SearchableList: React.FC<SearchableListProps> = ({people}) => {
   const [searchText, setSearchText] = useState("");
 

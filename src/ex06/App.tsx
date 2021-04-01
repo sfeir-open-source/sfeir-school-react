@@ -2,12 +2,8 @@ import React, {useEffect, useState} from "react";
 import { TopAppBarActionItem } from "@rmwc/top-app-bar";
 
 import { Header } from "../solution/Header";
-import { Loading } from "../solution/Loading";
-import { SearchableList } from "../solution/SearchableList";
-
-import { Player } from "./Player";
 import {loadPeople} from "../utils";
-// import { Player } from "../solution/Player";
+import {CurrentView} from "./CurrentView";
 
 export const App: React.FC = () => {
   const [showList, setShowList] = useState(true);
@@ -20,15 +16,12 @@ export const App: React.FC = () => {
     loadPeople().then(setPeople);
   }, []);
 
-  const CurrentView: React.ComponentType<{ people: People }> =
-    people.length === 0 ? Loading : showList ? SearchableList : Player;
-
   return (
     <>
       <Header>
         <TopAppBarActionItem icon={toggleIcon} onClick={toggleView} />
       </Header>
-      <CurrentView people={people} />
+      <CurrentView people={people} showList={showList} />
     </>
   );
 };

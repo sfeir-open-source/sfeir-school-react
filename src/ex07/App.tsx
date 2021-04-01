@@ -6,8 +6,9 @@ import { Loading } from "../solution/Loading";
 import { SearchableList } from "../solution/SearchableList";
 import { Player } from "../solution/Player";
 import { loadPeople } from "../utils";
-import {NavLink, Redirect, Route, Switch} from "react-router-dom";
+import {NavLink, Redirect, Route, RouteComponentProps, Switch} from "react-router-dom";
 import { PersonCard } from "../solution/PersonCard";
+import { Person } from "./Person";
 
 export const App: React.FC = () => {
   const [people, setPeople] = useState<People>([]);
@@ -30,20 +31,18 @@ export const App: React.FC = () => {
       {
         people.length === 0 ? <Loading/> : (
             <Switch>
-              <Route path="/list" render={() => <SearchableList people={people} />} />
-              <Route path="/player" render={() => <Player people={people} />} />
+              <Route path="/list">
+                <SearchableList people={people} />
+              </Route>
 
-              <Route path="/person/:personId" render={
-                ({ match: { params } }) => {
-                  const person = people.find(person => person.id === params.personId);
+              <Route path="/player">
+                <Player people={people} />
+              </Route>
 
-                  return (
-                      <main>
-                        <PersonCard person={person} />
-                      </main>
-                  )
-                }
-              }/>
+              <Route path="/person/:personId">
+                <Person people={people} />
+              </Route>
+
               <Redirect to="/list" />
             </Switch>
         )

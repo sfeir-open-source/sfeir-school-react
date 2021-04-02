@@ -1,16 +1,18 @@
-import React, {useState, useMemo, useContext} from "react";
+import React, {useState, useMemo} from "react";
 import { PersonCard } from "../solution/PersonCard";
 
 import { PersonForm } from "./PersonForm";
 import {savePerson} from "../utils";
-import {PeopleContext} from "./PeopleContext";
+import {usePeople} from "./usePeople";
+import {useQueryClient} from "react-query";
 
 type PersonProps = {
   person?: Person;
 };
 
 export const Person: React.FC<PersonProps> = ({ person }) => {
-  const {updatePerson} = useContext(PeopleContext);
+  const { people } = usePeople();
+  const queryClient = useQueryClient();
   const [editing, setEditing] = useState(false);
   const actions = useMemo(
     () => [{ label: "edit", onClick: () => setEditing(true) }],
@@ -19,7 +21,14 @@ export const Person: React.FC<PersonProps> = ({ person }) => {
 
   const onSubmit = (newPerson: Person) => {
     savePerson(newPerson)
-      .then(updatedPerson => updatePerson(updatedPerson))
+      .then(responsePerson => {
+        queryClient.setQueryData("people", people.map(person => {
+          if (responsePerson.id === person.id) {
+            return responsePerson;
+          }
+          return person;
+        }))
+      })
       .finally(() => {
         setEditing(false);
       });

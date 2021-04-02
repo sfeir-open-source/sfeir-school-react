@@ -63,14 +63,14 @@
     {
       "id": "5763cd4d5fc36e4f842ca5a9",
       "photo": "https://randomuser.me/portraits/men/30.jpg",
-      "firstname": "Moody",
-      "lastname": "Prince hello",
+      "firstname": "zerzer",
+      "lastname": "zerzer",
       "position": "Developer",
       "entryDate": "28/09/2015",
       "birthDate": "15/04/1971",
       "gender": "m",
-      "email": "prince.m@acme.com",
-      "phone": "0662589632",
+      "email": "zerzerz@gergfe.com",
+      "phone": "0649349349",
       "isManager": false,
       "manager": "Mercedes",
       "managerId": "5763cd4d979b62a209809160"
@@ -93,7 +93,7 @@
     {
       "id": "5763cd4d15e6c2c28b70f2e8",
       "photo": "https://randomuser.me/portraits/men/86.jpg",
-      "firstname": "Howell",
+      "firstname": "test",
       "lastname": "Mcknight",
       "position": "Sales",
       "entryDate": "26/09/2015",

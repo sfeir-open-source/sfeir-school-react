@@ -33,6 +33,5 @@ describe("CurrentView component", () => {
 
     expect(rendered.toJSON()).toMatchSnapshot();
   });
-
 });
 

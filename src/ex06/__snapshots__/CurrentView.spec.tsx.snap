@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrentView component should render Carousel 1`] = `
+<div
+  className="flex-row"
+>
+  <button
+    className="mdc-fab mdc-fab--mini"
+    onClick={[Function]}
+  >
+    <i
+      className="rmwc-icon material-icons mdc-fab__icon"
+    >
+      skip_previous
+    </i>
+  </button>
+  <div
+    className="carousel"
+  >
+    <section
+      className="current mdc-card"
+      id="p-123"
+    >
+      <div
+        className="card-content content-type-person-info"
+      >
+        <figure>
+          <img
+            alt="face of Jean-Michel"
+            src="string"
+          />
+        </figure>
+        <header>
+          <h1
+            className="mdc-typography--headline5"
+          >
+            <a
+              href="#/person/123"
+            >
+              Jean-Michel Test
+            </a>
+          </h1>
+          <h2
+            className="mdc-typography--subtitle1"
+          >
+            string
+          </h2>
+        </header>
+        <p>
+          <i
+            className="rmwc-icon material-icons rmwc-icon--size-small"
+            title="email"
+          >
+            email
+          </i>
+           
+          <a
+            href="mailto:string"
+          >
+            string
+          </a>
+        </p>
+        <p>
+          <i
+            className="rmwc-icon material-icons rmwc-icon--size-small"
+            title="phone"
+          >
+            phone
+          </i>
+           
+          <a
+            href="tel:string"
+          >
+            string
+          </a>
+        </p>
+        <p>
+          <i
+            className="rmwc-icon material-icons rmwc-icon--size-small"
+            title="manager"
+          >
+            supervisor_account
+          </i>
+           
+          <a
+            href="#/person/string"
+          >
+            string
+          </a>
+        </p>
+      </div>
+    </section>
+  </div>
+  <button
+    className="mdc-fab mdc-fab--mini"
+    onClick={[Function]}
+  >
+    <i
+      className="rmwc-icon material-icons mdc-fab__icon"
+    >
+      skip_next
+    </i>
+  </button>
+</div>
+`;
+
+exports[`CurrentView component should render List 1`] = `
+<section
+  className="mdc-card"
+>
+  <div
+    className="card-content content-type-person-info"
+  >
+    <figure>
+      <img
+        alt="face of Jean-Michel"
+        src="string"
+      />
+    </figure>
+    <header>
+      <h1
+        className="mdc-typography--headline5"
+      >
+        <a
+          href="/person/123"
+        >
+          Jean-Michel
+           
+          Test
+        </a>
+      </h1>
+      <h2
+        className="mdc-typography--subtitle1"
+      >
+        string
+      </h2>
+    </header>
+    <p>
+      <i
+        className="rmwc-icon material-icons rmwc-icon--size-small"
+      >
+        email
+      </i>
+       
+      <a
+        href="mailto:string"
+      >
+        string
+      </a>
+    </p>
+    <p>
+      <i
+        className="rmwc-icon material-icons rmwc-icon--size-small"
+      >
+        phone
+      </i>
+       
+      <a
+        href="tel:string"
+      >
+        string
+      </a>
+    </p>
+    <div>
+      hello
+    </div>
+  </div>
+</section>
+`;
+
+exports[`CurrentView component should render Loading 1`] = `
+<main>
+  <div
+    _size="xlarge"
+    className="rmwc-circular-progress rmwc-circular-progress--size-xlarge rmwc-circular-progress--indeterminate rmwc-circular-progress--thickerstroke"
+  >
+    <svg
+      className="rmwc-circular-progress__circle"
+      viewBox="0 0 48 48"
+    >
+      <circle
+        className="rmwc-circular-progress__path"
+        cx={24}
+        cy={24}
+        r={20}
+      />
+    </svg>
+  </div>
+</main>
+`;

@@ -4,7 +4,7 @@ interface Props {
   user: string;
 }
 
-export default function ProfilePage(props: Props) {
+export default function ProfilePage(props: Props): JSX.Element {
   const showMessage = () => {
     alert("Followed " + props.user);
   };

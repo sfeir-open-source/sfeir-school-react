@@ -5,7 +5,7 @@ interface Props {
   room: string;
 }
 
-export default function Messages({ room }: Props) {
+export default function Messages({ room }: Props): JSX.Element {
   const [messages, setMessages] = useState<Message[]>([]);
   useEffect(() => {
     const onMessageReceived = (message) => {

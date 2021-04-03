@@ -5,15 +5,15 @@ interface Props {
 }
 
 class ProfilePage extends React.Component<Props> {
-  showMessage = () => {
+  showMessage = (): void => {
     alert("Followed " + this.props.user);
   };
 
-  handleClick = () => {
+  handleClick = (): void => {
     setTimeout(this.showMessage, 3000);
   };
 
-  render() {
+  render(): JSX.Element {
     return <button onClick={this.handleClick}>(Class) Follow</button>;
   }
 }

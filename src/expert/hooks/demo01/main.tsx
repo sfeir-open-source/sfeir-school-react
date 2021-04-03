@@ -28,6 +28,7 @@ class App extends React.Component<{}, State> {
         <div className="rooms">
           {TYPES.map((type) => (
             <a
+              key={type}
               className={room === type ? "selected" : ""}
               onClick={(e) => this.setRoom(e, type)}
             >

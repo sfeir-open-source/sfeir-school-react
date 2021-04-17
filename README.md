@@ -79,3 +79,15 @@ Launches 3 servers :
 - demos and index at http://localhost:8080, in watch mode
 - exercises at http://localhost:1234, in watch mode
 - API at http://localhost:3000/people
+
+# School: Expert
+
+Looking for school expert ? PLease see README at `./src/expert/{school_name}/README.md`.
+
+## Hooks
+
+```shell
+$ npm run start:hooks
+```
+
+For more information, please see `./src/expert/hooks/README.md`.

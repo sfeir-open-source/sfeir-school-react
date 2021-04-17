@@ -5,8 +5,11 @@ import Thumbnails from "./Thumbnails";
 export default function Carousel(): JSX.Element {
   return (
     <div className="Carousel">
-      <div className="Carousel-Container">
-        <button className="selector-button selector-button-previous">
+      <div className="Carousel-container">
+        <button
+          className="selector-button selector-button-previous"
+          aria-label="Previous image"
+        >
           &#8249;
         </button>
 
@@ -15,7 +18,10 @@ export default function Carousel(): JSX.Element {
          */}
         <Details url={null} />
 
-        <button className="selector-button selector-button-next">
+        <button
+          className="selector-button selector-button-next"
+          aria-label="Next image"
+        >
           &#8250;
         </button>
       </div>

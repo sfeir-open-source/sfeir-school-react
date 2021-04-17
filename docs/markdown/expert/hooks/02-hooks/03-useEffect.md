@@ -23,6 +23,12 @@ Makes an effect  _(ex : setTimeout, HTTPS call, Websocket subscription ...)_
 
 <br/>
 
+Calls Cleanup _(ex: clearTimeout, cancel request, close Websocket ...)_
+* When dependencies change (_componentDidUpdate_)
+* When component is unmounted (_componentWillUnmount_)
+
+<br/>
+
 *Be careful* :
  * No dependency array : every render,
  * Empty dependency array : componentDidMount only

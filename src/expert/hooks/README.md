@@ -15,7 +15,7 @@ This will start :
 
 ## React app
 
-This Sfeir school bundles all exercises in a single web application, so that you can check each exercise at `localhost:localhost:1234/expert/hooks/{ex-name}/index.html`
+This Sfeir school bundles all exercises in a single web application, so that you can check each exercise at `localhost:1234/expert/hooks/{ex-name}/index.html`
 
 For example, to run the first exercise, just run `npm run start:hooks` and visit [http://localhost:1234/expert/hooks/ex01/index.html]()
 

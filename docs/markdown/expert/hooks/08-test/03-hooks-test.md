@@ -1,5 +1,3 @@
-<!-- .slide: class=""with-code““ -->
-
 # react-hooks-testing-library
  
 Provide simple wrapper for hooks

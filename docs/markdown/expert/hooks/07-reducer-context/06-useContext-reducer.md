@@ -1,5 +1,3 @@
-<!-- .slide: class=""with-code““ -->
-
 # UseContext & custom reducer together
 
 ```javascript

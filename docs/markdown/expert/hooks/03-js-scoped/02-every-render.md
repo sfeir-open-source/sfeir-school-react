@@ -1,5 +1,3 @@
-<!-- .slide: class=""with-code““ -->
-
 # On every render ?
 
 ```javascript

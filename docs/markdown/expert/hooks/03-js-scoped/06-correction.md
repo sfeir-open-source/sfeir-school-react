@@ -1,5 +1,3 @@
-<!-- .slide: class=""with-code““ -->
-
 # Less computing
 
 ```javascript

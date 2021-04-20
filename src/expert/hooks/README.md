@@ -11,7 +11,7 @@ $ npm run start:hooks
 This will start :
 
 - Parcel bundling all exercises,
-- API server at `localhost/5000/`
+- API server at `localhost:1337`
 
 ## React app
 

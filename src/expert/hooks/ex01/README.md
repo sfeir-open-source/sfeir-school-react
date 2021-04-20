@@ -1,4 +1,4 @@
-# Exercice 01 :
+# Exercise 01 :
 
 1. Fetch available images list
 2. Display thumbnails.

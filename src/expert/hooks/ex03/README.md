@@ -1,4 +1,4 @@
-# Exercice 03:
+# Exercise 03:
 
 ## Refactor code using custom hooks
 

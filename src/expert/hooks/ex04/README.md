@@ -1,4 +1,4 @@
-# Exercice 04 :
+# Exercise 04 :
 
 ## Refactor our code using useReducer
 

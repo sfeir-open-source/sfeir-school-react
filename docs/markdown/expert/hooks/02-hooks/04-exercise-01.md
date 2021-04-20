@@ -1,6 +1,6 @@
 <!-- .slide: class="center" -->
 
-# Exercice 01: useState & useEffect
+# Exercise 01: useState & useEffect
 ## Display Carousel (Thumbnails & Details)
 
 1. Fetch available images list  

@@ -1,4 +1,4 @@
-# Exercice 05 :
+# Exercise 05 :
 
 ## Refactor our code using useContext
 

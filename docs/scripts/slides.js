@@ -1,7 +1,7 @@
 // allFiles : canonical structure for ordered 2-levels filesystem tree
 // array of [directory, [file]] pairs
 
-const allFiles = [
+const institute = [
   [
     '00-school',
     [
@@ -163,6 +163,118 @@ const allFiles = [
     ],
   ],
 ];
+
+const expertHooks = [
+  [
+    'expert/hooks/00-school',
+    [
+      '00-title',
+    ]
+  ],
+  [
+    'expert/hooks/01-intro',
+    [
+      '00-why-hooks',
+      '01-without-hooks',
+      '02-with-hooks',
+      '03-no-breaking-change',
+    ]
+  ],
+  [
+    'expert/hooks/02-hooks',
+    [
+      '00-title',
+      '01-what-hooks',
+      '02-useState',
+      '03-useEffect',
+      '04-exercise-01',
+      '04-solution-01a',
+      '05-solution-01b',
+      '06-solution-01c',
+      '07-exercise-02',
+      '07-solution-02',
+    ]
+  ],
+  [
+    'expert/hooks/03-js-scoped',
+    [
+      '00-title',
+      '01-js-scoped',
+      '02-every-render',
+      '03-usememo',
+      '04-usecallback',
+      '05-useref',
+      '06-correction',
+      '07-exercise-02b',
+      '07-solution-02b',
+      '08-comparison',
+      '09-comparison-example',
+      '10-choose',
+    ]
+  ],
+  [
+    'expert/hooks/04-rules',
+    [
+      '00-title',
+      '01-call-all',
+      '02-function-only',
+    ]
+  ],
+  [
+    'expert/hooks/05-custom',
+    [
+      '00-title',
+      '01-reusable',
+      '02-custom-hook',
+      '03-exercise-03',
+      '03-solution-03',
+    ]
+  ],
+  [
+    'expert/hooks/07-reducer-context',
+    [
+      '00-title',
+      '01-useReducer',
+      '02-useReducer-example',
+      '03-useReducer-custom',
+      '04-exercise-04',
+      '04-solution-04',
+      '05-useContext',
+      '06-useContext-reducer',
+      '07-exercise-05',
+      '07-solution-05',
+    ]
+  ],
+  [
+    'expert/hooks/08-test',
+    [
+      '00-title',
+      '01-components',
+      '02-hooks-rule',
+      '03-hooks-test',
+    ]
+  ],
+  [
+    'expert/hooks/09-internals',
+    [
+      '00-title',
+      '01-rules',
+      '02-just-arrays',
+    ]
+  ],
+  [
+    'expert/hooks/10-conclusion',
+    [
+      '00-title',
+      '01-what',
+      '02-rules',
+      '04-conclusion',
+      '05-further-reading',
+    ]
+  ]
+];
+
+const allFiles = [...institute, ...expertHooks];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
 const pathReducer = (acc, [dir, files]) => [...acc, ...files.map(makeSlide(dir))];

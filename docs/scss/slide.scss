@@ -58,3 +58,6 @@ Specifics
 */
 
 //@import './speaker.scss';
+.with-code-dark {
+  @import "../web_modules/highlight.js/styles/darcula.css";
+}

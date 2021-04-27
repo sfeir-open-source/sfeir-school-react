@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+}
+
+.hooks-demo01-app {
+  height: 100vh;
+  display: flex;
+
+  .rooms {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin-right: 2em;
+    background-color: #b6b6b6;
+
+    > * {
+      padding: 0.5em;
+      margin-bottom: 1em;
+      cursor: pointer;
+
+      &.selected {
+        color: rgba(white, 0.8);
+        background-color: rgba(blue, 0.8);
+      }
+    }
+  }
+}

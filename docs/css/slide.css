@@ -1,3 +1,4 @@
+@import url(../web_modules/highlight.js/styles/darcula.css);
 .reveal .slides section.center,
 .reveal .slides section .center {
   text-align: center; }
@@ -36,5 +37,6 @@
 /**
 Specifics
 */
+.with-code-dark { }
 
 /*# sourceMappingURL=slide.css.map */

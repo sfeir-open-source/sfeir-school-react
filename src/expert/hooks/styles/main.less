@@ -1,0 +1,158 @@
+@background: rgba(black, 0.4);
+@color: rgba(white, 0.9);
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.App {
+  display: flex;
+
+  > *:not(:last-child) {
+    margin-right: 1em;
+  }
+}
+
+.Carousel {
+  max-width: 900px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+
+    @media screen and (-ms-high-contrast: active) {
+      border: 2px solid currentcolor;
+    }
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  .Carousel-container {
+    position: relative;
+
+    .selector-button {
+      position: absolute;
+      display: block;
+      z-index: 1;
+
+      font-size: 4em;
+      line-height: 1em;
+
+      color: @color;
+      background-color: @background;
+
+      top: calc(50% - 0.5em);
+
+      &.selector-button-previous {
+        left: 0;
+      }
+      &.selector-button-next {
+        right: 0;
+      }
+    }
+
+    .Details {
+      width: 100%;
+      position: relative;
+
+      .Image-info {
+        padding: 1em;
+        width: 100%;
+        position: absolute;
+        top: 0;
+
+        background-color: @background;
+        color: @color;
+
+        .Image-top {
+          display: flex;
+          justify-content: space-between;
+
+          .Image-top-username {
+            font-weight: 500;
+            font-size: 1.2em;
+            line-height: 1.5em;
+          }
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .Action {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: @background;
+    color: @color;
+    padding: 0.5em;
+
+    align-items: center;
+
+    button {
+      display: block;
+      color: @color;
+      padding-right: 1em;
+      flex-shrink: 0;
+      font-size: 1em;
+    }
+
+    .timeline {
+      height: 0.5em;
+      border-radius: 4px;
+      background-color: rgba(@color, 0.5);
+    }
+  }
+
+  .thumbnails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    height: 128px;
+    overflow-x: auto;
+
+    > button {
+      flex-grow: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+
+      &:not(.selected) {
+        opacity: 0.6;
+      }
+    }
+  }
+}

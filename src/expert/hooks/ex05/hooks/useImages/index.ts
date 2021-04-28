@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useReducer } from "react";
-import { Image } from "../../types";
+import { Image } from "../../../dto";
 import { goto, initialized, next, previous } from "./actions";
 import { reducer, State } from "./reducer";
 

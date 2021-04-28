@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ImageDetails } from "../types";
+import { ImageDetails } from "../../dto";
 
 type UseImageDetails = ImageDetails | undefined;
 export default function useImageDetails(url: string): UseImageDetails {

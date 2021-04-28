@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Image } from "../types";
+import { Image } from "../../dto";
 
 const DEFAULT_TIMER = 3000;
 

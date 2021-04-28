@@ -13,7 +13,7 @@ export default function Thumbnails({
   onSelectionChange,
 }: Props): JSX.Element {
   return (
-    <div className="Thumbnails">
+    <div className="thumbnails">
       {data.map((item) => (
         <button key={item.id} onClick={() => onSelectionChange(item)}>
           <img

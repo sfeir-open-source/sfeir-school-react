@@ -1,4 +1,4 @@
-import { Image } from "../../types";
+import { Image } from "../../../dto";
 
 export enum ACTIONS {
   INITIALIZED,

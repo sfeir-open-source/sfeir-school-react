@@ -1,4 +1,4 @@
-import { Image } from "../../types";
+import { Image } from "../../../dto";
 import { Action, ACTIONS } from "./actions";
 import { computeNext, computePrevious } from "./utils";
 

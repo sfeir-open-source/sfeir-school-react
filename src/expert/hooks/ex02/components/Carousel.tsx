@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Image } from "../../dto";
 import Action from "./Action";
 import Details from "./Details";
 import Thumbnails from "./Thumbnails";
-
-interface Image {
-  id: string;
-  thumbnailUrl: string;
-  details: string;
-}
 
 export default function Carousel(): JSX.Element {
   const [images, setImages] = useState<Image[]>(undefined);

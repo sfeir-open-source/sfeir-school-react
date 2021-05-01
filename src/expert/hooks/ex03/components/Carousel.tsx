@@ -1,15 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { Image } from "../../dto";
 import Action from "./Action";
 import Details from "./Details";
 import Thumbnails from "./Thumbnails";
 
 const DEFAULT_TIMER = 3000;
-
-interface Image {
-  id: string;
-  thumbnailUrl: string;
-  details: string;
-}
 
 export default function Carousel(): JSX.Element {
   const [images, setImages] = useState<Image[]>(undefined);
@@ -39,7 +34,6 @@ export default function Carousel(): JSX.Element {
       .then((images) => {
         setImages(images);
         setSelected(images[0]);
-        setAutoplay(true);
       });
   }, []);
 
@@ -85,18 +79,18 @@ export default function Carousel(): JSX.Element {
               &#8250;
             </button>
 
-            <Thumbnails
-              data={images}
-              selected={selected}
-              onSelectionChange={setSelected}
-            />
-
             <Action
               autoplay={autoplay}
               onAutoplayChange={setAutoplay}
               time={(elapsed / DEFAULT_TIMER) * 100}
             />
           </div>
+
+          <Thumbnails
+            data={images}
+            selected={selected}
+            onSelectionChange={setSelected}
+          />
         </>
       ) : (
         <div className="loading">Loading ...</div>

@@ -21,6 +21,13 @@
     "api:hooks": "node src/expert/hooks/server/index.js",
     "eslint:hooks": "eslint 'src/expert/hooks/**/*.(ts|tsx)'"
   },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
   "dependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",

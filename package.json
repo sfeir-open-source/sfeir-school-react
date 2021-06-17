@@ -22,10 +22,8 @@
     "eslint:hooks": "eslint 'src/expert/hooks/**/*.(ts|tsx)'"
   },
   "browserslist": [
-    "last 3 and_chr versions",
     "last 3 chrome versions",
     "last 3 opera versions",
-    "last 3 ios_saf versions",
     "last 3 safari versions",
     "last 3 firefox versions"
   ],

@@ -26,7 +26,8 @@
     "last 3 chrome versions",
     "last 3 opera versions",
     "last 3 ios_saf versions",
-    "last 3 safari versions"
+    "last 3 safari versions",
+    "last 3 firefox versions"
   ],
   "dependencies": {
     "@babel/core": "^7.11.6",

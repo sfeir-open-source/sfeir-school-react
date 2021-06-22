@@ -37,18 +37,18 @@ export default function Carousel(): JSX.Element {
               &#8250;
             </button>
 
-            <Thumbnails
-              data={images}
-              selected={selected}
-              onSelectionChange={handleChange}
-            />
-
             <Action
               autoplay={autoplay}
               onAutoplayChange={setAutoplay}
               time={time}
             />
           </div>
+
+          <Thumbnails
+            data={images}
+            selected={selected}
+            onSelectionChange={handleChange}
+          />
         </>
       ) : (
         <div className="loading">Loading ...</div>

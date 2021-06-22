@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-interface ImageDetails {
-  date: string;
-  username: string;
-  keywords: string[];
-  imageUrl: string;
-  description: string;
-}
+import { ImageDetails } from "../../dto";
 
 interface Props {
   url?: string;

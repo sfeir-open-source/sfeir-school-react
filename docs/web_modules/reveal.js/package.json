@@ -1,27 +1,43 @@
 {
-  "name": "reveal.js",
-  "version": "3.9.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://revealjs.com",
-  "subdomain": "revealjs",
-  "main": "js/reveal.js",
-  "scripts": {
-    "test": "grunt test",
-    "start": "grunt serve",
-    "build": "grunt"
+  "_args": [
+    [
+      "reveal.js@3.9.2",
+      "/Users/romain/SFEIR/sfeir-school-react/docs"
+    ]
+  ],
+  "_development": true,
+  "_from": "reveal.js@3.9.2",
+  "_id": "reveal.js@3.9.2",
+  "_inBundle": false,
+  "_integrity": "sha512-Dvv2oA9FrtOHE2DWj5js8pMRfwq++Wmvsn1EyAdYLC80lBjTphns+tPsB652Bnvep9AVviuVS/b4XoVY9rXHLA==",
+  "_location": "/reveal.js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "reveal.js@3.9.2",
+    "name": "reveal.js",
+    "escapedName": "reveal.js",
+    "rawSpec": "3.9.2",
+    "saveSpec": null,
+    "fetchSpec": "3.9.2"
   },
+  "_requiredBy": [
+    "#DEV:/",
+    "/sfeir-school-theme"
+  ],
+  "_resolved": "https://registry.npmjs.org/reveal.js/-/reveal.js-3.9.2.tgz",
+  "_spec": "3.9.2",
+  "_where": "/Users/romain/SFEIR/sfeir-school-react/docs",
   "author": {
     "name": "Hakim El Hattab",
     "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "url": "http://hakim.se"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+  "bugs": {
+    "url": "https://github.com/hakimel/reveal.js/issues"
   },
-  "engines": {
-    "node": ">=9.0.0"
-  },
+  "description": "The HTML Presentation Framework",
   "devDependencies": {
     "express": "^4.16.2",
     "grunt": "^1.0.4",
@@ -40,5 +56,22 @@
     "node-sass": "^4.13.1",
     "socket.io": "^2.2.0"
   },
-  "license": "MIT"
+  "engines": {
+    "node": ">=9.0.0"
+  },
+  "homepage": "http://revealjs.com",
+  "license": "MIT",
+  "main": "js/reveal.js",
+  "name": "reveal.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hakimel/reveal.js.git"
+  },
+  "scripts": {
+    "build": "grunt",
+    "start": "grunt serve",
+    "test": "grunt test"
+  },
+  "subdomain": "revealjs",
+  "version": "3.9.2"
 }

@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sfeir-open-source/sfeir-school-theme.git"
+    "url": "git+https://github.com/sfeir-open-source/sfeir-school-react.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "wgoedel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sfeir-open-source/sfeir-school-theme/issues"
+    "url": "https://github.com/sfeir-open-source/sfeir-school-react/issues"
   },
-  "homepage": "https://github.com/sfeir-open-source/sfeir-school-theme#readme",
+  "homepage": "https://github.com/sfeir-open-source/sfeir-school-react#readme",
   "devDependencies": {
     "highlight.js": "^9.15.6",
     "lit-html": "^1.2.1",

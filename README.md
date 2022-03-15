@@ -1,93 +1,94 @@
-# React 200
 
-A SFEIR School
 
-![logo](https://www.sfeir.com/img/school/formations/React%20200.png)
+# SfeirSchoolReact
 
-[Planning, trainers and other details](https://www.sfeir.com/school/react-200/)
+This project was generated using [Nx](https://nx.dev).
 
-# Slides
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/).
+🔎 **Smart, Extensible Build Framework**
 
-# Plan & Exercises
+## Adding capabilities to your workspace
 
-## Fundamentals
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
-### Intro JSX, Elements, Components as functions, Props
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-- ex01 - HandsOn (JSX and props)
+Below are our core plugins:
 
-### Component composition, Component Tree, Elements as Props, Children
+- [React](https://reactjs.org)
+  - `npm install --save-dev @nrwl/react`
+- Web (no framework frontends)
+  - `npm install --save-dev @nrwl/web`
+- [Angular](https://angular.io)
+  - `npm install --save-dev @nrwl/angular`
+- [Nest](https://nestjs.com)
+  - `npm install --save-dev @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `npm install --save-dev @nrwl/express`
+- [Node](https://nodejs.org)
+  - `npm install --save-dev @nrwl/node`
 
-- ex02 - Components (composition and children)
+There are also many [community plugins](https://nx.dev/community) you could add.
 
-### Local State and Simple Events
+## Generate an application
 
-- ex03 - Local state and clicks (get interactive)
-- ex03bis -> use useState
+Run `nx g @nrwl/react:app my-app` to generate an application.
 
-### Lists, Conditional rendering, more about children
+> You can use any of the plugins above to generate applications as well.
 
-- ex04 - Conditional, Lists (show 'em all)
+When using Nx, you can create multiple applications and libraries in the same workspace.
 
-## More advanced concepts
+## Generate a library
 
-### Input / Refs / controlled and uncontrolled components
+Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
-- ex05 - Controlled Components - Input (search)
+> You can also use any of the plugins above to generate libraries as well.
 
-### Lifecycle, Effects and lifting state up
+Libraries are shareable across libraries and applications. They can be imported from `@sfeir-school-react/mylib`.
 
-- ex06 - Lifecycle and Effects (async ftw)
+## Development server
 
-### Routing and Context
+Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-- ex07 - Navigation
-- ex08 - Context
+## Code scaffolding
 
-### Forms - the problem statement - Reuse component logic
+Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
 
-- ex09 - Reuse logic and forms
+## Build
 
-## React 300 - Managing state with Redux
+Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-### Adding Redux - reduce and connect
+## Running unit tests
 
-- ex10 - put people into redux state
+Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
 
-### Encapsulating Redux - selectors and action creators
+Run `nx affected:test` to execute the unit tests affected by a change.
 
-- ex11 - build a public state API
+## Running end-to-end tests
 
-### Embracing Redux
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
-- ex12 - leverage application state
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
-### Redux All The Things
+## Understand your workspace
 
-- ex13 - add async processing to state API
+Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
-# runtime
+## Further help
 
-```shell
-$ npm start
-```
+Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-Launches 3 servers :
 
-- demos and index at http://localhost:8080, in watch mode
-- exercises at http://localhost:1234, in watch mode
-- API at http://localhost:3000/people
 
-# School: Expert
+## ☁ Nx Cloud
 
-Looking for school expert ? PLease see README at `./src/expert/{school_name}/README.md`.
+### Distributed Computation Caching & Distributed Task Execution
 
-## Hooks
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
 
-```shell
-$ npm run start:hooks
-```
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
 
-For more information, please see `./src/expert/hooks/README.md`.
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+
+Visit [Nx Cloud](https://nx.app/) to learn more.

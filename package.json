@@ -42,9 +42,16 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "highlight.js": "^9.15.6",
+    "lit-html": "^1.1.2",
+    "live-server": "^1.2.1",
+    "parallelshell": "3.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
+    "reveal.js": "3.9.2",
+    "sass": "^1.19.0",
+    "snowpack": "^1.6.0",
     "tslib": "^2.0.0"
   }
 }

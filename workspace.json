@@ -7,7 +7,7 @@
       "sourceRoot": "apps/docs/src",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:build",
+          "executor": "@nrwl/web:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/docs",
@@ -63,7 +63,8 @@
             "lintFilePatterns": ["apps/docs/**/*.ts"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "solution": {
       "root": "apps/solution",
@@ -71,7 +72,7 @@
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:build",
+          "executor": "@nrwl/web:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/solution",
@@ -141,7 +142,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "solution-e2e": {
       "root": "apps/solution-e2e",
@@ -168,38 +170,9 @@
             "lintFilePatterns": ["apps/solution-e2e/**/*.{js,ts}"]
           }
         }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
       },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/web:application": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "none",
-      "e2eTestRunner": "none"
-    },
-    "@nrwl/web:library": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "none"
+      "tags": [],
+      "implicitDependencies": ["solution"]
     }
-  },
-  "defaultProject": "solution"
+  }
 }

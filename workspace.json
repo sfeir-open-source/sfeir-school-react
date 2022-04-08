@@ -6,61 +6,16 @@
       "root": "apps/docs",
       "sourceRoot": "apps/docs/src",
       "targets": {
-        "build": {
-          "executor": "@nrwl/web:webpack",
-          "outputs": ["{options.outputPath}"],
+        "sass": {
+          "executor": "@nrwl/workspace:run-script",
           "options": {
-            "outputPath": "dist/apps/docs",
-            "index": "apps/docs/src/index.html",
-            "baseHref": "/",
-            "main": "apps/docs/src/main.ts",
-            "polyfills": "apps/docs/src/polyfills.ts",
-            "tsConfig": "apps/docs/tsconfig.app.json",
-            "assets": ["apps/docs/src/favicon.ico", "apps/docs/src/assets"],
-            "styles": ["apps/docs/src/styles.css"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/docs/src/environments/environment.ts",
-                  "with": "apps/docs/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
-            }
+            "script": "sass"
           }
         },
         "serve": {
-          "executor": "@nrwl/web:dev-server",
+          "executor": "@nrwl/workspace:run-script",
           "options": {
-            "buildTarget": "docs:build"
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "docs:build:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/docs/**/*.ts"]
+            "script": "serve"
           }
         }
       },
@@ -73,7 +28,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:webpack",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/solution",
             "index": "apps/solution/src/index.html",
@@ -85,7 +42,9 @@
               "apps/solution/src/favicon.ico",
               "apps/solution/src/assets"
             ],
-            "styles": ["apps/solution/src/styles.scss"],
+            "styles": [
+              "apps/solution/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -129,14 +88,20 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/solution/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/solution/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/solution"],
+          "outputs": [
+            "coverage/apps/solution"
+          ],
           "options": {
             "jestConfig": "apps/solution/jest.config.js",
             "passWithNoTests": true
@@ -165,14 +130,20 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/solution-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/solution-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["solution"]
+      "implicitDependencies": [
+        "solution"
+      ]
     }
   }
 }

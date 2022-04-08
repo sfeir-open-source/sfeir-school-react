@@ -1,5 +1,5 @@
 {
-  "npmScope": "sfeir-school-react",
+  "npmScope": "empty-test",
   "affected": {
     "defaultBase": "master"
   },
@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -32,17 +27,15 @@
     ]
   },
   "projects": {
+    "docs": {
+      "tags": []
+    },
     "solution": {
       "tags": []
     },
     "solution-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "solution"
-      ]
-    },
-    "docs": {
-      "tags": []
+      "implicitDependencies": ["solution"]
     }
   }
 }

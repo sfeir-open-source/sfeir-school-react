@@ -10,11 +10,11 @@
 
 ## Slides
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-ReactJS/).
+You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/#/).
 
 ## Develop
 
-To run docs locally, go in directory `docs` and run `npx serve` of if you don't have node, you can use docker `docker-compose up`, and open slides on http://localhost:5000/.
+To run slides locally, run `npm run slides` or if you don't have node, you can use docker `docker-compose up`, and open slides on http://localhost:5000/.
 
 ## Workshop
 

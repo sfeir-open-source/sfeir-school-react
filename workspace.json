@@ -1,13 +1,33 @@
 {
   "version": 2,
   "projects": {
+    "docs": {
+      "projectType": "application",
+      "root": "apps/docs",
+      "sourceRoot": "apps/docs/src",
+      "targets": {
+        "sass": {
+          "executor": "@nrwl/workspace:run-script",
+          "options": {
+            "script": "sass"
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/workspace:run-script",
+          "options": {
+            "script": "serve"
+          }
+        }
+      },
+      "tags": []
+    },
     "solution": {
       "root": "apps/solution",
       "sourceRoot": "apps/solution/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/web:build",
+          "executor": "@nrwl/web:webpack",
           "outputs": [
             "{options.outputPath}"
           ],
@@ -87,7 +107,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "solution-e2e": {
       "root": "apps/solution-e2e",
@@ -118,39 +139,11 @@
             ]
           }
         }
-      }
-    },
-    "docs": "apps/docs"
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
       },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/web:application": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "none",
-      "e2eTestRunner": "none"
-    },
-    "@nrwl/web:library": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "none"
+      "tags": [],
+      "implicitDependencies": [
+        "solution"
+      ]
     }
-  },
-  "defaultProject": "solution"
+  }
 }

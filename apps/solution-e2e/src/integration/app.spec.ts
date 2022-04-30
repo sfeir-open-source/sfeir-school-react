@@ -1,13 +1,37 @@
-import { getGreeting } from '../support/app.po';
-
 describe('sfeir-school-react', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('should display header', () => {
+    cy.contains('SF≡IR People');
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to sfeir-school-react!');
+  it('should display a list of people', () => {
+    function findLeanneWoodardPanel() {
+      return cy.get('[data-testid=5763cd4d9d2a4f259b53c901]');
+    }
+
+    const expectedPeople = [
+      'Leanne Woodard',
+      'Castaneda Salinas',
+      'Phyllis Donovan',
+      'Erika Guzman',
+      'Moody Prince',
+      'Mercedes Hebert',
+      'Howell Mcknight',
+      'Lizzie Morris',
+      'Roy Nielsen',
+      'Mclaughlin Cochran',
+    ];
+
+    expectedPeople.forEach((name) => cy.contains(name));
+
+    findLeanneWoodardPanel().contains('Developer');
+    findLeanneWoodardPanel()
+      .contains('woodard.l@acme.com')
+      .should('have.attr', 'href', 'mailto:woodard.l@acme.com');
+    findLeanneWoodardPanel()
+      .contains('0784112248')
+      .should('have.attr', 'href', 'tel:0784112248');
+    findLeanneWoodardPanel().contains('Erika');
   });
 });

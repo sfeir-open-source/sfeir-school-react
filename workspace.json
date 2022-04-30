@@ -1,6 +1,29 @@
 {
   "version": 2,
   "projects": {
+    "design": {
+      "root": "libs/design",
+      "sourceRoot": "libs/design/src",
+      "projectType": "library",
+      "tags": [],
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/design/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/design"],
+          "options": {
+            "jestConfig": "libs/design/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "docs": {
       "projectType": "application",
       "root": "apps/docs",
@@ -28,9 +51,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:webpack",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/solution",
             "index": "apps/solution/src/index.html",
@@ -42,9 +63,7 @@
               "apps/solution/src/favicon.ico",
               "apps/solution/src/assets"
             ],
-            "styles": [
-              "apps/solution/src/styles.scss"
-            ],
+            "styles": ["apps/solution/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -88,20 +107,14 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": [
-            "{options.outputFile}"
-          ],
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "apps/solution/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/solution/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/solution"
-          ],
+          "outputs": ["coverage/apps/solution"],
           "options": {
             "jestConfig": "apps/solution/jest.config.js",
             "passWithNoTests": true
@@ -128,22 +141,28 @@
             }
           }
         },
+        "test": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "start-server-and-test api http://localhost:3000/people 'nx e2e solution-e2e'"
+          }
+        },
+        "develop": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "start-server-and-test api http://localhost:3000/people 'nx e2e solution-e2e -- --watch'"
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": [
-            "{options.outputFile}"
-          ],
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "apps/solution-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/solution-e2e/**/*.{js,ts}"]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": [
-        "solution"
-      ]
+      "implicitDependencies": ["solution"]
     }
   }
 }

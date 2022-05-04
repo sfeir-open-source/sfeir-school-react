@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "serve": "nx serve",
     "slides": "nx run docs:serve",
     "api": "json-server --delay=500 ./api/people.json",
+    "start": "concurrently --kill-others \"npm run api\" \"npm run serve\"",
     "build": "nx build --prod",
     "test": "nx run-many --target=test --all",
     "develop": "nx run solution-e2e:develop"
@@ -30,6 +31,7 @@
     "@typescript-eslint/eslint-plugin": "5.18.0",
     "@typescript-eslint/parser": "5.18.0",
     "babel-jest": "27.2.3",
+    "concurrently": "^7.1.0",
     "cypress": "^8.3.0",
     "eslint": "8.12.0",
     "eslint-config-prettier": "8.1.0",

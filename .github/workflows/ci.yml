@@ -16,6 +16,7 @@ jobs:
           node-version: 'lts/*'
           cache: 'npm'
           cache-dependency-path: './package-lock.json'
-      - run: npm ci
+      - run: npm install-ci-test
+      - run: npm run build
 
 

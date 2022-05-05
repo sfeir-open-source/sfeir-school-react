@@ -1,0 +1,27 @@
+@import '../../colors.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  flex-shrink: 1;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: $primary_color;
+}
+
+.position {
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.photo {
+  border-radius: 100%;
+}

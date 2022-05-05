@@ -1,7 +1,7 @@
 # SFEIR School ReactJS
 
 <p align="center">
- <img style="display:block" width="20%" height="20%" src="./docs/assets/images/sfeir-school-logo.png" alt="SFEIR School logo">
+ <img style="display:block" width="20%" height="20%" src="./apps/docs/assets/images/sfeir-school-logo.png" alt="SFEIR School logo">
 </p>
 
 <br/>
@@ -12,17 +12,33 @@
 
 You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/#/).
 
-## Develop
+### Develop
 
 To run slides locally, run `npm run slides` or if you don't have node, you can use docker `docker-compose up`, and open slides on http://localhost:5000/.
 
 ## Workshop
 
-Workshops are in directory `steps` :
+### Exercises
+Workshop's execises are located in `apps` folder. Each exercise is split in different folders : 
 
-- two directories per workshop :
-  - one with a README.md with workshop steps and source file to complete
-  - a second directory suffixed with `-solution` which contains source file with solutions.
+ * `exerciseXX` is the boileplate student has to change in order to answer the exercise,
+ * `exerciseXX-solution` is a solution of the exercise `exerciseXX`,
+ * `exerciseXX-solution-e2e` (if any) is the companion of `exerciseXX-solution` in order to run automatic tests.
+
+(where XX is the number of the exercise, in two digits)
+
+### Solution
+This repository also offers a complete solution implementing all features covered in this workshop, and follows the same naming convention : 
+
+ * `solution` is our implementation of the solution,
+ * `solution-e2e` is the companion of `solution` in order to run automatic tests.
+
+You can run the solution by running the following command:
+```shell
+npm run start
+```
+
+This will start the ReactJS application on http://localhost:4200 and the people api on http://localhost:3000
 
 ## Contributing
 

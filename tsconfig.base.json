@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@libs/design": ["libs/design/src/index.ts"]
+    }
   },
+  "include": ["./jest-setup.ts"],
   "exclude": ["node_modules", "tmp"]
 }

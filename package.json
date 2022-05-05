@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "slides": "nx run docs:serve",
-    "build": "nx build",
+    "build": "nx build --prod",
     "test": "nx test"
   },
   "private": true,

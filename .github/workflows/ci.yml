@@ -1,0 +1,22 @@
+on: [push, pull_request, workflow_dispatch]
+env:
+  CYPRESS_CACHE_FOLDER: cypress/cache
+
+jobs:
+  e2e-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v3
+        with:
+          path: cypress/cache
+          key: cypress-binary-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+      - run: npm install-ci-test
+      - run: npm run build
+
+

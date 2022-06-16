@@ -1,5 +1,5 @@
 import { Grid } from '@libs/design';
-import { Dispatch, SetStateAction, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import Person from '../person/person';
 import usePeople from '../person/usePeople';
 
@@ -32,7 +32,7 @@ export function People() {
 
 export interface SearchBarProps {
   searchTerm: string;
-  onSearchTermChange: Dispatch<SetStateAction<string>>;
+  onSearchTermChange: (value: string) => void;
 }
 function SearchBar({ searchTerm, onSearchTermChange }: SearchBarProps) {
 

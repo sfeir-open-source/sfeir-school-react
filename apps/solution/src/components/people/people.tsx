@@ -37,7 +37,7 @@ export interface SearchBarProps {
 function SearchBar({ searchTerm, onSearchTermChange }: SearchBarProps) {
 
   return (
-    <div className={[style.searchBar, style.container]}>
+    <div className={style.searchBar}>
       <label className={style.srOnly} htmlFor="searchBar">Search person</label>
       <input type="text" name="searchBar" id="searchBar" onChange={(e) => onSearchTermChange(e.target.value)} value={searchTerm} placeholder="Search…" />
     </div>

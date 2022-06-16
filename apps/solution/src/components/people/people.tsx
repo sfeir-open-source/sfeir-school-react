@@ -1,5 +1,5 @@
 import { Grid } from '@libs/design';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction, useMemo, useState } from 'react';
 import Person from '../person/person';
 import usePeople from '../person/usePeople';
 
@@ -13,10 +13,10 @@ export function People() {
   const people = usePeople();
   const [searchTerm, setSearchTerm] = useState("")
 
-  const filteredPeople = people?.filter(person => {
+  const filteredPeople = useMemo(() => people?.filter(person => {
     const searchTermNormalized: string = normalize(searchTerm)
     return normalize(person.lastname).includes(searchTermNormalized) || normalize(person.firstname).includes(searchTermNormalized)
-  })
+  }), [people, searchTerm])
 
   return (
     <>

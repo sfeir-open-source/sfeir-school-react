@@ -20,7 +20,7 @@ export function People() {
 
   return (
     <>
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <SearchBar searchTerm={searchTerm} onSearchTermChange={setSearchTerm} />
       <Grid className={style.container}>
         {filteredPeople?.map((person) => <Person key={person.id} person={person} />) ||
           'Loading ...'}
@@ -32,14 +32,14 @@ export function People() {
 
 export interface SearchBarProps {
   searchTerm: string;
-  setSearchTerm: Dispatch<SetStateAction<string>>;
+  onSearchTermChange: Dispatch<SetStateAction<string>>;
 }
-function SearchBar({ searchTerm, setSearchTerm }: SearchBarProps) {
+function SearchBar({ searchTerm, onSearchTermChange }: SearchBarProps) {
 
   return (
     <>
       <label htmlFor="searchBar">Search</label>
-      <input className={style.searchBar} type="text" name="searchBar" id="searchBar" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm} />
+      <input className={style.searchBar} type="text" name="searchBar" id="searchBar" onChange={(e) => onSearchTermChange(e.target.value)} value={searchTerm} />
     </>
   )
 }

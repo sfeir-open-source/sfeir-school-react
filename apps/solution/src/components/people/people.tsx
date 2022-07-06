@@ -37,10 +37,10 @@ export interface SearchBarProps {
 function SearchBar({ searchTerm, onSearchTermChange }: SearchBarProps) {
 
   return (
-    <div className={style.searchBar} data-cy="searchbar">
+    <form className={style.searchBar} role="search" aria-label='People'>
       <label className={style.srOnly} htmlFor="searchBar">Search person</label>
       <input type="text" name="searchBar" id="searchBar" onChange={(e) => onSearchTermChange(e.target.value)} value={searchTerm} placeholder="Search…" />
-    </div>
+    </form>
   )
 }
 

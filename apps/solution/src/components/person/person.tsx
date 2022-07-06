@@ -13,7 +13,7 @@ export function Person({ person }: PersonProps) {
     person;
 
   return (
-    <Panel className={styles.container} data-testid={id}>
+    <Panel className={styles.container} data-cy={`person-panel-${id}`} >
       <div className={styles.informations}>
         <h2 className={styles.name}>
           {firstname}&nbsp;{lastname}

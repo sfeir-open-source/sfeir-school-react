@@ -35,9 +35,8 @@ export interface SearchBarProps {
   onSearchTermChange: (value: string) => void;
 }
 function SearchBar({ searchTerm, onSearchTermChange }: SearchBarProps) {
-
   return (
-    <form className={style.searchBar} role="search" aria-label='People'>
+    <form className={style.searchBar} role="search" aria-label='People' onSubmit={e => e.preventDefault()}>
       <label className={style.srOnly} htmlFor="searchBar">Search person</label>
       <input type="text" name="searchBar" id="searchBar" onChange={(e) => onSearchTermChange(e.target.value)} value={searchTerm} placeholder="Search…" />
     </form>

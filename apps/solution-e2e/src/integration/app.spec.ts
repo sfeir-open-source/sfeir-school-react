@@ -63,7 +63,7 @@ describe('sfeir-school-react', () => {
     })
 
     it('should ignore case', () => {
-      typeInSearchBar('woOdArD')
+      typeInSearchBar('WoOdArD')
       findLeanneWoodardPanel().should('be.visible');
     })
   })

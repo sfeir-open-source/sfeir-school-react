@@ -24,6 +24,7 @@ export function People() {
       <Grid className={style.container}>
         {filteredPeople?.map((person) => <Person key={person.id} person={person} />) ||
           'Loading ...'}
+        {people && !filteredPeople?.length && <span>No results</span>}
       </Grid>
     </>
   );

@@ -149,6 +149,21 @@
       "isManager": true,
       "manager": "",
       "managerId": ""
+    },
+    {
+      "id": "5763cd4dfa6f96cd26c65780",
+      "photo": "https://randomuser.me/portraits/men/2.jpg",
+      "firstname": "Reginald",
+      "lastname": "Marché",
+      "position": "Marketing",
+      "entryDate": "14/02/2015",
+      "birthDate": "19/11/1992",
+      "gender": "m",
+      "email": "regi.m@acme.com",
+      "phone": "0266334850",
+      "isManager": false,
+      "manager": "",
+      "managerId": ""
     }
   ]
 }

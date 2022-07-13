@@ -1,3 +1,5 @@
+import { getSearchBar, findLeanneWoodardPanel, findReginaldMarche, typeInSearchBar } from "../support/app.po";
+
 describe('sfeir-school-react', () => {
   beforeEach(() => cy.visit('/'));
 
@@ -6,10 +8,6 @@ describe('sfeir-school-react', () => {
   });
 
   it('should display a list of people', () => {
-    function findLeanneWoodardPanel() {
-      return cy.get('[data-testid=5763cd4d9d2a4f259b53c901]');
-    }
-
     const expectedPeople = [
       'Leanne Woodard',
       'Castaneda Salinas',
@@ -34,4 +32,39 @@ describe('sfeir-school-react', () => {
       .should('have.attr', 'href', 'tel:0784112248');
     findLeanneWoodardPanel().contains('Erika');
   });
+
+  describe('Search Bar', () => {
+    it('should display the search bar', () => {
+      getSearchBar().should('be.visible');
+    })
+
+    it('should input the search correctly', () => {
+      typeInSearchBar("wood").should('have.value', 'wood');
+    })
+
+    it('should filter the people list by their firstname', () => {
+      typeInSearchBar('Leanne');
+      cy.contains('Leanne Woodard');
+    })
+
+    it('should filter the people list by their lastname', () => {
+      typeInSearchBar('Woodard');
+      cy.contains('Leanne Woodard');
+    })
+
+    it('should display the person typed regardless of accent', () => {
+      typeInSearchBar('Marché').should('have.value', 'Marché');
+      findReginaldMarche().should('be.visible');
+      findLeanneWoodardPanel().should('not.exist');
+
+      typeInSearchBar('marche').should('have.value', 'marche');
+      findReginaldMarche().should('be.visible');
+      findLeanneWoodardPanel().should('not.exist');
+    })
+
+    it('should ignore case', () => {
+      typeInSearchBar('WoOdArD')
+      findLeanneWoodardPanel().should('be.visible');
+    })
+  })
 });

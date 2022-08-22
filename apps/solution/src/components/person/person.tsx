@@ -1,6 +1,7 @@
 import { PersonModel } from '../../api/person';
 import { Iconized, Panel } from '@libs/design';
 import styles from './person.module.scss';
+import { Link } from 'react-router-dom';
 
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
@@ -13,10 +14,12 @@ export function Person({ person }: PersonProps) {
     person;
 
   return (
-    <Panel className={styles.container} data-cy={`person-panel-${id}`} >
+    <Panel className={styles.container} data-cy={`person-panel-${id}`}>
       <div className={styles.informations}>
         <h2 className={styles.name}>
-          {firstname}&nbsp;{lastname}
+          <Link to={`/edit/${id}`}>
+            {firstname}&nbsp;{lastname}
+          </Link>
         </h2>
         <div className={styles.position}>{position}</div>
         <Iconized icon={solid('envelope')}>

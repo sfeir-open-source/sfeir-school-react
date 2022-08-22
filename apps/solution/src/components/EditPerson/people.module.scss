@@ -1,0 +1,49 @@
+@import '../../colors.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  flex-shrink: 1;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name {
+  color: $primary_color;
+}
+
+.position {
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.photo {
+  border-radius: 100%;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: end;
+  gap: 1em;
+}
+
+.panel {
+  margin: auto;
+  width: 50%;
+}
+
+.edit-btn {
+  color: $primary_color;
+}
+
+.delete-btn {
+  color: red;
+}

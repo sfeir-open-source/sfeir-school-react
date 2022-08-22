@@ -6,12 +6,15 @@
   justify-content: space-between;
   gap: 2em;
   flex-shrink: 1;
+  flex-direction: column;
 }
 
 .informations {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .name {
@@ -31,7 +34,7 @@
   display: flex;
   width: 100%;
   margin-top: 1rem;
-  justify-content: end;
+  justify-content: space-around;
   gap: 1em;
 }
 
@@ -46,4 +49,13 @@
 
 .delete-btn {
   color: red;
+}
+
+.submit-btn {
+  background-color: $primary_color;
+  border-radius: 3em;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: large;
 }

@@ -1,5 +1,5 @@
 import People from '../components/people/people';
-import EditPeople from '../components/EditPeople/EditPeople';
+import EditPeople from '../components/EditPerson/EditPerson';
 import styles from './app.module.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 

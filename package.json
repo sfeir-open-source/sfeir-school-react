@@ -66,6 +66,7 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-is": "18.0.0",
+    "react-router-dom": "^6.3.0",
     "react-test-renderer": "18.0.0",
     "regenerator-runtime": "0.13.7",
     "reveal.js": "3.9.2",

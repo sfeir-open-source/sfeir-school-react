@@ -1,5 +1,5 @@
 import { Iconized, Panel } from '@libs/design';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { PersonModel } from '../../api/person';
 import usePeopleId from './UsePerson';
 import styles from './people.module.scss';

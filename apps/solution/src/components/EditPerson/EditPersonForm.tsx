@@ -1,6 +1,6 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Iconized } from '@libs/design';
-import { PersonModel } from '../../api/person';
+import { PersonModel, updatePerson } from '../../api/person';
 import styles from './people.module.scss';
 import moment from 'moment';
 import { useState } from 'react';
@@ -8,22 +8,16 @@ import useManagers from './UseManagers';
 
 export interface EditPersonFormProps {
   person: PersonModel;
+  refreshPerson: () => void;
 }
 
 const normalizeDate = (date: string): string => {
   return moment(date, ['DD/MM/YYYY', 'YYYY-MM-DD']).format('YYYY-MM-DD');
 };
-/**
- *
- * TODO Hanlde form submit & Handle form validation + Change
- */
-function EditPersonForm({ person }: EditPersonFormProps) {
+
+function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
   const [formData, setFormData] = useState(person);
   const managers = useManagers(person.id);
-
-  const selectedManagerId = managers?.find(
-    (m) => m.firstname === formData.manager
-  )?.id;
 
   const {
     firstname,
@@ -36,7 +30,11 @@ function EditPersonForm({ person }: EditPersonFormProps) {
     entryDate,
     birthDate,
     gender,
+    managerId,
   } = formData;
+
+  const selectedManagerId =
+    managers?.find((m) => m.firstname === formData.manager)?.id || managerId;
 
   const handleChange = (
     e:
@@ -50,6 +48,7 @@ function EditPersonForm({ person }: EditPersonFormProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    updatePerson(formData).then(() => refreshPerson());
   };
 
   return (
@@ -149,4 +148,5 @@ function EditPersonForm({ person }: EditPersonFormProps) {
     </form>
   );
 }
+
 export default EditPersonForm;

@@ -3,16 +3,16 @@
     {
       "id": "5763cd4d9d2a4f259b53c901",
       "photo": "https://randomuser.me/portraits/women/85.jpg",
-      "firstname": "Leanne",
+      "firstname": "Lena",
       "lastname": "Woodard",
       "position": "Developer",
       "entryDate": "27/10/2015",
-      "birthDate": "02/01/1974",
+      "birthDate": "1974-01-12",
       "gender": "f",
       "email": "woodard.l@acme.com",
       "phone": "0784112248",
       "isManager": false,
-      "manager": "Erika",
+      "manager": "Mercedes",
       "managerId": "5763cd4d3b57c672861bfa1f"
     },
     {

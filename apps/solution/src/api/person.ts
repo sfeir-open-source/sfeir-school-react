@@ -23,3 +23,13 @@ export async function getPeople(): Promise<PersonModel[]> {
 export async function getPeopleById(id: string): Promise<PersonModel> {
   return fetch(`${PEOPLE_API}/${id}`).then((response) => response.json());
 }
+
+export async function updatePerson(person: PersonModel): Promise<PersonModel> {
+  return fetch(`${PEOPLE_API}/${person.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(person),
+  }).then((response) => response.json());
+}

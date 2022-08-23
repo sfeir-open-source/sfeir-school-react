@@ -1,7 +1,7 @@
 import { Iconized, Panel } from '@libs/design';
 import { useParams } from 'react-router-dom';
 import { PersonModel } from '../../api/person';
-import usePeopleId from './UsePerson';
+import usePerson from './UsePerson';
 import styles from './people.module.scss';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import EditPersonDisplay from './EditPersonDisplay';
@@ -13,10 +13,10 @@ export interface EditPeopleProps {
 }
 
 function EditPeople() {
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
 
   const { id } = useParams();
-  const person = usePeopleId(id as string);
+  const [person, refreshPerson] = usePerson(id as string);
 
   if (!person) return <div>Loading...</div>;
 
@@ -26,7 +26,7 @@ function EditPeople() {
         {!showForm ? (
           <EditPersonDisplay person={person} />
         ) : (
-          <EditPersonForm person={person} />
+          <EditPersonForm person={person} refreshPerson={refreshPerson} />
         )}
         <div className={styles['btn-container']}>
           <Iconized

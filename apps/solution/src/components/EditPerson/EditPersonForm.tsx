@@ -121,6 +121,7 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
           name="manager"
           value={manager}
           onChange={(e) => handleChange(e)}
+          data-cy="select-manager"
         >
           {managers?.map((manager) => (
             <option key={manager.id} value={manager.firstname}>

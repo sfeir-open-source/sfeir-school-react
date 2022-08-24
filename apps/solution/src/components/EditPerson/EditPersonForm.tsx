@@ -50,8 +50,8 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
     managerId,
   } = formData;
 
-  const selectedManagerId =
-    managers?.find((m) => m.firstname === formData.manager)?.id || managerId;
+  const selectedManagerName =
+    managers?.find((m) => m.id === formData.managerId)?.firstname || manager;
 
   const handleChange = (
     e:
@@ -69,7 +69,7 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
       ...formData,
       entryDate: unNormalizeDate(entryDate),
       birthDate: unNormalizeDate(birthDate),
-      managerId: selectedManagerId,
+      manager: selectedManagerName,
     }).then(() => refreshPerson());
   };
 
@@ -118,19 +118,17 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
 
         <Iconized icon={solid('person')}>Manger: </Iconized>
         <select
-          name="manager"
-          value={manager}
+          name="managerId"
+          value={managerId}
           onChange={(e) => handleChange(e)}
           data-cy="select-manager"
         >
           {managers?.map((manager) => (
-            <option key={manager.id} value={manager.firstname}>
+            <option key={manager.id} value={manager.id}>
               {manager.firstname}
             </option>
           ))}
         </select>
-
-        <input type="hidden" name="managerId" value={selectedManagerId} />
 
         <Iconized icon={solid('phone')}>Phone:</Iconized>
         <input

@@ -113,6 +113,9 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
+        <Iconized icon={solid('image')}>Photo: </Iconized>
+        <input type="text" name="photo" value={photo} onChange={handleChange} />
+
         <Iconized icon={solid('person')}>Manger: </Iconized>
         <select
           name="manager"

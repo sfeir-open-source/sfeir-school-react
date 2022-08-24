@@ -34,11 +34,13 @@ function EditPeople() {
             size={'2x'}
             className={styles['edit-btn']}
             onClick={() => setShowForm(!showForm)}
+            data-cy={`edit-btn-${id}`}
           />
           <Iconized
             icon={solid('person-circle-minus')}
             size={'2x'}
             className={styles['delete-btn']}
+            data-cy={`delete-btn-${id}`}
           />
         </div>
       </Panel>

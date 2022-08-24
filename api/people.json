@@ -7,12 +7,12 @@
       "lastname": "Woodard",
       "position": "Developer",
       "entryDate": "27/10/2015",
-      "birthDate": "1974-01-12",
+      "birthDate": "14/01/1974",
       "gender": "f",
       "email": "woodard.l@acme.com",
       "phone": "0784112248",
       "isManager": false,
-      "manager": "Mercedes",
+      "manager": "Erika",
       "managerId": "5763cd4d3b57c672861bfa1f"
     },
     {

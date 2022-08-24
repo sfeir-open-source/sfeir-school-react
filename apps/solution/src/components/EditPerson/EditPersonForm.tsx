@@ -2,7 +2,6 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Iconized } from '@libs/design';
 import { PersonModel, updatePerson } from '../../api/person';
 import styles from './people.module.scss';
-import moment from 'moment';
 import { useState } from 'react';
 import useManagers from './UseManagers';
 
@@ -11,8 +10,26 @@ export interface EditPersonFormProps {
   refreshPerson: () => void;
 }
 
+/**
+ *
+ * @param date
+ * @returns new date in format yyyy-mm-dd to satisfie the Input type="date" format
+ */
 const normalizeDate = (date: string): string => {
-  return moment(date, ['DD/MM/YYYY', 'YYYY-MM-DD']).format('YYYY-MM-DD');
+  if (date.includes('-')) return date;
+  const [day, month, year] = date.split('/');
+  return `${year}-${month}-${day}`;
+};
+
+/**
+ *
+ * @param date
+ * @returns new date in format dd/mm/yyyy to satisfie the API format
+ */
+const unNormalizeDate = (date: string): string => {
+  if (date.includes('/')) return date;
+  const [year, month, day] = date.split('-');
+  return `${day}/${month}/${year}`;
 };
 
 function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
@@ -42,13 +59,18 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
       | React.ChangeEvent<HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+    console.log(value);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
-    updatePerson(formData).then(() => refreshPerson());
+    updatePerson({
+      ...formData,
+      entryDate: unNormalizeDate(entryDate),
+      birthDate: unNormalizeDate(birthDate),
+      managerId: selectedManagerId,
+    }).then(() => refreshPerson());
   };
 
   return (

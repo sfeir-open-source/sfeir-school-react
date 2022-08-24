@@ -35,6 +35,9 @@ describe('sfeir-school-react | edit page', () => {
     cy.get('input[name="position"]').should('have.value', 'Developer');
     cy.get('input[name="email"]').should('have.value', 'woodard.l@acme.com');
     cy.get('input[name="phone"]').should('have.value', '0784112248');
-    cy.get('select[name="manager"]').should('have.value', 'Erika');
+    cy.get('select[name="managerId"]').should(
+      'have.value',
+      '5763cd4d3b57c672861bfa1f'
+    );
   });
 });

@@ -94,7 +94,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         <Iconized icon={solid('image')}>Picture: </Iconized>
         <input type="text" name="photo" value={photo} onChange={handleChange} />
 
-        <Iconized icon={solid('person')}>Manger: </Iconized>
+        <Iconized icon={solid('person')}>Manager: </Iconized>
         <select
           name="managerId"
           value={managerId}

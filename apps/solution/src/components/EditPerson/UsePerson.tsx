@@ -1,16 +1,22 @@
 import { useEffect, useState } from 'react';
-import { getPeopleById, PersonModel } from '../../api/person';
+import { getPerson, PersonModel, updatePerson } from '../../api/person';
 
 export default function usePerson(id: string) {
-  const [people, setPeople] = useState<PersonModel | null>(null);
+  const [person, setPerson] = useState<PersonModel | null>(null);
 
   useEffect(() => {
-    getPeopleById(id).then(setPeople);
+    getPerson(id).then(setPerson);
   }, [id]);
 
   const refreshPerson = (): void => {
-    getPeopleById(id).then(setPeople);
+    getPerson(id).then(setPerson);
   };
 
-  return [people, refreshPerson] as const;
+  const updatePersonAction = (person: PersonModel): void => {
+    updatePerson(person).then((updatedPerson) => {
+      setPerson(updatedPerson);
+    });
+  };
+
+  return [person, updatePersonAction, refreshPerson] as const;
 }

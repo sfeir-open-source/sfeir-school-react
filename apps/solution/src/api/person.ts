@@ -20,7 +20,7 @@ export async function getPeople(): Promise<PersonModel[]> {
   return fetch(`${PEOPLE_API}`).then((response) => response.json());
 }
 
-export async function getPeopleById(id: string): Promise<PersonModel> {
+export async function getPerson(id: string): Promise<PersonModel> {
   return fetch(`${PEOPLE_API}/${id}`).then((response) => response.json());
 }
 

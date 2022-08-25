@@ -1,38 +1,17 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Iconized } from '@libs/design';
-import { PersonModel, updatePerson } from '../../api/person';
+import { PersonModel } from '../../api/person';
 import styles from './people.module.scss';
 import { useState } from 'react';
 import useManagers from './UseManagers';
+import { normalizeDate, unNormalizeDate } from '../../utils/date';
 
 export interface EditPersonFormProps {
   person: PersonModel;
-  refreshPerson: () => void;
+  updatePersonAction: (person: PersonModel) => void;
 }
 
-/**
- *
- * @param date
- * @returns new date in format yyyy-mm-dd to satisfie the Input type="date" format
- */
-const normalizeDate = (date: string): string => {
-  if (date.includes('-')) return date;
-  const [day, month, year] = date.split('/');
-  return `${year}-${month}-${day}`;
-};
-
-/**
- *
- * @param date
- * @returns new date in format dd/mm/yyyy to satisfie the API format
- */
-const unNormalizeDate = (date: string): string => {
-  if (date.includes('/')) return date;
-  const [year, month, day] = date.split('-');
-  return `${day}/${month}/${year}`;
-};
-
-function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
+function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
   const [formData, setFormData] = useState(person);
   const managers = useManagers(person.id);
 
@@ -59,18 +38,17 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
       | React.ChangeEvent<HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    console.log(value);
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updatePerson({
+    updatePersonAction({
       ...formData,
       entryDate: unNormalizeDate(entryDate),
       birthDate: unNormalizeDate(birthDate),
       manager: selectedManagerName,
-    }).then(() => refreshPerson());
+    });
   };
 
   return (
@@ -113,7 +91,7 @@ function EditPersonForm({ person, refreshPerson }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('image')}>Photo: </Iconized>
+        <Iconized icon={solid('image')}>Picture: </Iconized>
         <input type="text" name="photo" value={photo} onChange={handleChange} />
 
         <Iconized icon={solid('person')}>Manger: </Iconized>

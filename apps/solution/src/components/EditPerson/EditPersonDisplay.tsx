@@ -48,7 +48,14 @@ function EditPersonDisplay({ person }: EditPersonDisplayProps) {
         )}
         <Iconized icon={solid('birthday-cake')}>{birthDate}</Iconized>
         <Iconized icon={solid('clock')}>Entry date: {entryDate}</Iconized>
-        <Iconized icon={solid('person')}>Gender: {gender}</Iconized>
+        <Iconized icon={solid('person')}>
+          Gender:{' '}
+          {gender === 'f'
+            ? 'Female'
+            : gender === 'm'
+            ? 'Male'
+            : 'Not specified'}
+        </Iconized>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ function EditPeople() {
   const [showForm, setShowForm] = useState(false);
 
   const { id } = useParams();
-  const [person, refreshPerson] = usePerson(id as string);
+  const [person, updatePersonAction] = usePerson(id as string);
 
   if (!person) return <div>Loading...</div>;
 
@@ -26,7 +26,10 @@ function EditPeople() {
         {!showForm ? (
           <EditPersonDisplay person={person} />
         ) : (
-          <EditPersonForm person={person} refreshPerson={refreshPerson} />
+          <EditPersonForm
+            person={person}
+            updatePersonAction={updatePersonAction}
+          />
         )}
         <div className={styles['btn-container']}>
           <Iconized

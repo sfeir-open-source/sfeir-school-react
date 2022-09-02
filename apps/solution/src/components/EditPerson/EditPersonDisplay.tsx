@@ -35,20 +35,22 @@ function EditPersonDisplay({ person }: EditPersonDisplayProps) {
           {firstname}&nbsp;{lastname}
         </h2>
         <div className={styles.position}>{position}</div>
-        <Iconized icon={solid('envelope')}>
+        <Iconized icon={{ icon: solid('envelope') }}>
           <a href={`mailto:${email}`}>{email}</a>
         </Iconized>
-        <Iconized icon={solid('phone')}>
+        <Iconized icon={{ icon: solid('phone') }}>
           <a href={`tel:${phone}`}>{phone}</a>
         </Iconized>
         {manager && (
-          <Iconized icon={solid('user')}>
+          <Iconized icon={{ icon: solid('user') }}>
             <Link to={`/edit/${managerId}`}>{manager}</Link>
           </Iconized>
         )}
-        <Iconized icon={solid('birthday-cake')}>{birthDate}</Iconized>
-        <Iconized icon={solid('clock')}>Entry date: {entryDate}</Iconized>
-        <Iconized icon={solid('person')}>
+        <Iconized icon={{ icon: solid('birthday-cake') }}>{birthDate}</Iconized>
+        <Iconized icon={{ icon: solid('clock') }}>
+          Entry date: {entryDate}
+        </Iconized>
+        <Iconized icon={{ icon: solid('person') }}>
           Gender:{' '}
           {gender === 'f'
             ? 'Female'

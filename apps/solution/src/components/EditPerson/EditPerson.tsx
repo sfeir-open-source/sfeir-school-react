@@ -32,15 +32,13 @@ function EditPeople() {
       )}
       <div className={styles['btn-container']}>
         <Iconized
-          icon={solid('pen-to-square')}
-          size={'2x'}
+          icon={{ size: '2x', icon: solid('pen-to-square') }}
           className={styles['edit-btn']}
           onClick={() => setShowForm(!showForm)}
           data-cy={`edit-btn-${id}`}
         />
         <Iconized
-          icon={solid('person-circle-minus')}
-          size={'2x'}
+          icon={{ size: '2x', icon: solid('person-circle-minus') }}
           className={styles['delete-btn']}
           data-cy={`delete-btn-${id}`}
         />

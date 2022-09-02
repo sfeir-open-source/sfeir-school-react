@@ -59,7 +59,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         className={styles.photo}
       />
       <div className={styles.informations}>
-        <Iconized icon={solid('id-card')}>Firstname: </Iconized>
+        <Iconized icon={{ icon: solid('id-card') }}>Firstname: </Iconized>
         <input
           type="text"
           name="firstname"
@@ -67,7 +67,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('id-card')}>Name: </Iconized>
+        <Iconized icon={{ icon: solid('id-card') }}>Name: </Iconized>
         <input
           type="text"
           name="lastname"
@@ -75,7 +75,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('briefcase')}>Position: </Iconized>
+        <Iconized icon={{ icon: solid('briefcase') }}>Position: </Iconized>
         <input
           type="text"
           name="position"
@@ -83,7 +83,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('envelope')}>email: </Iconized>
+        <Iconized icon={{ icon: solid('envelope') }}>email: </Iconized>
         <input
           type="email"
           name="email"
@@ -91,10 +91,10 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('image')}>Picture: </Iconized>
+        <Iconized icon={{ icon: solid('image') }}>Picture: </Iconized>
         <input type="text" name="photo" value={photo} onChange={handleChange} />
 
-        <Iconized icon={solid('person')}>Manager: </Iconized>
+        <Iconized icon={{ icon: solid('person') }}>Manager: </Iconized>
         <select
           name="managerId"
           value={managerId}
@@ -108,7 +108,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           ))}
         </select>
 
-        <Iconized icon={solid('phone')}>Phone:</Iconized>
+        <Iconized icon={{ icon: solid('phone') }}>Phone:</Iconized>
         <input
           type="number"
           name="phone"
@@ -116,7 +116,9 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('birthday-cake')}>Birth date: </Iconized>
+        <Iconized icon={{ icon: solid('birthday-cake') }}>
+          Birth date:{' '}
+        </Iconized>
         <input
           type="date"
           name="birthDate"
@@ -124,7 +126,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('clock')}>Entry date:</Iconized>
+        <Iconized icon={{ icon: solid('clock') }}>Entry date:</Iconized>
         <input
           type="date"
           name="entryDate"
@@ -132,7 +134,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           onChange={handleChange}
         />
 
-        <Iconized icon={solid('person')}>Gender:</Iconized>
+        <Iconized icon={{ icon: solid('person') }}>Gender:</Iconized>
         <select
           name="gender"
           id=""

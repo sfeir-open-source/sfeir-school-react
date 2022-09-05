@@ -59,43 +59,66 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         className={styles.photo}
       />
       <div className={styles.informations}>
-        <Iconized icon={{ icon: solid('id-card') }}>Firstname: </Iconized>
+        <Iconized icon={{ icon: solid('id-card') }}>
+          <label htmlFor="firstname">Firstname:</label>
+        </Iconized>
         <input
+          id="firstname"
           type="text"
           name="firstname"
           value={firstname}
           onChange={handleChange}
         />
 
-        <Iconized icon={{ icon: solid('id-card') }}>Name: </Iconized>
+        <Iconized icon={{ icon: solid('id-card') }}>
+          <label htmlFor="lastname">Lastname:</label>
+        </Iconized>
         <input
+          id="lastname"
           type="text"
           name="lastname"
           value={lastname}
           onChange={handleChange}
         />
 
-        <Iconized icon={{ icon: solid('briefcase') }}>Position: </Iconized>
+        <Iconized icon={{ icon: solid('briefcase') }}>
+          <label htmlFor="position">Position:</label>
+        </Iconized>
         <input
+          id="position"
           type="text"
           name="position"
           value={position}
           onChange={handleChange}
         />
 
-        <Iconized icon={{ icon: solid('envelope') }}>email: </Iconized>
+        <Iconized icon={{ icon: solid('envelope') }}>
+          <label htmlFor="email">Email:</label>
+        </Iconized>
         <input
+          id="email"
           type="email"
           name="email"
           value={email}
           onChange={handleChange}
         />
 
-        <Iconized icon={{ icon: solid('image') }}>Picture: </Iconized>
-        <input type="text" name="photo" value={photo} onChange={handleChange} />
+        <Iconized icon={{ icon: solid('image') }}>
+          <label htmlFor="photo">Picture:</label>
+        </Iconized>
+        <input
+          id="photo"
+          type="text"
+          name="photo"
+          value={photo}
+          onChange={handleChange}
+        />
 
-        <Iconized icon={{ icon: solid('person') }}>Manager: </Iconized>
+        <Iconized icon={{ icon: solid('person') }}>
+          <label htmlFor="manager">Manager:</label>
+        </Iconized>
         <select
+          id="manager"
           name="managerId"
           value={managerId}
           onChange={(e) => handleChange(e)}
@@ -108,8 +131,11 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
           ))}
         </select>
 
-        <Iconized icon={{ icon: solid('phone') }}>Phone:</Iconized>
+        <Iconized icon={{ icon: solid('phone') }}>
+          <label htmlFor="phone">Phone:</label>
+        </Iconized>
         <input
+          id="phone"
           type="number"
           name="phone"
           value={phone}
@@ -117,27 +143,33 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('birthday-cake') }}>
-          Birth date:{' '}
+          <label htmlFor="birthDate">Birthdate:</label>
         </Iconized>
         <input
+          id="birthDate"
           type="date"
           name="birthDate"
           value={normalizeDate(birthDate)}
           onChange={handleChange}
         />
 
-        <Iconized icon={{ icon: solid('clock') }}>Entry date:</Iconized>
+        <Iconized icon={{ icon: solid('clock') }}>
+          <label htmlFor="entryDate">Entry date:</label>
+        </Iconized>
         <input
+          id="entryDate"
           type="date"
           name="entryDate"
           value={normalizeDate(entryDate)}
           onChange={handleChange}
         />
 
-        <Iconized icon={{ icon: solid('person') }}>Gender:</Iconized>
+        <Iconized icon={{ icon: solid('person') }}>
+          <label htmlFor="gender">Gender:</label>
+        </Iconized>
         <select
           name="gender"
-          id=""
+          id="gender"
           value={gender}
           onChange={(e) => handleChange(e)}
         >

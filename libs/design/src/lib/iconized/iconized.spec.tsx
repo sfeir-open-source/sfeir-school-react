@@ -5,7 +5,7 @@ import Iconized from './iconized';
 describe('Iconized', () => {
   it('should render successfully', () => {
     const { container } = render(
-      <Iconized icon={solid('user')}>a label</Iconized>
+      <Iconized icon={{ icon: solid('user') }}>a label</Iconized>
     );
     expect(screen.getByText('a label')).toBeInTheDocument();
     expect(container.querySelector('[data-icon="user"]')).toBeTruthy();
@@ -16,7 +16,7 @@ describe('Iconized', () => {
       <Iconized
         data-testid="iconized"
         className="my-class"
-        icon={solid('user')}
+        icon={{ icon: solid('user') }}
       >
         a label
       </Iconized>

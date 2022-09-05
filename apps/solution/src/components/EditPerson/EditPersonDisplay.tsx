@@ -2,6 +2,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Iconized } from '@libs/design';
 import { Link } from 'react-router-dom';
 import { PersonModel } from '../../api/person';
+import { normalizeDate } from '../../utils/date';
 import styles from './people.module.scss';
 
 export interface EditPersonDisplayProps {
@@ -46,9 +47,11 @@ function EditPersonDisplay({ person }: EditPersonDisplayProps) {
             <Link to={`/edit/${managerId}`}>{manager}</Link>
           </Iconized>
         )}
-        <Iconized icon={{ icon: solid('birthday-cake') }}>{birthDate}</Iconized>
+        <Iconized icon={{ icon: solid('birthday-cake') }}>
+          {normalizeDate(birthDate)}
+        </Iconized>
         <Iconized icon={{ icon: solid('clock') }}>
-          Entry date: {entryDate}
+          Entry date: {normalizeDate(entryDate)}
         </Iconized>
         <Iconized icon={{ icon: solid('person') }}>
           Gender:{' '}

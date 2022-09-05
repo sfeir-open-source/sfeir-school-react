@@ -4,7 +4,7 @@ import { PersonModel } from '../../api/person';
 import styles from './people.module.scss';
 import { useState } from 'react';
 import useManagers from './UseManagers';
-import { normalizeDate, unNormalizeDate } from '../../utils/date';
+import { normalizeDate } from '../../utils/date';
 
 export interface EditPersonFormProps {
   person: PersonModel;
@@ -45,8 +45,8 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
     e.preventDefault();
     updatePersonAction({
       ...formData,
-      entryDate: unNormalizeDate(entryDate),
-      birthDate: unNormalizeDate(birthDate),
+      entryDate: new Date(formData.entryDate).toISOString(),
+      birthDate: new Date(formData.birthDate).toISOString(),
       manager: selectedManagerName,
     });
   };

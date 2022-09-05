@@ -6,7 +6,7 @@ export default function useManagers(currentId: string) {
 
   useEffect(() => {
     getPeople().then((res) =>
-      setManagers(res.filter((p) => p.id !== currentId))
+      setManagers(res.filter((p) => p.id !== currentId && p.isManager))
     );
   }, [currentId]);
 

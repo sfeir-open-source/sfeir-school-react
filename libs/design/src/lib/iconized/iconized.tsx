@@ -21,10 +21,7 @@ export function Iconized({
       className={classnames(styles['container'], className)}
       {...passThrough}
     >
-      <FontAwesomeIcon
-        //icon={icon}
-        {...icon}
-      />
+      <FontAwesomeIcon {...icon} />
       {children}
     </div>
   );

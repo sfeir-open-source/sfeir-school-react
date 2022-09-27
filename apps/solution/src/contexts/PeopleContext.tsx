@@ -37,7 +37,7 @@ enum PeopleActionKind {
 
 interface PeopleAction {
   type: PeopleActionKind;
-  payload: PersonModel;
+  person: PersonModel;
 }
 
 type PeopleState = [PersonModel]

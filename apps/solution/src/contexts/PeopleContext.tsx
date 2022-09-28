@@ -46,7 +46,7 @@ function peopleReducer(people: PeopleState, action: Action): PeopleState {
       return [...people, ...action.people]
     }
     case PeopleActionKind.UPDATE: {
-      return [...people, action.person]
+      return people.map(person => person.id === action.person.id ? action.person : person)
     }
     case PeopleActionKind.REMOVE: {
       return people.filter(person => person.id !== action.person.id)

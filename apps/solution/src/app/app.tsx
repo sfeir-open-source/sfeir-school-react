@@ -2,6 +2,7 @@ import People from '../components/people/people';
 import EditPeople from '../components/EditPerson/EditPerson';
 import styles from './app.module.scss';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { PeopleProvider } from '../contexts/PeopleContext';
 
 export function App() {
   return (
@@ -13,10 +14,13 @@ export function App() {
           </Link>
         </header>
         <main>
-          <Routes>
-            <Route path="/" element={<People />} />
-            <Route path="/edit/:id" element={<EditPeople />} />
-          </Routes>
+          <PeopleProvider>
+            <Routes>
+              <Route path="/" element={<People />} />
+              <Route path="/edit/:id" element={<EditPeople />} />
+            </Routes>
+          </PeopleProvider>
+
         </main>
       </BrowserRouter>
     </div>

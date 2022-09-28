@@ -3,8 +3,12 @@ import { useContext } from "react";
 import { createContext } from "react";
 import { PersonModel } from "../api/person";
 
-export const PeopleContext = createContext<PersonModel[]>([]);
-export const PeopleDispatchContext = createContext<React.Dispatch<PeopleAction> | null>(null);
+interface PeopleContext {
+  people: PersonModel[],
+  dispatch: React.Dispatch<PeopleAction> | null
+}
+
+export const PeopleContext = createContext<PeopleContext>({ people: [], dispatch: null });
 
 interface childrenProps {
   children: JSX.Element;
@@ -13,13 +17,12 @@ interface childrenProps {
 export function PeopleProvider({ children }: childrenProps) {
   const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[])
   return (
-    <PeopleContext.Provider value={people} >
-      <PeopleDispatchContext.Provider value={dispatch}>
-        {children}
-      </PeopleDispatchContext.Provider>
+    <PeopleContext.Provider value={{ people, dispatch }} >
+      {children}
     </PeopleContext.Provider>
   )
 }
+
 type PeopleState = PersonModel[]
 function peopleReducer(people: PeopleState, action: PeopleAction) {
   // TODO : Add, Remove, Update, Set Data
@@ -42,9 +45,9 @@ interface PeopleAction {
 }
 
 export function usePeople() {
-  return useContext(PeopleContext);
+  return useContext(PeopleContext).people;
 }
 
 export function usePeopleDispatch() {
-  return useContext(PeopleDispatchContext);
+  return useContext(PeopleContext).dispatch;
 }

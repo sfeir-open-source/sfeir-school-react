@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { useContext } from "react";
 import { createContext } from "react";
 import { PersonModel } from "../api/person";
 
@@ -38,4 +39,12 @@ enum PeopleActionKind {
 interface PeopleAction {
   type: PeopleActionKind;
   person: PersonModel;
+}
+
+export function usePeople() {
+  return useContext(PeopleContext);
+}
+
+export function usePeopleDispatch() {
+  return useContext(PeopleDispatchContext);
 }

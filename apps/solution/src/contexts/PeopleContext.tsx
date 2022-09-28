@@ -40,4 +40,4 @@ interface PeopleAction {
   person: PersonModel;
 }
 
-type PeopleState = [PersonModel]
+type PeopleState = PersonModel[] | null

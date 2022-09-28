@@ -2,15 +2,15 @@ import { useReducer } from "react";
 import { createContext } from "react";
 import { PersonModel } from "../api/person";
 
-export const PeopleContext = createContext(null);
-export const PeopleDispatchContext = createContext(null);
+export const PeopleContext = createContext<PersonModel[] | null>(null);
+export const PeopleDispatchContext = createContext<React.Dispatch<PeopleAction> | null>(null);
 
 interface childrenProps {
   children: JSX.Element;
 }
 
 export function PeopleProvider({ children }: childrenProps) {
-  const [people, dispatch] = useReducer(peopleReducer, [])
+  const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[])
   return (
     <PeopleContext.Provider value={people} >
       <PeopleDispatchContext.Provider value={dispatch}>
@@ -19,7 +19,7 @@ export function PeopleProvider({ children }: childrenProps) {
     </PeopleContext.Provider>
   )
 }
-
+type PeopleState = PersonModel[] | null
 function peopleReducer(people: PeopleState, action: PeopleAction) {
   // TODO : Add, Remove, Update, Set Data
   switch (action.type) {
@@ -39,5 +39,3 @@ interface PeopleAction {
   type: PeopleActionKind;
   person: PersonModel;
 }
-
-type PeopleState = PersonModel[] | null

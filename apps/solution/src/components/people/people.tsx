@@ -1,7 +1,7 @@
 import { Grid } from '@libs/design';
 import { useMemo, useState } from 'react';
+import { usePeopleContext } from '../../contexts/PeopleContext';
 import Person from '../person/person';
-import usePeople from '../person/usePeople';
 
 import style from './people.module.scss';
 
@@ -10,7 +10,7 @@ function normalize(text: string) {
 }
 
 export function People() {
-  const people = usePeople();
+  const people = usePeopleContext();
   const [searchTerm, setSearchTerm] = useState("")
 
   const filteredPeople = useMemo(() => people?.filter(person => {

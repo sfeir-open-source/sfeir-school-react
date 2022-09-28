@@ -37,7 +37,8 @@ interface PeopleAction {
 function peopleReducer(people: PeopleState, action: PeopleAction) {
   // TODO : Add, Remove, Update, Set Data
   switch (action.type) {
-    case PeopleActionKind.ADD: {
+    case PeopleActionKind.ADD:
+    case PeopleActionKind.UPDATE: {
       return [...people, action.person]
     }
     case PeopleActionKind.REMOVE: {

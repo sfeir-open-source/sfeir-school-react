@@ -22,9 +22,9 @@ export enum PeopleActionKind {
   REMOVE = 'REMOVE',
   INIT = 'INIT'
 }
-interface PeopleActionPeople { type: PeopleActionKind.ADD | PeopleActionKind.INIT, people: PersonModel[]; }
-interface PeopleActionPerson { type: PeopleActionKind.UPDATE | PeopleActionKind.REMOVE, person: PersonModel; }
-type Action = PeopleActionPeople | PeopleActionPerson
+interface PeopleAction { type: PeopleActionKind.ADD | PeopleActionKind.INIT, people: PersonModel[]; }
+interface PersonAction { type: PeopleActionKind.UPDATE | PeopleActionKind.REMOVE, person: PersonModel; }
+type Action = PeopleAction | PersonAction
 
 export function PeopleProvider({ children }: childrenProps) {
   const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[])
@@ -49,7 +49,7 @@ function peopleReducer(people: PeopleState, action: Action): PeopleState {
       return [...people, action.person]
     }
     case PeopleActionKind.REMOVE: {
-      return [...people.filter(person => person.id !== action.person.id)]
+      return people.filter(person => person.id !== action.person.id)
     }
     case PeopleActionKind.INIT: return action.people
     default: {

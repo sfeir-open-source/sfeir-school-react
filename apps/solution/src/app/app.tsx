@@ -20,7 +20,6 @@ export function App() {
               <Route path="/edit/:id" element={<EditPeople />} />
             </Routes>
           </PeopleProvider>
-
         </main>
       </BrowserRouter>
     </div>

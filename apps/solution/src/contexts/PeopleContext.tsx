@@ -6,7 +6,7 @@ import { getPeople, PersonModel } from "../api/person";
 
 interface PeopleContextTypes {
   people: PersonModel[],
-  dispatch: React.Dispatch<PeopleAction>
+  dispatch: React.Dispatch<Action>
 }
 
 export const PeopleContext = createContext<PeopleContextTypes>({} as PeopleContextTypes);
@@ -22,10 +22,9 @@ export enum PeopleActionKind {
   REMOVE = 'REMOVE',
   INIT = 'INIT'
 }
-interface PeopleAction {
-  type: PeopleActionKind;
-  people: PersonModel[];
-}
+interface PeopleActionPeople { type: PeopleActionKind.ADD | PeopleActionKind.INIT, people: PersonModel[]; }
+interface PeopleActionPerson { type: PeopleActionKind.UPDATE | PeopleActionKind.REMOVE, person: PersonModel; }
+type Action = PeopleActionPeople | PeopleActionPerson
 
 export function PeopleProvider({ children }: childrenProps) {
   const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[])
@@ -41,14 +40,16 @@ export function PeopleProvider({ children }: childrenProps) {
   )
 }
 
-function peopleReducer(people: PeopleState, action: PeopleAction) {
+function peopleReducer(people: PeopleState, action: Action): PeopleState {
   switch (action.type) {
-    case PeopleActionKind.ADD:
-    case PeopleActionKind.UPDATE: {
+    case PeopleActionKind.ADD: {
       return [...people, ...action.people]
     }
+    case PeopleActionKind.UPDATE: {
+      return [...people, action.person]
+    }
     case PeopleActionKind.REMOVE: {
-      return [...people.filter(person => person.id !== action.people[0]?.id)]
+      return [...people.filter(person => person.id !== action.person.id)]
     }
     case PeopleActionKind.INIT: return action.people
     default: {

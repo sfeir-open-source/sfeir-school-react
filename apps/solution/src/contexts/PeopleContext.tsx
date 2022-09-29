@@ -18,9 +18,10 @@ export enum PeopleActionKind {
   REMOVE = 'REMOVE',
   INIT = 'INIT'
 }
-interface PeopleAction { type: PeopleActionKind.ADD | PeopleActionKind.INIT, people: PersonModel[]; }
-interface PersonAction { type: PeopleActionKind.UPDATE | PeopleActionKind.REMOVE, person: PersonModel; }
-type Action = PeopleAction | PersonAction
+type Action = { type: PeopleActionKind.INIT, people: PersonModel[] }
+  | { type: PeopleActionKind.ADD, people: PersonModel[] }
+  | { type: PeopleActionKind.UPDATE, person: PersonModel }
+  | { type: PeopleActionKind.REMOVE, person: PersonModel }
 
 export function PeopleProvider({ children }: PropsWithChildren<unknown>) {
   const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[]);

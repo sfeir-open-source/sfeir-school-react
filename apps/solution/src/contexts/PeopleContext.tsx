@@ -1,8 +1,7 @@
-import { useEffect, useReducer } from "react";
+import { PropsWithChildren, useEffect, useReducer } from "react";
 import { useContext } from "react";
 import { createContext } from "react";
 import { getPeople, PersonModel } from "../api/person";
-
 
 interface PeopleContextTypes {
   people: PersonModel[],
@@ -10,10 +9,6 @@ interface PeopleContextTypes {
 }
 
 export const PeopleContext = createContext<PeopleContextTypes>({} as PeopleContextTypes);
-
-interface childrenProps {
-  children: JSX.Element[] | JSX.Element;
-}
 
 type PeopleState = PersonModel[]
 export enum PeopleActionKind {
@@ -26,7 +21,7 @@ interface PeopleAction { type: PeopleActionKind.ADD | PeopleActionKind.INIT, peo
 interface PersonAction { type: PeopleActionKind.UPDATE | PeopleActionKind.REMOVE, person: PersonModel; }
 type Action = PeopleAction | PersonAction
 
-export function PeopleProvider({ children }: childrenProps) {
+export function PeopleProvider({ children }: PropsWithChildren<unknown>) {
   const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[])
 
   useEffect(() => {
@@ -41,7 +36,8 @@ export function PeopleProvider({ children }: childrenProps) {
 }
 
 function peopleReducer(people: PeopleState, action: Action): PeopleState {
-  switch (action.type) {
+  const type = action.type
+  switch (type) {
     case PeopleActionKind.ADD: {
       return [...people, ...action.people]
     }
@@ -53,7 +49,7 @@ function peopleReducer(people: PeopleState, action: Action): PeopleState {
     }
     case PeopleActionKind.INIT: return action.people
     default: {
-      return [...people];
+      throw Error('Unknown action: ' + type);
     }
   }
 }

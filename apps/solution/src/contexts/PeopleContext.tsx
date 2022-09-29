@@ -56,10 +56,14 @@ function peopleReducer(people: PeopleState, action: Action): PeopleState {
 }
 
 // Utils
+export function usePeople() {
+  return useContext(PeopleContext);
+}
+
 export function usePeopleContext() {
-  return useContext(PeopleContext).people;
+  return usePeople().people;
 }
 
 export function usePeopleDispatch() {
-  return useContext(PeopleContext).dispatch;
+  return usePeople().dispatch;
 }

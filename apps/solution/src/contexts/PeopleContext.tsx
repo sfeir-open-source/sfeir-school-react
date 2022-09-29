@@ -37,7 +37,7 @@ export function PeopleProvider({ children }: PropsWithChildren<unknown>) {
 
 function peopleReducer(people: PeopleState, action: Action): PeopleState {
   const type = action.type
-  switch (type) {
+  switch (action.type) {
     case PeopleActionKind.ADD: {
       return [...people, ...action.people]
     }

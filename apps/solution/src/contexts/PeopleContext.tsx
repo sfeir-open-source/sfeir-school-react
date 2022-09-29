@@ -8,7 +8,8 @@ interface PeopleContextTypes {
   dispatch: React.Dispatch<Action>
 }
 
-export const PeopleContext = createContext<PeopleContextTypes>({} as PeopleContextTypes);
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export const PeopleContext = createContext<PeopleContextTypes>({ people: [], dispatch: () => { } });
 
 type PeopleState = PersonModel[]
 export enum PeopleActionKind {

@@ -1,22 +1,16 @@
-import { useEffect, useState } from 'react';
-import { getPerson, PersonModel, updatePerson } from '../../api/person';
+import { useMemo } from 'react';
+import { PersonModel, updatePerson } from '../../api/person';
+import { PeopleActionKind, usePeople } from '../../contexts/PeopleContext';
 
 export default function usePerson(id: string) {
-  const [person, setPerson] = useState<PersonModel | null>(null);
-
-  useEffect(() => {
-    getPerson(id).then(setPerson);
-  }, [id]);
-
-  const refreshPerson = (): void => {
-    getPerson(id).then(setPerson);
-  };
+  const { people, dispatch } = usePeople();
+  const person = useMemo(() => people.find(person => person.id === id), [people, id])
 
   const updatePersonAction = (person: PersonModel): void => {
     updatePerson(person).then((updatedPerson) => {
-      setPerson(updatedPerson);
+      dispatch({ type: PeopleActionKind.UPDATE, person: updatedPerson })
     });
   };
 
-  return [person, updatePersonAction, refreshPerson] as const;
+  return [person, updatePersonAction] as const;
 }

@@ -3,7 +3,7 @@ import { PersonModel, updatePerson } from '../../api/person';
 import { PeopleActionKind, usePeople } from '../../contexts/PeopleContext';
 
 export default function usePerson(id: string) {
-  const [people, dispatch] = usePeople();
+  const { people, dispatch } = usePeople();
   const person = useMemo(() => people.find(person => person.id === id), [people, id])
 
   const updatePersonAction = (person: PersonModel): void => {

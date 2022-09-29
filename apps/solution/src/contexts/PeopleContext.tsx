@@ -41,15 +41,15 @@ function peopleReducer(people: PeopleState, action: Action): PeopleState {
   const type = action.type
   switch (action.type) {
     case PeopleActionKind.ADD: {
-      return [...people, ...action.people]
+      return [...people, ...action.people];
     }
     case PeopleActionKind.UPDATE: {
-      return people.map(person => person.id === action.person.id ? action.person : person)
+      return people.map(person => person.id === action.person.id ? action.person : person);
     }
     case PeopleActionKind.REMOVE: {
-      return people.filter(person => person.id !== action.person.id)
+      return people.filter(person => person.id !== action.person.id);
     }
-    case PeopleActionKind.INIT: return action.people
+    case PeopleActionKind.INIT: return action.people;
     default: {
       throw Error('Unknown action: ' + type);
     }

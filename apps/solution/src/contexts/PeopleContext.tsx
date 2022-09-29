@@ -57,13 +57,13 @@ function peopleReducer(people: PeopleState, action: Action): PeopleState {
 
 // Utils
 export function usePeople() {
-  return useContext(PeopleContext);
+  return [useContext(PeopleContext).people, useContext(PeopleContext).dispatch] as const;
 }
 
 export function usePeopleContext() {
-  return usePeople().people;
+  return useContext(PeopleContext).people;
 }
 
 export function usePeopleDispatch() {
-  return usePeople().dispatch;
+  return useContext(PeopleContext).dispatch;
 }

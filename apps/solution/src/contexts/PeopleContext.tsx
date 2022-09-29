@@ -23,7 +23,7 @@ interface PersonAction { type: PeopleActionKind.UPDATE | PeopleActionKind.REMOVE
 type Action = PeopleAction | PersonAction
 
 export function PeopleProvider({ children }: PropsWithChildren<unknown>) {
-  const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[])
+  const [people, dispatch] = useReducer(peopleReducer, [] as PersonModel[]);
 
   useEffect(() => {
     getPeople().then((people) => dispatch({ type: PeopleActionKind.INIT, people }));

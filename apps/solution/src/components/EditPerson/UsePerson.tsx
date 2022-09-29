@@ -10,10 +10,6 @@ export default function usePerson(id: string) {
     getPerson(id).then(setPerson);
   }, [id]);
 
-  const refreshPerson = (): void => {
-    getPerson(id).then(setPerson);
-  };
-
   const updatePersonAction = (person: PersonModel): void => {
     updatePerson(person).then((updatedPerson) => {
       setPerson(updatedPerson);
@@ -21,5 +17,5 @@ export default function usePerson(id: string) {
     });
   };
 
-  return [person, updatePersonAction, refreshPerson] as const;
+  return [person, updatePersonAction] as const;
 }

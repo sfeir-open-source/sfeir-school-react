@@ -44,6 +44,7 @@
       },
       "tags": []
     },
+    "shared-ui-styles": "libs/shared/ui-styles",
     "solution": {
       "root": "apps/solution",
       "sourceRoot": "apps/solution/src",

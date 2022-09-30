@@ -10,14 +10,33 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/design": ["libs/design/src/index.ts"]
+      "@libs/design": [
+        "libs/design/src/index.ts"
+      ],
+      "@styles": [
+        "libs/shared/ui-styles/src/index.ts"
+      ],
+      "variables": [
+        "libs/shared/ui-styles/src/lib/variables.scss"
+      ],
+      "colors": [
+        "libs/shared/ui-styles/src/lib/colors.scss"
+      ]
     }
   },
-  "include": ["./jest-setup.ts"],
-  "exclude": ["node_modules", "tmp"]
+  "include": [
+    "./jest-setup.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

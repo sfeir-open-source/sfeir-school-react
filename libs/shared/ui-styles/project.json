@@ -1,0 +1,21 @@
+{
+  "root": "libs/shared/ui-styles",
+  "sourceRoot": "libs/shared/ui-styles/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/shared/ui-styles",
+        "main": "libs/shared/ui-styles/src/index.ts",
+        "tsConfig": "libs/shared/ui-styles/tsconfig.lib.json",
+        "assets": [
+          "libs/shared/ui-styles/*.md"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

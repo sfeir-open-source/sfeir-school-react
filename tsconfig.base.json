@@ -26,9 +26,6 @@
       ],
       "variables": [
         "libs/shared/ui-styles/src/lib/variables.scss"
-      ],
-      "colors": [
-        "libs/shared/ui-styles/src/lib/colors.scss"
       ]
     }
   },

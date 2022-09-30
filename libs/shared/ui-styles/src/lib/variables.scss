@@ -2,7 +2,12 @@
 $borderRadius: 4px;
 
 // Colors
-$text: hsl(0, 0%, 5%);
+$textBlack: hsl(0, 0%, 5%);
+$textWhite: hsl(0, 0%, 95%);
+
+// Backgrounds
+$primary_color: hsl(204, 99%, 34%);
+$white_color: hsl(0, 0%, 100%);
 
 // Animation
 $transitionFast: 200ms;

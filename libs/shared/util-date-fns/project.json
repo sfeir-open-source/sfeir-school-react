@@ -1,0 +1,32 @@
+{
+  "root": "libs/shared/util-date-fns",
+  "sourceRoot": "libs/shared/util-date-fns/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/util-date-fns",
+        "main": "libs/shared/util-date-fns/src/index.ts",
+        "tsConfig": "libs/shared/util-date-fns/tsconfig.lib.json",
+        "assets": ["libs/shared/util-date-fns/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/util-date-fns/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util-date-fns"],
+      "options": {
+        "jestConfig": "libs/shared/util-date-fns/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

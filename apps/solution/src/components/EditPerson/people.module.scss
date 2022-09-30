@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'shadows' as *;
 
 .container {
   display: flex;
@@ -55,13 +56,26 @@
 
 .submit-btn {
   display: inline-block;
+  @include BoxShadow(2);
   cursor: pointer;
   border: none;
   border-radius: $borderRadius;
   margin: 0.5em 0;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   color: $textWhite;
   background-color: $primary_color;
   font-weight: bold;
   font-size: large;
+  transition: $transitionFast;
+  text-transform: uppercase;
+
+  &:hover {
+    @include BoxShadow(4);
+  }
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
 }

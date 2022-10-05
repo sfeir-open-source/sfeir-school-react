@@ -4,7 +4,7 @@ import { PersonModel } from '../../api/person';
 import styles from './people.module.scss';
 import { useState } from 'react';
 import useManagers from './UseManagers';
-import { normalizeDate } from '../../utils/date';
+import { normalizeDate } from '@util/date-fns';
 
 export interface EditPersonFormProps {
   person: PersonModel;

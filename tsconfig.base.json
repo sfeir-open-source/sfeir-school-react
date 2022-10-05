@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/design": ["libs/design/src/index.ts"]
+      "@libs/design": ["libs/design/src/index.ts"],
+      "@util/date-fns": ["libs/shared/util-date-fns/src/index.ts"]
     }
   },
   "include": ["./jest-setup.ts"],

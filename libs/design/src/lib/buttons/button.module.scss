@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'shadows' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: $white_color;
+  @include BoxShadow(2);
+  border-radius: $borderRadius;
+  transition: $transitionFast;
+  text-transform: uppercase;
+  color: $textBlack;
+
+  &:hover {
+    cursor: pointer;
+    @include BoxShadow(4);
+  }
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'shadows';
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    border: none;
+    background-color: $white_color;
+    border-radius: $borderRadius;
+    padding: 1em;
+    @include BoxShadow(2)
+  }
+
+  .label {
+    &.mandatory::after {
+      content: '*';
+      color: red;
+      margin-left: .5em;
+    }
+  }
+}

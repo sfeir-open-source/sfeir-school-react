@@ -45,6 +45,7 @@
       "tags": []
     },
     "shared-ui-styles": "libs/shared/ui-styles",
+    "shared-util-date-fns": "libs/shared/util-date-fns",
     "solution": {
       "root": "apps/solution",
       "sourceRoot": "apps/solution/src",

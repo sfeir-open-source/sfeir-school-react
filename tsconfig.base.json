@@ -18,6 +18,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@util/date-fns": ["libs/shared/util-date-fns/src/index.ts"],
       "@libs/design": [
         "libs/design/src/index.ts"
       ],

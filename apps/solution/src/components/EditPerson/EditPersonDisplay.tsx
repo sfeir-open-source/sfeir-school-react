@@ -1,8 +1,8 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Iconized } from '@libs/design';
+import { normalizeDate } from '@util/date-fns';
 import { Link } from 'react-router-dom';
 import { PersonModel } from '../../api/person';
-import { normalizeDate } from '../../utils/date';
 import styles from './people.module.scss';
 
 export interface EditPersonDisplayProps {
@@ -58,8 +58,8 @@ function EditPersonDisplay({ person }: EditPersonDisplayProps) {
           {gender === 'f'
             ? 'Female'
             : gender === 'm'
-            ? 'Male'
-            : 'Not specified'}
+              ? 'Male'
+              : 'Not specified'}
         </Iconized>
       </div>
     </div>

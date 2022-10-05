@@ -3,8 +3,6 @@
 }
 
 .searchBar {
-  margin: 2em;
-
   input {
     border: none;
     padding: 1em;
@@ -23,4 +21,13 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.actionButtons {
+  display: flex;
+  margin: 2em 0;
+
+  >* {
+    margin-left: 1em;
+  }
 }

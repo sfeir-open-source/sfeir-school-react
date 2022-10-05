@@ -1,4 +1,4 @@
-import { Grid } from '@libs/design';
+import { Grid, LinkButton } from '@libs/design';
 import { useMemo, useState } from 'react';
 import { usePeopleContext } from '../../contexts/PeopleContext';
 import Person from '../person/person';
@@ -20,7 +20,10 @@ export function People() {
 
   return (
     <>
-      <SearchBar searchTerm={searchTerm} onSearchTermChange={setSearchTerm} />
+      <div className={style.actionButtons}>
+        <SearchBar searchTerm={searchTerm} onSearchTermChange={setSearchTerm} />
+        <LinkButton to="/people/new">Add</LinkButton >
+      </div>
       <Grid className={style.container}>
         {filteredPeople?.map((person) => <Person key={person.id} person={person} />) ||
           'Loading ...'}

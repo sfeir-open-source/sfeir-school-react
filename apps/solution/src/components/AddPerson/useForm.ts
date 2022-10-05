@@ -2,7 +2,7 @@ import { useState } from "react";
 import { PersonModel } from "../../api/person";
 
 export default function useForm(initialState: PersonModel, validations = []) {
-  const [values, setValues] = useState(initialState || {})
+  const [values, setValues] = useState(initialState)
   const [errors, setErrors] = useState({})
   const [isValid, setIsValid] = useState(true)
 

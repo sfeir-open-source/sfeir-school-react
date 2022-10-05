@@ -60,7 +60,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
       />
       <div className={styles.informations}>
         <Iconized icon={{ icon: solid('id-card') }}>
-          <label htmlFor="firstname">Firstname:</label>
+          <label htmlFor="firstname">Firstname</label>
         </Iconized>
         <input
           id="firstname"
@@ -71,7 +71,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('id-card') }}>
-          <label htmlFor="lastname">Lastname:</label>
+          <label htmlFor="lastname">Lastname</label>
         </Iconized>
         <input
           id="lastname"
@@ -82,7 +82,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('briefcase') }}>
-          <label htmlFor="position">Position:</label>
+          <label htmlFor="position">Position</label>
         </Iconized>
         <input
           id="position"
@@ -93,7 +93,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('envelope') }}>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
         </Iconized>
         <input
           id="email"
@@ -104,7 +104,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('image') }}>
-          <label htmlFor="photo">Picture:</label>
+          <label htmlFor="photo">Picture</label>
         </Iconized>
         <input
           id="photo"
@@ -115,7 +115,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('person') }}>
-          <label htmlFor="manager">Manager:</label>
+          <label htmlFor="manager">Manager</label>
         </Iconized>
         <select
           id="manager"
@@ -132,7 +132,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         </select>
 
         <Iconized icon={{ icon: solid('phone') }}>
-          <label htmlFor="phone">Phone:</label>
+          <label htmlFor="phone">Phone</label>
         </Iconized>
         <input
           id="phone"
@@ -143,7 +143,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('birthday-cake') }}>
-          <label htmlFor="birthDate">Birthdate:</label>
+          <label htmlFor="birthDate">Birthdate</label>
         </Iconized>
         <input
           id="birthDate"
@@ -154,7 +154,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('clock') }}>
-          <label htmlFor="entryDate">Entry date:</label>
+          <label htmlFor="entryDate">Entry date</label>
         </Iconized>
         <input
           id="entryDate"
@@ -165,7 +165,7 @@ function EditPersonForm({ person, updatePersonAction }: EditPersonFormProps) {
         />
 
         <Iconized icon={{ icon: solid('person') }}>
-          <label htmlFor="gender">Gender:</label>
+          <label htmlFor="gender">Gender</label>
         </Iconized>
         <select
           name="gender"

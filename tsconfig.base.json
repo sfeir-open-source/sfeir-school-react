@@ -10,15 +10,33 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/design": ["libs/design/src/index.ts"],
-      "@util/date-fns": ["libs/shared/util-date-fns/src/index.ts"]
+      "@libs/design": [
+        "libs/design/src/index.ts"
+      ],
+      "@util/date-fns": [
+        "libs/shared/util-date-fns/src/index.ts"
+      ],
+      "shadows": [
+        "libs/design/src/lib/styles/shadows.scss"
+      ],
+      "variables": [
+        "libs/design/src/lib/styles/variables.scss"
+      ]
     }
   },
-  "include": ["./jest-setup.ts"],
-  "exclude": ["node_modules", "tmp"]
+  "include": [
+    "./jest-setup.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

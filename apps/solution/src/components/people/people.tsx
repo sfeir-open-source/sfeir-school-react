@@ -22,7 +22,7 @@ export function People() {
     <>
       <div className={style.actionButtons}>
         <SearchBar searchTerm={searchTerm} onSearchTermChange={setSearchTerm} />
-        <LinkButton to="/people/new">Add</LinkButton >
+        <LinkButton to="/people/new">New</LinkButton >
       </div>
       <Grid className={style.container}>
         {filteredPeople?.map((person) => <Person key={person.id} person={person} />) ||

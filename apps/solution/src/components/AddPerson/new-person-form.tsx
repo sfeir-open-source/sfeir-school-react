@@ -1,7 +1,8 @@
 import { Button, Input, Title } from '@libs/design';
 import { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PersonModel, updatePerson } from '../../api/person';
+import { addPerson, PersonModel, updatePerson } from '../../api/person';
+import { PeopleActionKind, usePeopleDispatch } from '../../contexts/PeopleContext';
 import styles from './new-person-form.module.scss';
 import useForm from './useForm';
 
@@ -9,17 +10,22 @@ import useForm from './useForm';
 export function NewPersonForm() {
   const navigate = useNavigate()
   const { values, handleChange: handleChangeNew } = useForm({} as PersonModel)
+  const dispatch = usePeopleDispatch()
+
   function onSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault()
-    updatePerson(values).then(res => {
+    console.log(values);
+
+    addPerson(values).then(res => {
       console.log(res);
+      dispatch({ type: PeopleActionKind.ADD, people: [res] })
       navigate('/people')
     })
   }
 
   return (
     <div className={"container " + styles['newPerson']}>
-      <Title>Add new person</Title>
+      <Title>New person</Title>
       <form onSubmit={(e) => onSubmit(e)}>
         <Input type="text" name="firstname" label="First Name" value={values?.firstname} onChange={handleChangeNew} required />
         <Input type="text" name="lastname" label="Last Name" value={values?.lastname} onChange={handleChangeNew} required />

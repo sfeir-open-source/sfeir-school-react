@@ -1,10 +1,11 @@
 .newPerson {
+  max-width: 40%;
+  margin: 0 auto;
+
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-
-
   }
 
   .full-width {

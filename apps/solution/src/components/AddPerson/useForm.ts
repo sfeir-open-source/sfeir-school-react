@@ -9,8 +9,15 @@ interface IError {
 export default function useForm(initialState: PersonModel, validations: Record<string, (value: string) => boolean | void>) {
   const [values, setValues] = useState<PersonModel>(initialState)
   const [errors, setErrors] = useState<IError[] | []>([])
-  const isValid = useMemo(() => errors === undefined, [errors])
-  console.log(validations, isValid, errors);
+  const isValid = useMemo(() => errors.length === 0, [errors])
+
+  function validate(name: string, value: string) {
+    if (validations[name] !== null && !validations[name](value)) {
+      setErrors((prevState) => ([...prevState.filter(error => error.name !== name), { name: name, message: "Invalid " + name }]))
+    } else {
+      setErrors((prevState) => ([...prevState.filter(error => error.name !== name)]))
+    }
+  }
 
   /**
    * Controls the inputs https://reactjs.org/docs/forms.html#controlled-components
@@ -19,14 +26,8 @@ export default function useForm(initialState: PersonModel, validations: Record<s
   function handleChange(e: React.FormEvent<HTMLInputElement>) {
     const { name, value } = e.currentTarget
     // Validate
-    if (validations[name] !== null && !validations[name](value)) {
-      console.log(name);
-      setErrors((prevState) => ([...prevState.filter(error => error.name !== name), { name: name, message: "Invalid " + name }]))
-    } else {
-      setErrors((prevState) => ([...prevState.filter(error => error.name !== name)]))
-    }
+    validate(name, value)
     setValues(prevState => ({ ...prevState, [name]: value }))
   }
-
-  return { values, handleChange, errors }
+  return { values, handleChange, errors, isValid }
 }

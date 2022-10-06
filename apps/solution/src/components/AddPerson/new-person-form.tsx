@@ -10,7 +10,7 @@ import useForm from './useForm';
 export function NewPersonForm() {
   const navigate = useNavigate()
   const dispatch = usePeopleDispatch()
-  const { values, handleChange: handleChangeNew, errors } = useForm(
+  const { values, handleChange: handleChangeNew, errors, isValid: formIsValid } = useForm(
     {} as PersonModel,
     {
       "firstname": (value: string) => value.length > 2,
@@ -22,12 +22,13 @@ export function NewPersonForm() {
 
   function onSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault()
-    console.log(errors);
-    // addPerson(values).then(res => {
-    //   console.log(res);
-    //   dispatch({ type: PeopleActionKind.ADD, people: [res] })
-    //   navigate('/people')
-    // })
+    if (formIsValid) {
+      addPerson(values).then(res => {
+        console.log(res);
+        dispatch({ type: PeopleActionKind.ADD, people: [res] })
+        navigate('/people')
+      })
+    }
   }
 
   return (

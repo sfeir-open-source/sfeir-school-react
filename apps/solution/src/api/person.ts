@@ -33,3 +33,13 @@ export async function updatePerson(person: PersonModel): Promise<PersonModel> {
     body: JSON.stringify(person),
   }).then((response) => response.json());
 }
+
+export async function addPerson(person: PersonModel): Promise<PersonModel> {
+  return fetch(`${PEOPLE_API}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(person),
+  }).then((response) => response.json());
+}

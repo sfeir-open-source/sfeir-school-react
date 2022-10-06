@@ -1,7 +1,7 @@
 import { Button, Input, Title } from '@libs/design';
 import { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { addPerson, PersonModel, updatePerson } from '../../api/person';
+import { addPerson, PersonModel } from '../../api/person';
 import { PeopleActionKind, usePeopleDispatch } from '../../contexts/PeopleContext';
 import styles from './new-person-form.module.scss';
 import useForm from './useForm';
@@ -9,18 +9,25 @@ import useForm from './useForm';
 /* eslint-disable-next-line */
 export function NewPersonForm() {
   const navigate = useNavigate()
-  const { values, handleChange: handleChangeNew } = useForm({} as PersonModel)
   const dispatch = usePeopleDispatch()
+  const { values, handleChange: handleChangeNew, errors } = useForm(
+    {} as PersonModel,
+    {
+      "firstname": (value: string) => value.length > 2,
+      "lastname": (value: string) => value.length > 2,
+      "photo": (value: string) => value.startsWith("http"),
+      "position": (value: string) => value.length > 0 ? value.length > 2 : true
+    }
+  )
 
   function onSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault()
-    console.log(values);
-
-    addPerson(values).then(res => {
-      console.log(res);
-      dispatch({ type: PeopleActionKind.ADD, people: [res] })
-      navigate('/people')
-    })
+    console.log(errors);
+    // addPerson(values).then(res => {
+    //   console.log(res);
+    //   dispatch({ type: PeopleActionKind.ADD, people: [res] })
+    //   navigate('/people')
+    // })
   }
 
   return (
@@ -31,6 +38,9 @@ export function NewPersonForm() {
         <Input type="text" name="lastname" label="Last Name" value={values?.lastname} onChange={handleChangeNew} required />
         <Input type="text" name="photo" label="Picture URL" value={values?.photo} onChange={handleChangeNew} required />
         <Input type="text" name="position" label="Position" value={values?.position} onChange={handleChangeNew} />
+        {errors.map((error) => {
+          return (<p>{error.message}</p>)
+        })}
         {/*
         "entryDate": "04/10/2015",
         "birthDate": "22/01/1963",

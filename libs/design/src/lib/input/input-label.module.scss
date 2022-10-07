@@ -10,13 +10,23 @@
     background-color: $white_color;
     border-radius: $borderRadius;
     padding: 1em;
-    @include BoxShadow(2)
+    @include BoxShadow(2);
+
+  }
+
+  .error {
+    border: 1px solid $errorColor;
+  }
+
+  .error:focus {
+    border: 1px solid $errorColor;
+    background-color: $lightErrorColor;
   }
 
   .label {
     &.mandatory::after {
       content: '*';
-      color: red;
+      color: $errorColor;
       margin-left: .5em;
     }
   }

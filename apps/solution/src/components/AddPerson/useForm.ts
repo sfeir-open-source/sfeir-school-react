@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { FormEvent, useMemo, useState } from "react";
 import { PersonModel } from "../../api/person";
 
 interface IError {
@@ -6,7 +6,7 @@ interface IError {
   message: string
 }
 
-export default function useForm(initialState: PersonModel, validations: Record<string, (value: string) => boolean | void>) {
+export default function useForm(initialState: PersonModel, validations: Record<string, (value: string) => boolean | void>, incomingOnSubmit: (arg0: PersonModel) => void) {
   const [values, setValues] = useState<PersonModel>(initialState)
   const [errors, setErrors] = useState<IError[] | []>([])
   const isValid = useMemo(() => errors.length === 0, [errors])
@@ -29,5 +29,13 @@ export default function useForm(initialState: PersonModel, validations: Record<s
     validate(name, value)
     setValues(prevState => ({ ...prevState, [name]: value }))
   }
-  return { values, handleChange, errors, isValid }
+
+  function onSubmit(e: FormEvent<HTMLFormElement>): void {
+    e.preventDefault();
+    if (isValid) {
+      incomingOnSubmit(values)
+    }
+  }
+
+  return { values, handleChange, errors, isValid, onSubmit }
 }

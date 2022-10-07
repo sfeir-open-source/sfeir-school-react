@@ -1,5 +1,4 @@
-import { Button, Input, Title } from '@libs/design';
-import { FormEvent } from 'react';
+import { Button, InputLabel, Title } from '@libs/design';
 import { useNavigate } from 'react-router-dom';
 import { addPerson, PersonModel } from '../../api/person';
 import { PeopleActionKind, usePeopleDispatch } from '../../contexts/PeopleContext';
@@ -10,37 +9,38 @@ import useForm from './useForm';
 export function NewPersonForm() {
   const navigate = useNavigate()
   const dispatch = usePeopleDispatch()
-  const { values, handleChange: handleChangeNew, errors, isValid: formIsValid } = useForm(
+  const { values, handleChange: handleChangeNew, errors, onSubmit } = useForm(
     {} as PersonModel,
     {
       "firstname": (value: string) => value.length > 2,
       "lastname": (value: string) => value.length > 2,
       "photo": (value: string) => value.startsWith("http"),
       "position": (value: string) => value.length > 0 ? value.length > 2 : true
-    }
-  )
-
-  function onSubmit(e: FormEvent<HTMLFormElement>): void {
-    e.preventDefault()
-    if (formIsValid) {
+    },
+    (values) => {
       addPerson(values).then(res => {
         console.log(res);
         dispatch({ type: PeopleActionKind.ADD, people: [res] })
         navigate('/people')
       })
     }
-  }
+  )
 
   return (
     <div className={"container " + styles['newPerson']}>
       <Title>New person</Title>
+      {
+        errors.find(error => {
+          return error.name === 'firstname'
+        })?.name
+      }
       <form onSubmit={(e) => onSubmit(e)}>
-        <Input type="text" name="firstname" label="First Name" value={values?.firstname} onChange={handleChangeNew} required />
-        <Input type="text" name="lastname" label="Last Name" value={values?.lastname} onChange={handleChangeNew} required />
-        <Input type="text" name="photo" label="Picture URL" value={values?.photo} onChange={handleChangeNew} required />
-        <Input type="text" name="position" label="Position" value={values?.position} onChange={handleChangeNew} />
+        <InputLabel type="text" error={true} name="firstname" label="First Name" value={values?.firstname} onChange={handleChangeNew} required />
+        <InputLabel type="text" name="lastname" label="Last Name" value={values?.lastname} onChange={handleChangeNew} required />
+        <InputLabel type="text" name="photo" label="Picture URL" value={values?.photo} onChange={handleChangeNew} required />
+        <InputLabel type="text" name="position" label="Position" value={values?.position} onChange={handleChangeNew} />
         {errors.map((error) => {
-          return (<p>{error.message}</p>)
+          return (<p key={error.name}>{error.message}</p>)
         })}
         {/*
         "entryDate": "04/10/2015",

@@ -5,17 +5,17 @@ import styles from './input-label.module.scss';
 export interface InputLabelProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string,
   label: string,
-  error?: boolean,
+  error?: boolean | string,
   mandatory?: boolean
 }
 
-export function InputLabel({ name, label, required = false, value, onChange, error = false, ...passThrough }: InputLabelProps) {
+export function InputLabel({ type = "text", name, label, required = false, value, onChange, error = false, ...passThrough }: InputLabelProps) {
   return (
     <div className={styles['field-group']} data-cy={'field-group' + name}>
       <label htmlFor={name} className={styles['label'] + ' ' + (required ? styles['mandatory'] : '')}>
         {label}
       </label>
-      <input name={name} required={required} {...passThrough} className={styles['input'] + ' ' + (error ? styles['error'] : '')} value={value} onChange={onChange} />
+      <input type={type} name={name} required={required} {...passThrough} className={styles['input'] + ' ' + (error ? styles['error'] : '')} value={value} onChange={onChange} />
     </div>
   );
 }

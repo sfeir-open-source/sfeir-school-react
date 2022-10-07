@@ -29,19 +29,11 @@ export function NewPersonForm() {
   return (
     <div className={"container " + styles['newPerson']}>
       <Title>New person</Title>
-      {
-        errors.find(error => {
-          return error.name === 'firstname'
-        })?.name
-      }
       <form onSubmit={(e) => onSubmit(e)}>
-        <InputLabel type="text" error={true} name="firstname" label="First Name" value={values?.firstname} onChange={handleChangeNew} required />
-        <InputLabel type="text" name="lastname" label="Last Name" value={values?.lastname} onChange={handleChangeNew} required />
-        <InputLabel type="text" name="photo" label="Picture URL" value={values?.photo} onChange={handleChangeNew} required />
-        <InputLabel type="text" name="position" label="Position" value={values?.position} onChange={handleChangeNew} />
-        {errors.map((error) => {
-          return (<p key={error.name}>{error.message}</p>)
-        })}
+        <InputLabel error={errors.firstname} name="firstname" label="First Name" value={values?.firstname} onChange={handleChangeNew} required />
+        <InputLabel error={errors.lastname} name="lastname" label="Last Name" value={values?.lastname} onChange={handleChangeNew} required />
+        <InputLabel error={errors.photo} name="photo" label="Picture URL" value={values?.photo} onChange={handleChangeNew} required />
+        <InputLabel error={errors.position} name="position" label="Position" value={values?.position} onChange={handleChangeNew} />
         {/*
         "entryDate": "04/10/2015",
         "birthDate": "22/01/1963",

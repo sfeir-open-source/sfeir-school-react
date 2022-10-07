@@ -1,21 +1,16 @@
 import { FormEvent, useMemo, useState } from "react";
 import { PersonModel } from "../../api/person";
 
-interface IError {
-  name: string,
-  message: string
-}
-
 export default function useForm(initialState: PersonModel, validations: Record<string, (value: string) => boolean | void>, incomingOnSubmit: (arg0: PersonModel) => void) {
   const [values, setValues] = useState<PersonModel>(initialState)
-  const [errors, setErrors] = useState<IError[] | []>([])
-  const isValid = useMemo(() => errors.length === 0, [errors])
+  const [errors, setErrorss] = useState<Record<string, string | undefined>>({})
+  const isValid = useMemo(() => Object.values(errors).every(value => value === undefined), [errors])
 
   function validate(name: string, value: string) {
     if (validations[name] !== null && !validations[name](value)) {
-      setErrors((prevState) => ([...prevState.filter(error => error.name !== name), { name: name, message: "Invalid " + name }]))
+      setErrorss((prevState) => ({ ...prevState, [name]: 'Invalid ' + name }))
     } else {
-      setErrors((prevState) => ([...prevState.filter(error => error.name !== name)]))
+      setErrorss((prevState) => ({ ...prevState, [name]: undefined }))
     }
   }
 
@@ -37,5 +32,5 @@ export default function useForm(initialState: PersonModel, validations: Record<s
     }
   }
 
-  return { values, handleChange, errors, isValid, onSubmit }
+  return { values, handleChange, onSubmit, errors }
 }

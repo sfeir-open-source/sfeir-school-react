@@ -3,14 +3,14 @@ import { PersonModel } from "../../api/person";
 
 export default function useForm(initialState: PersonModel, validations: Record<string, (value: string) => boolean | void>, incomingOnSubmit: (arg0: PersonModel) => void) {
   const [values, setValues] = useState<PersonModel>(initialState)
-  const [errors, setErrorss] = useState<Record<string, string | undefined>>({})
+  const [errors, setErrors] = useState<Record<string, string | undefined>>({})
   const isValid = useMemo(() => Object.values(errors).every(value => value === undefined), [errors])
 
   function validate(name: string, value: string) {
     if (validations[name] !== null && !validations[name](value)) {
-      setErrorss((prevState) => ({ ...prevState, [name]: 'Invalid ' + name }))
+      setErrors((prevState) => ({ ...prevState, [name]: 'Invalid ' + name }))
     } else {
-      setErrorss((prevState) => ({ ...prevState, [name]: undefined }))
+      setErrors((prevState) => ({ ...prevState, [name]: undefined }))
     }
   }
 

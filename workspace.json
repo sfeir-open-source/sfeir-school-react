@@ -44,6 +44,118 @@
       },
       "tags": []
     },
+    "exercice01": {
+      "root": "apps/exercice01",
+      "sourceRoot": "apps/exercice01/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:webpack",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/exercice01",
+            "index": "apps/exercice01/src/index.html",
+            "baseHref": "/",
+            "main": "apps/exercice01/src/main.tsx",
+            "polyfills": "apps/exercice01/src/polyfills.ts",
+            "tsConfig": "apps/exercice01/tsconfig.app.json",
+            "assets": [
+              "apps/exercice01/src/favicon.ico",
+              "apps/exercice01/src/assets"
+            ],
+            "styles": ["apps/exercice01/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "exercice01:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "exercice01:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/exercice01/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/exercice01"],
+          "options": {
+            "jestConfig": "apps/exercice01/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "exercice01-solution": {
+      "root": "apps/exercice01-solution",
+      "sourceRoot": "apps/exercice01-solution/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:webpack",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/exercice01-solution",
+            "index": "apps/exercice01-solution/src/index.html",
+            "baseHref": "/",
+            "main": "apps/exercice01-solution/src/main.tsx",
+            "polyfills": "apps/exercice01-solution/src/polyfills.ts",
+            "tsConfig": "apps/exercice01-solution/tsconfig.app.json",
+            "assets": [
+              "apps/exercice01-solution/src/favicon.ico",
+              "apps/exercice01-solution/src/assets"
+            ],
+            "styles": ["apps/exercice01-solution/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "exercice01-solution:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "exercice01-solution:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "apps/exercice01-solution/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/exerciexercice01-solutionce01"],
+          "options": {
+            "jestConfig": "apps/exercice01-solution/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "shared-util-date-fns": "libs/shared/util-date-fns",
     "solution": {
       "root": "apps/solution",

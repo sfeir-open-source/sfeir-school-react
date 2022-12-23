@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+h1,
+h2,
+h3,
+a {
+  color: $primary_color;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}

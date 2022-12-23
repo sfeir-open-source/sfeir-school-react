@@ -1,7 +1,6 @@
-// allFiles : canonical structure for ordered 2-levels filesystem tree
-// array of [directory, [file]] pairs
+import { initTheme } from './utils.js';
 
-const institute = [
+const slidesPerDirectory = [
   [
     '00-school',
     [
@@ -18,6 +17,4 @@ const institute = [
   ]
 ];
 
-const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
-const pathReducer = (acc, [dir, files]) => [...acc, ...files.map(makeSlide(dir))];
-export const slides = institute.reduce(pathReducer, []);
+initTheme(slidesPerDirectory);

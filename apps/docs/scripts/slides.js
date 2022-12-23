@@ -1,20 +1,29 @@
 import { initTheme } from './utils.js';
 
-const slidesPerDirectory = [
+const introduction = [
+  '00-introduction',
   [
-    '00-school',
-    [
-      '00-TITLE-institute',
-      // professor
-      '01-speaker-wgo',
-      // speakers, uncomment as needed
-      '01-speaker-rto',
-      //'01-speaker-fsa',
-      '02-introduce-yourself',
-      '03-repository',
-      '04-these-slides'
-    ],
-  ]
+    '01-presentation',
+
+    '02-speaker-qdujardin',
+
+    '03-introduce-yourself',
+    '04-repository',
+  ],
+];
+
+const fundamentals = [
+  '01-fundamentals',
+  [
+    '01-presentation',
+
+    '09-exercice'
+  ],
+];
+
+const slidesPerDirectory = [
+  introduction,
+  fundamentals,
 ];
 
 initTheme(slidesPerDirectory);

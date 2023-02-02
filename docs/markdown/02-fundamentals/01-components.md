@@ -50,15 +50,11 @@
 
 <br/><br/>
 
-# demo 01 ter
+# Demo
 
-## a very simple app
+## let's write a very simple app
 
 Notes:
 
 - use jsbin or codesandbox
 - extract JSX in a function App- pass a propertyCongrats: this is your first React Component :)
-
-##==##
-
-# let's write a real application...

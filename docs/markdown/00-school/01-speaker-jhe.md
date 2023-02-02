@@ -2,19 +2,19 @@
 
 # Présentation
 
-![speaker](./assets/images/speakers/WGO.jpg)
+![speaker](./assets/images/speakers/JHE.jpg)
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-<h2>Wolfgang <span> Goedel</span></h2>
+<h2>Julien <span> Hery</span></h2>
 
-### Head of Engineering - Factory Paris
+### Developer & Engineering Manager
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### @wgoedel
+### @HeryDev
 
 <!-- .element: class="icon-twitter icon-second" -->
 
-### goedel.w@sfeir.com
+### hery.j@sfeir.com
 
 <!-- .element: class="icon-mail icon-third" -->

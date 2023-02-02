@@ -1,7 +1,4 @@
-<!-- .slide: class="first-slide sfeir-bg-red" sfeir-techno="React-200" -->
+<!-- .slide: class="first-slide sfeir-bg-red" sfeir-techno="React" -->
 
 # Thank you
 
-## #sfeirschool #react
-
-@sfeir @wgoedel goedel.w@sfeir.com

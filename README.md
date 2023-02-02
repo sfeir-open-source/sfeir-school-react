@@ -2,10 +2,6 @@
 
 A SFEIR School
 
-![logo](https://www.sfeir.com/img/school/formations/React%20200.png)
-
-[Planning, trainers and other details](https://www.sfeir.com/school/react-200/)
-
 # Slides
 
 You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/).
@@ -25,7 +21,7 @@ You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-
 ### Local State and Simple Events
 
 - ex03 - Local state and clicks (get interactive)
-- ex03bis -> use useState
+- ex03bis -> Introduction to hooks (useState)
 
 ### Lists, Conditional rendering, more about children
 
@@ -46,27 +42,9 @@ You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-
 - ex07 - Navigation
 - ex08 - Context
 
-### Forms - the problem statement - Reuse component logic
+### Forms - the problem statement
 
-- ex09 - Reuse logic and forms
-
-## React 300 - Managing state with Redux
-
-### Adding Redux - reduce and connect
-
-- ex10 - put people into redux state
-
-### Encapsulating Redux - selectors and action creators
-
-- ex11 - build a public state API
-
-### Embracing Redux
-
-- ex12 - leverage application state
-
-### Redux All The Things
-
-- ex13 - add async processing to state API
+- ex09 - forms
 
 # runtime
 

@@ -2,7 +2,7 @@
 
 # **Welcome to SFEIR School**
 
-## **React 200**
+## **React**
 
 ##==##
 

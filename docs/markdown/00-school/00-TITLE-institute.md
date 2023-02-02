@@ -2,4 +2,4 @@
 
 # **Welcome to SFEIR Institute**
 
-## **React 300**
+## **React**

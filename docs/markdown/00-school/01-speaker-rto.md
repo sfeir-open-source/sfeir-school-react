@@ -7,7 +7,7 @@
 
 <h2>Romain <span> Torond</span></h2>
 
-### Developer & Team leader
+### Developer & Engineering Manager
 
 <!-- .element: class="icon-rule icon-first" -->
 

@@ -1,16 +1,3 @@
-<!-- .slide: class="center" -->
-
-# Hello JSX
-
-demo 01 bisfundamental tooling
-
-Notes:
-transform jsbin to use JSX
-
-##==##
-
-<!-- .slide: class="with-code" -->
-
 # Hello JSX
 
 ```javascript

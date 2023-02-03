@@ -152,7 +152,6 @@ export const getFilteredPeopleIds = createSelector(
 
 //////////////////////////////////////////////
 
-export const useQuery = () => useSelector(getQuery);
 export const useCurrentId = () => useSelector(getCurrent);
 export const usePerson = (id: string) => useSelector(getPersonById(id));
 

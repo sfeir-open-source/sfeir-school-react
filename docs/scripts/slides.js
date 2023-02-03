@@ -152,7 +152,17 @@ const institute = [
       '06-form-code-04',
       '08-forms',
       '09-exercise9-reuse-form-logic',
-      '11-thank-you',
+      // '11-thank-you',
+    ],
+  ],
+  [
+    '09-react-query',
+    [
+      '00-TITLE',
+      '01-why',
+      '02-useQuery',
+      '03-useMutation',
+      '04-exercise',
     ],
   ],
 ];

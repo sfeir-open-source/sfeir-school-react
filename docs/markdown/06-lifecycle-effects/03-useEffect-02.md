@@ -1,8 +1,6 @@
-<!-- .slide: class="with-code two-column-layout" -->
+<!-- .slide: class="with-code two-column" -->
 
 # useEffect hook
-
-##--##
 
 ```javascript
 const FromServer = () => {
@@ -19,6 +17,7 @@ const FromServer = () => {
 ```
 
 ##--##
+<!-- .slide: class="with-code" -->
 
 ```javascript
 class FromServer extends React.Component {
@@ -39,3 +38,4 @@ class FromServer extends React.Component {
   }
 }
 ```
+<!-- .element: style="margin-top:200px" -->

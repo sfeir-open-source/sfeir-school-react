@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # refs
-
-##--##
 
 **refs** of **DOM components** give access to the document object instance - this includes **WebComponents**
 
@@ -11,6 +9,7 @@
 **you can't ref a function component**
 
 ##--##
+<!-- .slide: class="with-code" -->
 
 ```javascript
 class Jukebox extends React.Component {
@@ -35,3 +34,4 @@ const MyInput = (props) => {
   return <input ref={inputRef} {...props} />;
 };
 ```
+<!-- .element: style="margin-top:100px" -->

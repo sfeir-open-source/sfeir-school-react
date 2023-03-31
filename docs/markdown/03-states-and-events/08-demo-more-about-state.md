@@ -1,3 +1,3 @@
-<!-- .slide: class="transition-center" -->
+<!-- .slide: class="transition" -->
 
 # More about state - Demo !

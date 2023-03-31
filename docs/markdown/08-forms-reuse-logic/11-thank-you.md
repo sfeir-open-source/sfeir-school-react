@@ -1,4 +1,4 @@
-<!-- .slide: class="first-slide sfeir-bg-red" sfeir-techno="React" -->
+<!-- .slide: class="first-slide " sfeir-techno="React" -->
 
 # Thank you
 

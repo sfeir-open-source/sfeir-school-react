@@ -1,4 +1,4 @@
-<!-- .slide: class="transition-white sfeir-bg-blue" -->
+<!-- .slide: class="transition bg-white" -->
 
 # Ok, great! <br/> but how do you change state now?
 

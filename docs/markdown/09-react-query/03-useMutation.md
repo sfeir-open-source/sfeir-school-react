@@ -5,20 +5,17 @@
 ```javascript
 const Todos = () => {
   const { data, isLoading } = useQuery("todos", fetchTodos);
-
   const mutation = useMutation(postTodo, {
     onSuccess: () => {
       // Invalidate and refetch
       queryClient.invalidateQueries("todos");
     },
   });
-
   return (
     <div>
       <ul>
         {data.map((todo) => <li key={todo.id}>{todo.title}</li>)}
       </ul>
-
       <button
         onClick={() => {
           mutation.mutate({
@@ -26,10 +23,8 @@ const Todos = () => {
             title: "Do Laundry",
           });
         }}
-      >
-        Add Todo
+      > Add Todo
       </button>
     </div>
-  );
-};
+  );};
 ```

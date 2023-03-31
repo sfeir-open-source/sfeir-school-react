@@ -1,8 +1,6 @@
-<!-- .slide: class="with-code two-column-layout" -->
+<!-- .slide: class="with-code two-column" -->
 
 # Route props...
-
-##--##
 
 render: func
 
@@ -12,7 +10,10 @@ render: func
 
 ##--##
 
+<!-- .slide: class="with-code" -->
+
 exact: bool
+<!-- .element: class="mt-200" -->
 
 ```javascript
 <Route path="/" exact component={Index} />

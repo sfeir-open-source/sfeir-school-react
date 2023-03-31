@@ -4,16 +4,13 @@
 
 ```javascript
 const queryClient = new QueryClient();
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <Todos />
   </QueryClientProvider>;
 );
-
 const Todos = () => {
   const { data, isLoading } = useQuery("todos", fetchTodos);
-
   return (
     <div>
       {isLoading ? (

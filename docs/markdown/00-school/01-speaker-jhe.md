@@ -13,8 +13,8 @@
 
 ### @HeryDev
 
-<!-- .element: class="icon-twitter icon-second" -->
+<!-- .element: class="icon-second" -->
 
 ### hery.j@sfeir.com
 
-<!-- .element: class="icon-mail icon-third" -->
+<!-- .element: class="icon-third" -->

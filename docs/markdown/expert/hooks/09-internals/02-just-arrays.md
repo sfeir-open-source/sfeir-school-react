@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 <style>
 .reveal .root {
    display: flex;
@@ -30,7 +30,6 @@
 </style>
 
 # Hooks : not Magic, just Arrays
-##--##
 
 ```javascript
 function BadHook() {
@@ -59,7 +58,7 @@ function BadHook() {
 ```
 
 ##--##
-<div class="root">
+<div class="root mt-200">
    <div class="column">
       <div>0</div>
       <div>1</div>
@@ -88,9 +87,8 @@ function BadHook() {
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 # Hooks : not Magic, just Arrays
-##--##
 
 ```javascript
 function BadHook() {
@@ -120,7 +118,7 @@ function BadHook() {
 
 ##--##
 
-<div class="root">
+<div class="root mt-200">
    <div class="column">
       <div>0</div>
       <div>1</div>
@@ -145,6 +143,6 @@ function BadHook() {
    </div>
 </div>
 
-<div class="fragment fade-in buggy">
+<div class="fragment fade-in buggy" style="margin-top:0">
 Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
 </div>

@@ -1,3 +1,4 @@
+import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
 // allFiles : canonical structure for ordered 2-levels filesystem tree
 // array of [directory, [file]] pairs
 
@@ -281,4 +282,6 @@ const allFiles = [...institute, ...expertHooks];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
 const pathReducer = (acc, [dir, files]) => [...acc, ...files.map(makeSlide(dir))];
-export const slides = allFiles.reduce(pathReducer, []);
+const slides = ()=>allFiles.reduce(pathReducer, []);
+// Is to replace by
+SfeirThemeInitializer.init(slides);

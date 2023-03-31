@@ -12,3 +12,4 @@
   }) => <Movie id={params.id} />}
 />
 ```
+<!-- .element: class="big-code" -->

@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Handling events
-
-##--##
 
 <br/>
 
@@ -16,6 +14,8 @@
 
 ##--##
 
+<!-- .slide: class="with-code" -->
+
 ```html
     <script>
       function doIt() {
@@ -27,6 +27,7 @@
       do it the old way !
     </a>
 ```
+<!-- .element: style="margin-top:200px" -->
 
 ```javascript
     const Action = () => {

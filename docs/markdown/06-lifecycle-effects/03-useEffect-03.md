@@ -1,8 +1,6 @@
-<!-- .slide: class="with-code two-column-layout" -->
+<!-- .slide: class="with-code two-column" -->
 
 # useEffect hook
-
-##--##
 
 ```javascript
 const Repeat = () => {
@@ -17,6 +15,8 @@ const Repeat = () => {
 ```
 
 ##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 class Repeat extends React.Component {
@@ -33,3 +33,4 @@ class Repeat extends React.Component {
   }
 }
 ```
+<!-- .element: style="margin-top:200px" -->

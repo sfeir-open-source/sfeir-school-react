@@ -4,13 +4,11 @@
   "description": "Sfeir School React with revealJS",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass scss/slide.scss -o ./css/ --source-map=true --watch=\\\"scss\\\" --recursive=\\\"scss\\\"",
-    "sass-once": "node-sass scss/slide.scss -o ./css/ --source-map=true ",
-    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown/\"",
+    "sass": "sass ./scss/slides.scss:./css/slides.css --source-map --watch",
+    "sass-once": "sass ./scss/slides.scss:./css/slides.css --source-map",
+    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown,scripts/\"",
     "start": "parallelshell \"npm run serve\" \"npm run sass\"",
-    "copy-highlight": "cpx \"node_modules/highlight.js/styles/**/*\" \"web_modules/highlight.js/styles\" ",
-    "copy-reveal": "cpx \"node_modules/reveal.js/**/*\" \"web_modules/reveal.js\" ",
-    "prepare": "parallelshell \"npm run copy-reveal\"  \"npm run copy-highlight\" \"snowpack\""
+    "prepare": "node ./scripts/dont-touch/prepare-script.js"
   },
   "repository": {
     "type": "git",
@@ -27,21 +25,14 @@
     "url": "https://github.com/sfeir-open-source/sfeir-school-react/issues"
   },
   "homepage": "https://github.com/sfeir-open-source/sfeir-school-react#readme",
-  "devDependencies": {
-    "highlight.js": "^9.15.6",
-    "lit-html": "^1.2.1",
-    "reveal.js": "^3.9.2",
-    "live-server": "^1.2.1",
-    "node-sass": "^4.12.0",
-    "parallelshell": "3.0.1",
-    "prettier": "^2.0.5",
-    "sfeir-school-theme": "^2.0.1",
-    "snowpack": "^1.7.1"
+  "dependencies": {
+    "sfeir-school-theme": "^3.0.0"
   },
-  "snowpack": {
-    "webDependencies": [
-      "sfeir-school-theme/dist/**/*",
-      "lit-html"
-    ]
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "live-server": "^1.2.1",
+    "sass": "^1.51.0",
+    "parallelshell": "3.0.1",
+    "shelljs": "^0.8.5"
   }
 }

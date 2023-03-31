@@ -1,22 +1,22 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Handling events
 
-##--##
-
 <br/>
 
-#### DOM
+### DOM
 * event names are lowercase
 * string is evaluated (what's the context?)
 
 <br/>
 
-#### React
+### React
 * names are camelCase
 * functions are called in global context like pure callbacks
 
 ##--##
+
+<!-- .slide: class="with-code" -->
 
 ```html
     <script>
@@ -29,6 +29,7 @@
       do it the old way !
     </button>
 ```
+<!-- .element: style="margin-top:200px" -->
 
 ```javascript
     const Action = () => {

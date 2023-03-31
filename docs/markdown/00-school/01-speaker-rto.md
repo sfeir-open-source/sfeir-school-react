@@ -13,8 +13,8 @@
 
 ### @rtorond
 
-<!-- .element: class="icon-twitter icon-second" -->
+<!-- .element: class="icon-second" -->
 
 ### torond.r@sfeir.com
 
-<!-- .element: class="icon-mail icon-third" -->
+<!-- .element: class="icon-third" -->

@@ -1,3 +1,3 @@
-<!-- .slide: class="transition-white sfeir-bg-red" -->
+<!-- .slide: class="transition " -->
 
 # Fundamentals : <br/> Component tree, properties and children

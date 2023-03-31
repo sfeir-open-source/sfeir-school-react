@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Composition - children 
-
-##--##
 
 <div class="center" style="margin-bottom: 40px;">
   components receive their "children" <br />
@@ -27,7 +25,9 @@
 
 ##--##
 
-<div style="margin-bottom: 100px;"></div>
+<!-- .slide: class="with-code" -->
+
+<br><br><br><br><br>
 
 ```javascript
     const Container = (props) => (
@@ -51,33 +51,30 @@
 ##==##
 
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Composition - children 
 
-##--##
+...but they might as well get <br/> components via attributes
+<!-- .element: class="center" -->
 
-<div class="center" style="margin-bottom: 40px;">
-  ...but they might as well get <br/> components via attributes
-</div>
 
 ```html
-    <MyNav
-      left={<img src={logoUrl} />}
-      right={
-        <ul>
-          <li><a href="...">...</a></li>
-          <li><a href="...">...</a></li>
-        </ul>
-      }
-    />
+<MyNav
+  left={<img src={logoUrl} />}
+  right={
+    <ul>
+      <li><a href="...">...</a></li>
+      <li><a href="...">...</a></li>
+    </ul>
+  }
+/>
 ```
 
 ##--##
 
-<div class="center" style="margin-bottom: 40px;">
-  remember: you are manipulating <br /> JavaScript expressions
-</div>
+remember: you are manipulating <br /> JavaScript expressions
+<!-- .element: class="center" style="margin-top: 200px"  -->
 
 ```javascript
     const MyNav = (props) => (

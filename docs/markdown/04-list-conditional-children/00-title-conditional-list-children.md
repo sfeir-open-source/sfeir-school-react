@@ -1,3 +1,3 @@
-<!-- .slide: class="transition-white sfeir-bg-red" -->
+<!-- .slide: class="transition " -->
 
 # conditionals, lists <br/> and more about children

@@ -1,12 +1,12 @@
-<!-- .slide: class="with-code two-column-layout" -->
+<!-- .slide: class="with-code two-column" -->
 
 # &lt;Switch> and &lt;Redirect>
-
-##--##
 
 **Switch** displays the first matching route exclusively
 
 ##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 <Switch>
@@ -16,3 +16,4 @@
   <Redirect to="/" />
 </Switch>
 ```
+<!-- .element: style="margin-top:200px" -->

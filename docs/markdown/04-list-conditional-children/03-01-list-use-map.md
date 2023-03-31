@@ -1,8 +1,7 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Lists
 
-##--##
 
 same for lists
 
@@ -11,6 +10,8 @@ JSX accepts **arrays of elements**
 the rest is (functional) JavaScript
 
 ##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
     const Inbox = ({ messages, unread }) => (
@@ -26,3 +27,4 @@ the rest is (functional) JavaScript
       </div>
     );
 ```
+<!-- .element: style="margin-top:200px" -->

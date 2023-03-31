@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Children
-
-##--##
 
 **children** property is an **opaque structure**
 
@@ -11,6 +9,8 @@
 use **React.cloneElement** if you need to add properties
 
 ##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
     const Tabs = ({ children }) => {
@@ -31,3 +31,4 @@ use **React.cloneElement** if you need to add properties
       );
     };
 ```
+<!-- .element: style="margin-top:200px" -->

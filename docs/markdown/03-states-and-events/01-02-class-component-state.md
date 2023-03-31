@@ -1,18 +1,17 @@
-<!-- .slide: class="two-column-layout with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Component flavours
-
-##--##
 
 ```javascript
 const Button = ({ clickCount }) => <button>clicked {clickCount} times</button>;
 ```
 
-<!-- .element: class="big-code" -->
 
 a class instance can keep state... <!-- .element: class="center" -->
 
 ##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 class Button extends React.Component {
@@ -28,5 +27,4 @@ class Button extends React.Component {
   }
 }
 ```
-
-<!-- .element: class="big-code" -->
+<!-- .element: style="margin-top:200px" -->

@@ -1,4 +1,4 @@
-<!-- .slide: class="speaker-slide blue" -->
+<!-- .slide: class="speaker-slide" -->
 
 # Présentation
 

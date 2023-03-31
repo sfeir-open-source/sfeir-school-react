@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 # Comparison
 <br/>
-##--##
-
 ## Class
 
 this.state is always the same ref

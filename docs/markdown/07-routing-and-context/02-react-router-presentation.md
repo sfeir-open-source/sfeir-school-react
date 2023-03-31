@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # react-router
-
-##--##
 
 ![center h-400](./assets/images/react-router.svg)
 

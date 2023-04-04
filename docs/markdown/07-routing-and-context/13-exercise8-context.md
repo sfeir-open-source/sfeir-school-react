@@ -1,6 +1,10 @@
-# Exercice 08: context
+<!-- .slide: class="exercice" -->
 
-## another way of sharing
+# Context: another way of sharing
+
+## Lab
+
+<small>
 
 - Share the **people** list through a **PeopleContext**
 
@@ -11,3 +15,7 @@
 - Use different ways of accessing the Context
   - use the Consumer
   - use the useContext hook
+
+</small>
+
+### Step: ex08

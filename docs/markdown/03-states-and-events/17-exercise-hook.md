@@ -1,7 +1,10 @@
-<!-- .slide: class="center" -->
+<!-- .slide: class="exercice" -->
 
-# Exercise 03 bis: useState hook
-## back to functions
+# useState hook: back to functions
+
+## Lab
+
+<small>
 
 * change the PersonCarousel back into a function component
 
@@ -10,3 +13,7 @@
 * keep the projection function
     * setState :: oldState => newState
     * it is returned by the range util
+
+</small>
+
+### Step: ex03 (bis)

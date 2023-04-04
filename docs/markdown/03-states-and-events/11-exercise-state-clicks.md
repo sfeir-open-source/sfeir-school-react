@@ -1,8 +1,10 @@
-<!-- .slide: class="center" -->
+<!-- .slide: class="exercice" -->
 
-# Exercise 03: state and clicks
+# State and clicks
 
-## remember it
+## Lab
+
+<small>
 
 - change the Carousel into a class component
 
@@ -13,6 +15,10 @@
 
 - use setState with a projection function
   - setState :: (oldState, props) => partial\<newState>
+
+</small>
+
+### Step: ex03
 
 Notes:
 

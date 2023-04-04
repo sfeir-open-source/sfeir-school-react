@@ -1,8 +1,11 @@
-<!-- .slide: class="center" -->
+<!-- .slide: class="exercice" -->
 
-# Exercise 01: hands on
 
-## JSX - component functions - props
+# <small>JSX - component functions - props</small>
+
+## Lab
+
+<small>
 
 * create two function components: Header and Card
     - use provided html templates as blueprint
@@ -16,6 +19,10 @@
 
 * Warning: disable “safe write” of your IDE:<br/> 
 https://parceljs.org/hmr.html#safe-write
+
+</small>
+
+### Step: ex01
 
 Notes:
 - LIVE CODING

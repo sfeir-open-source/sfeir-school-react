@@ -1,7 +1,10 @@
-<!-- .slide: class="center" -->
+<!-- .slide: class="exercice" -->
 
-# Exercise 04: lists of persons
-## repeat yourself
+# Lists of persons
+
+## Lab
+
+<small>
 
 * Change App so you can switch between a List and a Carousel of PersonCards
     * use the action item in Header to toggle the views
@@ -9,3 +12,7 @@
 
 * Create the Carousel component displaying anything you pass as children
     * there must not remain any reference to PersonCard
+
+</small>
+
+### Step: ex04

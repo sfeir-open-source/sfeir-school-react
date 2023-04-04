@@ -2,11 +2,17 @@
 
 # What we will do
 
-* Explore key concepts of ReactI will show slides and do some live coding
+* Explore key concepts of React
 
-* Practice with hands-on exercisesYou will code, I will help
+I will show slides and do some live coding
 
-* Breaks when appropriateHave lunch, play babyfoot
+* Practice with hands-on exercises
+
+You will code, I will help
+
+* Breaks when appropriate
+
+Have lunch, play babyfoot
 
 
 

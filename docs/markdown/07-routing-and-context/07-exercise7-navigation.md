@@ -1,6 +1,10 @@
-# Exercise 07: navigation
+<!-- .slide: class="exercice" -->
+ 
+# Navigation with a router
 
-## use a router
+## Lab
+
+<small>
 
 - Add two routes: **/player** and **/list**
 
@@ -12,3 +16,7 @@
 - **Bonus**: Add a **/person/:id** route and a new **Person** component
   - Person should receive a person via props and display it
   - Person should display "not found" if the person does not exist
+
+</small>
+
+### Step: ex07

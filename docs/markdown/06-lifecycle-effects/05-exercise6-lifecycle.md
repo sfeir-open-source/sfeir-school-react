@@ -1,6 +1,12 @@
-# Exercise 06: lifecycle
+<!-- .slide: class="exercice" -->
 
-## have some side effects
+# Lifecycle
+
+## Lab
+
+Have some side effects
+
+<small>
 
 - **Contact the API** - load people from **'http://localhost:3000/people'**
 
@@ -10,3 +16,7 @@
   - **lift state up** into the player - make **Carousel "controlled"**
   - how will you stop the timeout function ?
   - there must not be any warning when switching back to list
+
+</small>
+
+### Step: ex06

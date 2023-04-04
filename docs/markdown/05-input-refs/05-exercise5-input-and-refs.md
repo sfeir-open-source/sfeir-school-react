@@ -1,6 +1,12 @@
-# Exercice 05: inputs and refs
+<!-- .slide: class="exercice" -->
 
-## filter lists, control the carousel
+# Inputs and refs
+
+## Lab
+
+Filter lists, control the carousel
+
+<small>
 
 - Implement the **SearchableList** component
 
@@ -10,3 +16,7 @@
 
 - Expose an imperative **next** method on the **Carousel in Player**
   - call it **via a ref** when the play button is clicked
+
+</small>
+
+### Step: ex05

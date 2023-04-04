@@ -1,9 +1,10 @@
-<!-- .slide: class="center" -->
+<!-- .slide: class="exercice" -->
 
-# Exercise 2: component tree
+# Component tree: divide et impera
 
-## divide et impera
+## Lab
 
+<small>
 
 * decompose the PersonCard component
     * provide randomPerson as property
@@ -13,3 +14,7 @@
     * define in Card.js sub-components of a Card : (Image, Title, Info)
     * use those sub-components in PersonCard
     * there should not remain any style information left in Person
+
+</small>
+
+### Step: ex02

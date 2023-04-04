@@ -34,11 +34,20 @@
   color: white;
 }
 
+.reveal .slides section.sfeir-basic-slide.exercice ul ul {
+  font-size: 1em !important;
+}
+
 /**
 Specifics
 */
 .with-code-dark {
   @import "../web_modules/highlight.js/styles/darcula.css";
 }
+
+.reveal .slides .sfeir-basic-slide.smaller {
+  font-size: 0.8em;
+}
+
 
 /*# sourceMappingURL=slides.css.map */

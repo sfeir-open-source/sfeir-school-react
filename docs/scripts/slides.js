@@ -9,8 +9,9 @@ const institute = [
       '00-TITLE-institute',
       // speakers, uncomment as needed
       '01-speaker-rto',
-      '01-speaker-jhe',
+      // '01-speaker-jhe',
       //'01-speaker-fsa',
+      // '01-speaker-jta',
       '02-introduce-yourself',
       '03-repository',
       // '04-these-slides',

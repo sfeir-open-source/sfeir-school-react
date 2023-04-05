@@ -1,6 +1,8 @@
 import React from "react";
 
 import { PersonCard } from "../solution/PersonCard";
+import { range } from "../utils";
+import { useState } from "react";
 
 // cycle through the people array when clicking the previous
 // and the next buttons. Look in ../utils.js for some utility
@@ -8,10 +10,11 @@ import { PersonCard } from "../solution/PersonCard";
 
 type FabProps = {
   icon: string;
+  onClick: () => void;
 };
 
-const Fab: React.FC<FabProps> = ({ icon }) => (
-  <button className="mdc-fab mdc-fab--mini">
+const Fab: React.FC<FabProps> = ({ icon, onClick }) => (
+  <button className="mdc-fab mdc-fab--mini" onClick={onClick}>
     <i className="rmwc-icon material-icons mdc-fab__icon">{icon}</i>
   </button>
 );
@@ -19,16 +22,23 @@ const Fab: React.FC<FabProps> = ({ icon }) => (
 type CarouselProps = {
   people: People;
 };
+type CarouselState = {
+  personIdx: number;
+};
+export const Carousel: React.FC<CarouselProps> = (props) => {
+  const [count, setCount] = useState(0);
 
-export const Carousel: React.FC<CarouselProps> = ({ people }) => (
-  <div className="flex-row">
-    <Fab icon="skip_previous" />
-    <div className="carousel">
-      <PersonCard person={people[0]} className="current" />
+  const { succ, pred } = range(0, props.people.length - 1);
+  return (
+    <div className="flex-row">
+      <Fab icon="skip_previous" onClick={() => setCount(pred)} />
+      <div className="carousel">
+        <PersonCard person={props.people[count]} className="current" />
+      </div>
+      <Fab icon="skip_next" onClick={() => setCount(succ)} />
     </div>
-    <Fab icon="skip_next" />
-  </div>
-);
+  );
+};
 
 // when you are done:
 // replace the local Fab with the Fab component from RMWC

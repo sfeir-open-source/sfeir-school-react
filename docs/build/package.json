@@ -1,0 +1,48 @@
+{
+  "name": "sfeirschoolreact",
+  "version": "1.0.0",
+  "description": "Sfeir School React with revealJS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/slide.scss:css/slide.css --source-map --watch",
+    "sass-once": "sass scss/slide.scss:css/slide.css --source-map ",
+    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown/\"",
+    "start": "parallelshell \"npm run serve\" \"npm run sass\"",
+    "copy-highlight": "cpx \"node_modules/highlight.js/styles/**/*\" \"web_modules/highlight.js/styles\" ",
+    "copy-reveal": "cpx \"node_modules/reveal.js/**/*\" \"web_modules/reveal.js\" ",
+    "prepare": "parallelshell \"npm run copy-reveal\"  \"npm run copy-highlight\" \"snowpack\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfeir-open-source/sfeir-school-react.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "sfeir"
+  ],
+  "author": "wgoedel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfeir-open-source/sfeir-school-react/issues"
+  },
+  "homepage": "https://github.com/sfeir-open-source/sfeir-school-react#readme",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "highlight.js": "^9.15.6",
+    "lit-html": "^1.2.1",
+    "live-server": "^1.2.1",
+    "parallelshell": "3.0.1",
+    "prettier": "^2.0.5",
+    "reveal.js": "^3.9.2",
+    "sass": "^1.51.0",
+    "sfeir-school-theme": "^2.2.0",
+    "snowpack": "^3.8.8"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "sfeir-school-theme/dist/**/*",
+      "lit-html"
+    ]
+  }
+}

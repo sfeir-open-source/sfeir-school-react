@@ -12,4 +12,4 @@
 - Declarative
 - Just Components
 
-Docs : https://reacttraining.com/react-router
+Docs : https://v5.reactrouter.com/

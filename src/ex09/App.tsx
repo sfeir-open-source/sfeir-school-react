@@ -1,5 +1,12 @@
 import React, { useContext } from "react";
-import { Switch, Route, Redirect, RouteComponentProps } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useParams,
+  useMatches,
+  useMatch,
+} from "react-router-dom";
 
 import { Header, HeaderActionItem } from "../solution/Header";
 import { SearchableList } from "../solution/SearchableList";
@@ -19,11 +26,14 @@ const ContextualPlayer: React.FC = () => {
   return <Player people={people} />;
 };
 
-const ContextualPerson: React.FC<RouteComponentProps<{
-  id: string;
-}>> = ({ match }) => {
+const ContextualPerson: React.FC = () => {
+  const params = useParams();
   const people = useContext(PeopleContext);
-  const person = people.find((p) => p.id === match.params.id);
+  const person = people.find((p) => p.id === params.id);
+  const manager = useMatch("/managers/*");
+  console.log(manager, person);
+  if (manager != null && !person.isManager)
+    return <>This person is not a manager</>;
   return <Person person={person} />;
 };
 
@@ -38,12 +48,15 @@ export const App: React.FC = () => {
       {people.length === 0 ? (
         <Loading />
       ) : (
-        <Switch>
-          <Route path="/list" component={ContextualList} />
-          <Route path="/player" component={ContextualPlayer} />
-          <Route path="/person/:id" component={ContextualPerson} />
-          <Redirect to="/list" />
-        </Switch>
+        <Routes>
+          <Route path="/list" element={<ContextualList />} />
+          <Route path="/player" element={<ContextualPlayer />} />
+          <Route path="/person/:id/*" element={<ContextualPerson />} />
+          <Route path="/managers">
+            <Route path=":id/*" element={<ContextualPerson />} />
+          </Route>
+          <Route path="*" element={<Navigate to="/list" />} />
+        </Routes>
       )}
     </>
   );

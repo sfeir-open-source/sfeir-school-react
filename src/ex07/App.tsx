@@ -5,11 +5,21 @@ import { Header } from "../solution/Header";
 import { Loading } from "../solution/Loading";
 import { SearchableList } from "../solution/SearchableList";
 import { Player } from "../solution/Player";
-import { loadPeople } from "../utils";
-import { Link, NavLink, Route, Switch } from "react-router-dom";
-import { Redirect } from "react-router-dom";
+import { loadPeople, loadPerson } from "../utils";
+import {
+  Link,
+  NavLink,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useMatch,
+} from "react-router-dom";
 import { Person } from "./Person";
 
+const ElementTest = () => {
+  return <div>Element test</div>;
+};
 export const App: React.FC = () => {
   //const showList = match.path === "/list";
   //const [ setShowList] = useState(true);
@@ -26,8 +36,9 @@ export const App: React.FC = () => {
   // const CurrentView: React.ComponentType<{ people: People }> =
   //   people.length === 0 ? Loading : showList ? SearchableList : Player;
 
-  function SuperNavItem({ location: { pathname } }) {
-    const showList = pathname === "/list";
+  function SuperNavItem() {
+    const match = useMatch("/list");
+    const showList = match !== null;
     return (
       <NavLink to={showList ? "/player" : "/list"}>
         <TopAppBarActionItem
@@ -39,7 +50,7 @@ export const App: React.FC = () => {
   return (
     <>
       <Header>
-        <Route render={SuperNavItem} />
+        <SuperNavItem />
         {/*
         <NavLink to="/player">
           <TopAppBarActionItem icon="view_carousel" />
@@ -49,23 +60,15 @@ export const App: React.FC = () => {
       {showLoader ? (
         <Loading />
       ) : (
-        <Switch>
-          <Route
-            path="/list"
-            render={() => <SearchableList people={people} />}
-          />
-          <Route path="/player" render={() => <Player people={people} />} />
-          <Route
-            path="/person/:id"
-            render={(routeProps) => {
-              const person = people.find(
-                (p) => p.id === routeProps.match.params.id
-              );
-              return <Person person={person} />;
-            }}
-          />
-          <Redirect to="/list" />
-        </Switch>
+        <Routes>
+          <Route path="*" element={<Navigate to="/list" />} />
+          <Route path="/list" element={<SearchableList people={people} />} />
+          <Route path="/player" element={<Player people={people} />} />
+          <Route path="/person/:id" element={<Person people={people} />} />
+          <Route path="/test/*" element={<ElementTest />} />
+
+          {/* <Redirect to="/list" /> */}
+        </Routes>
       )}
     </>
   );

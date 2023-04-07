@@ -13,9 +13,10 @@ export const Person: React.FC<PersonProps> = ({ person }) => {
     () => [{ label: "edit", onClick: () => setEditing(true) }],
     []
   );
+  const resetForm = () => setEditing(false);
 
   const card = editing ? (
-    <PersonForm person={person} />
+    <PersonForm person={person} onReset={resetForm} />
   ) : (
     <PersonCard person={person} actions={actions} />
   );

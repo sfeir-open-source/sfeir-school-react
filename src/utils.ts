@@ -20,6 +20,9 @@ export const toRing = <T>(
 export const loadPeople = (): Promise<People> =>
   fetch("http://localhost:3000/people").then((res) => res.json());
 
+export const loadPerson = (id: string): Promise<Person> =>
+  fetch(`http://localhost:3000/people/${id}`).then((res) => res.json());
+
 export const savePerson = (person: Person): Promise<Person> =>
   fetch("http://localhost:3000/people/" + person.id, {
     method: "PUT",

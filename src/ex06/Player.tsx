@@ -1,4 +1,4 @@
-import React, { useState, cloneElement, useEffect } from "react";
+import React, { useState, cloneElement, useEffect, useReducer } from "react";
 import { Fab } from "@rmwc/fab";
 import { range } from "../utils";
 import { PersonCard } from "../solution/PersonCard";
@@ -42,19 +42,65 @@ type PlayerProps = {
   people: People;
 };
 
+type PlayerState = {
+  currentIndex: number;
+  isPlaying: boolean;
+};
+type PlayerAction =
+  | {
+      type: "NEXT";
+    }
+  | { type: "BACK" }
+  | { type: "PLAY" }
+  | { type: "PAUSE" };
 export const Player: React.FC<PlayerProps> = ({ people }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const { succ, pred } = range(0, people.length - 1);
-  const goNext = () => {
-    setCurrentIndex(succ);
+  //const [currentIndex, setCurrentIndex] = useState(0);
+  //const [isPlaying, setIsPlaying] = useState(false);
+
+  const playerReducer = (
+    state: PlayerState,
+    action: PlayerAction
+  ): PlayerState => {
+    const { succ, pred } = range(0, people.length - 1);
+    switch (action.type) {
+      case "NEXT":
+        return {
+          ...state,
+          currentIndex: succ(state.currentIndex),
+          isPlaying: false,
+        };
+      case "BACK":
+        return {
+          ...state,
+          currentIndex: pred(state.currentIndex),
+          isPlaying: false,
+        };
+      case "PAUSE":
+        return { ...state, isPlaying: false };
+      case "PLAY":
+        return {
+          ...state,
+          isPlaying: true,
+          currentIndex: succ(state.currentIndex),
+        };
+      default:
+        return state;
+    }
   };
-  const goPrev = () => setCurrentIndex(pred);
+  const [state, dispatch] = useReducer(playerReducer, {
+    currentIndex: 0,
+    isPlaying: false,
+  });
+
+  const goNext = () => {
+    dispatch({ type: "NEXT" });
+  };
+  const goPrev = () => dispatch({ type: "BACK" });
 
   // Method 1: With timeout
   useEffect(() => {
     //console.log("effect");
-    if (isPlaying) {
+    if (state.isPlaying) {
       //console.log("isplaying, setTimeout");
       const timeoutId = setTimeout(goNext, 2000);
       return () => {
@@ -62,7 +108,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
         clearTimeout(timeoutId);
       };
     }
-  }, [isPlaying, currentIndex]);
+  }, [state]);
 
   // Method 2: with Interval
   // useEffect(() => {
@@ -77,7 +123,11 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
   return (
     <>
       <main>
-        <Carousel currentIndex={currentIndex} goNext={goNext} goPrev={goPrev}>
+        <Carousel
+          currentIndex={state.currentIndex}
+          goNext={goNext}
+          goPrev={goPrev}
+        >
           {people.map((person) => (
             <PersonCard person={person} key={person.id} />
           ))}
@@ -85,8 +135,8 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
       </main>
       <footer>
         <Fab
-          icon={isPlaying ? "pause" : "play_arrow"}
-          onClick={() => setIsPlaying(!isPlaying)}
+          icon={state.isPlaying ? "pause" : "play_arrow"}
+          onClick={() => dispatch({ type: state.isPlaying ? "PAUSE" : "PLAY" })}
         />
         {/* show the pause icon when playing */}
       </footer>

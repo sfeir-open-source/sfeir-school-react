@@ -1,3 +1,7 @@
 {
-  "$schema": "http://json.schemastore.org/prettierrc"
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "editorconfig": true,
+  "semi": true,
+  "trailingComma": "es5"
 }

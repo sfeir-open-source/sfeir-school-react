@@ -1,18 +1,4 @@
-## compiled output
-/.cache
+# Add files here to ignore them from prettier formatting
 /dist
-
-## dependencies
-/node_modules
-
-## IDEs and editors
-/.idea
-/.vscode
-
-# auto-generated files
-/package.json
-/package-lock.json
-/yarn.lock
-
-# sub projects
-/docs
+/coverage
+/.nx/cache

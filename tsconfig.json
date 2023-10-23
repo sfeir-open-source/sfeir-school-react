@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "ES2020",
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
-  }
-}

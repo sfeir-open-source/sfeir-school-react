@@ -1,0 +1,53 @@
+{
+  "name": "server-express",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "server-express/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/server-express",
+        "main": "server-express/src/main.js",
+        "tsConfig": "server-express/tsconfig.app.json",
+        "target": "node",
+        "compiler": "tsc"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "server-express/src/environments/environment.js",
+              "with": "server-express/src/environments/environment.prod.js"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "server-express:build",
+        "watch": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "server-express/**/*.js"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,80 @@
+{
+  "name": "01-bootstrapping",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "01-bootstrapping/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/01-bootstrapping"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "01-bootstrapping:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "01-bootstrapping:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "01-bootstrapping:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "01-bootstrapping:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "01-bootstrapping:build:development"
+        },
+        "production": {
+          "buildTarget": "01-bootstrapping:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/01-bootstrapping"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "01-bootstrapping/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

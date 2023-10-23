@@ -1,3 +1,0 @@
-# ...but
-
-# what about hooks?

@@ -1,15 +1,16 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="Nx" -->
+<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="React" -->
 # **Welcome to SFEIR School**
-## **Nx 200**
+
+## **React 200**
 
 ##==##
 
 <!-- .slide: class="transition-bg-green-5" -->
-# Déroulement de la formation
+# How the training take place
 
 <p class="center">
-C'est quand la pause ?<br>
-Quand est-ce qu'on mange ?<br>
-Tour de table ...
+When is the break ?<br>
+when will we eat ?<br>
+Ice break, let introduce ourself<br>
 </p>
 <br><br>

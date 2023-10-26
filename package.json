@@ -1,8 +1,18 @@
 {
-  "name": "@sfeir-school-react/source",
+  "name": "sfeir-school-react",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve": "nx serve",
+    "start:prez": "nx run docs:start-prez",
+    "server:start": "nx serve server-express --no-inspect",
+    "test:ci": "nx affected --exclude=docs --target=test --base=remotes/origin/main --head=HEAD --parallel=5",
+    "lint:ci": "nx affected --exclude=docs --target=lint --base=remotes/origin/main --head=HEAD --parallel=5",
+    "build:ci": "nx affected --exclude=docs --target=build --base=remotes/origin/main --head=HEAD --parallel=5",
+    "lint:all": "nx run-many --target=lint --exclude=docs --all --parallel=5 --fix",
+    "migrate-nx": "nx migrate latest",
+    "run-migration": "nx migrate --run-migrations=migrations.json"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",

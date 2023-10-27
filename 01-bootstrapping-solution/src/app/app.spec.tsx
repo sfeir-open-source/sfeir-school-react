@@ -10,6 +10,6 @@ describe('App', () => {
 
   it('should have a greeting as the title', () => {
     const { getByText } = render(<App />);
-    expect(getByText(/01-bootstrapping/gi)).toBeTruthy();
+    expect(getByText(/Successfuly bootstraped 01-bootstrapping-solution!/gi)).toBeTruthy();
   });
 });

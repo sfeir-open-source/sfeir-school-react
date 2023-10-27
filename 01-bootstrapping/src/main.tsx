@@ -1,11 +1,5 @@
-import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom/client';
-
-import App from './app/app';
-
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+/**
+ * This is the entry point to the application. It is responsible for bootstrapping the application.
+ * Write what's necessary to bootstrap the application and render the App component.
+ */
+export {};

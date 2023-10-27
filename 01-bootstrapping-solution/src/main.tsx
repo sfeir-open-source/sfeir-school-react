@@ -1,14 +1,14 @@
 import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom/client';
-
-import App from './app/app';
+import { createRoot } from 'react-dom/client';
 
 /**
  * This is the entry point to the application. It is responsible for bootstrapping the application.
  */
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = createRoot(document.getElementById('root') as HTMLDivElement);
 root.render(
   <StrictMode>
-    <App />
+    <div>
+      <h1>Hello Students</h1>
+    </div>
   </StrictMode>
 );

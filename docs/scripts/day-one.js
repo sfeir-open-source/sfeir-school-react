@@ -3,7 +3,7 @@ function schoolSlides() {
 }
 
 function introSlides() {
-  return ['01-intro/00-TITLE.md', '01-intro/01-ENVIRONMENTS.md', '01-intro/02-BOOTSTRAPPING.md'];
+  return ['01-intro/00-TITLE.md', '01-intro/01-ENVIRONMENTS.md', '01-intro/02-BOOTSTRAPPING.md', '01-intro/03-HELLO_WORLD.md', '01-intro/10-EXERCICE.md'];
 }
 
 export function dayOneSlides() {

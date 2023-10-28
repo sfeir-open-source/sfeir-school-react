@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "nx serve",
+    "test": "nx test",
     "start:prez": "nx run docs:serve",
     "server:start": "nx serve server-express --no-inspect",
     "test:ci": "nx affected --exclude=docs --target=test --base=remotes/origin/main --head=HEAD --parallel=5",

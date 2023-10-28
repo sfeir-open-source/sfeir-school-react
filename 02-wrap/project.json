@@ -1,0 +1,80 @@
+{
+  "name": "02-wrap",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "02-wrap/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/02-wrap"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "02-wrap:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "02-wrap:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "02-wrap:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "02-wrap:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "02-wrap:build:development"
+        },
+        "production": {
+          "buildTarget": "02-wrap:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/02-wrap"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "02-wrap/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

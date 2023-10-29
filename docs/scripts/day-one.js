@@ -10,6 +10,7 @@ function introSlides() {
     '01-intro/03-HELLO_WORLD.md',
     '01-intro/10-EXERCICE-BOOTSTRAPPING.md',
     '01-intro/04-DEEPER.md',
+    '01-intro/05-JSX.md',
   ];
 }
 

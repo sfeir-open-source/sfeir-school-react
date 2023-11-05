@@ -15,7 +15,12 @@ function introSlides() {
 }
 
 function architectureSlides() {
-  return ['02-architecture/00-TITLE.md', '02-architecture/01-KINDS.md', '02-architecture/02-COMPONENT-TREE.md']
+  return [
+    '02-architecture/00-TITLE.md',
+    '02-architecture/01-KINDS.md',
+    '02-architecture/02-COMPONENTS.md',
+    '02-architecture/03-COMPONENT-TREE.md',
+  ];
 }
 
 export function dayOneSlides() {

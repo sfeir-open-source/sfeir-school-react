@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`App > should display a snapshot of App 1`] = `
-<DocumentFragment>
-  <h1>
-    Hello Students
-  </h1>
-</DocumentFragment>
-`;

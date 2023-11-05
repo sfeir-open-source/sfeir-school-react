@@ -2,5 +2,4 @@
 /dist
 /coverage
 /.nx/cache
-/docs/*
-!/docs/markdown
+/docs/**/*.md

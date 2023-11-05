@@ -1,0 +1,28 @@
+.people-header {
+  height: 6rem;
+  width: 100%;
+
+  .MuiAppBar-positionStatic {
+    position: static;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('images/bg_right.png');
+  }
+
+  &__links {
+    width: calc(100% - 150px);
+    display: flex;
+    justify-content: flex-end;
+
+    .MuiLink-underlineHover {
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

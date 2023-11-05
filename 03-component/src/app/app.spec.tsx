@@ -5,7 +5,6 @@ describe('App', () => {
 
   beforeEach(() => {
     const { container: host } = render(<App />);
-
     container = host;
   });
 

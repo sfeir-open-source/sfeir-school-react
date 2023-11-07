@@ -20,9 +20,14 @@ function architectureSlides() {
     '02-architecture/01-KINDS.md',
     '02-architecture/02-COMPONENTS.md',
     '02-architecture/03-COMPONENT-TREE.md',
+    '02-architecture/10-EXERCICE.md',
   ];
 }
 
+function bindingSlides() {
+  return ['03-binding/00-TITLE.md', '03-binding/01-HISTORY.md', '03-binding/02-BINDING.md'];
+}
+
 export function dayOneSlides() {
-  return [...schoolSlides(), ...introSlides(), ...architectureSlides()];
+  return [...schoolSlides(), ...introSlides(), ...architectureSlides(), ...bindingSlides()];
 }

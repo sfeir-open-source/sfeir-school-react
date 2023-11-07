@@ -1,0 +1,40 @@
+<section className="people-home">
+  <Card sx={{ width: '30%' }}>
+  <CardHeader
+    avatar={<Avatar alt="person-photo" src="https://random-photo.com/test" sx={{ width: 70, height: 70 }} />}
+  title="John Doe"
+  subheader={
+  <div className="people-home__icons">
+    <CakeOutIcon />
+    <span>18/02/1978</span>
+  </div>
+  }
+  />
+  <CardContent>
+    <div className="people-home__icons">
+      <BusinessIcon />
+      <span>SFEIR Luxembourg</span>
+    </div>
+    <div className="people-home__icons">
+      <ManageAccountsIcon />
+      <span>Rodrigue Bouleau</span>
+    </div>
+    <div className="people-home__icons">
+      <EmailIcon />
+      <span>doe.j@sfeir.com</span>
+    </div>
+    <div className="people-home__icons">
+      <PhoneAndroidIcon />
+      <span>+33656890098</span>
+    </div>
+  </CardContent>
+  <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
+  <Button type="button" variant="outlined" color="error" startIcon={<TrashIcon />}>
+  Delete
+  </Button>
+  <Button type="button" variant="contained" color="success" startIcon={<ModeEditIcon />}>
+  Update
+  </Button>
+  </CardActions>
+  </Card>
+</section>

@@ -1,0 +1,21 @@
+.people-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .MuiCardContent-root {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+}

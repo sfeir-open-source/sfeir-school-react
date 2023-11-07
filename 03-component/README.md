@@ -4,7 +4,7 @@
 
 - Create a folder **core/components** in the app folder
 - Create a file **header.tsx** and **header.scss** inside the **core/components** folder
-- Copy paste the content from the **assets/\_header.html** and **assets/\_header.scss** files into the **header.tsx** and **header.scss** files respectively
+- Copy and paste the content from the **assets/\_header.html** and **assets/\_header.scss** files into the **header.tsx** and **header.scss** files respectively
 - Import the **header.scss** file inside the **header.tsx** file
 
 ## STEP 2

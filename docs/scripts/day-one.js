@@ -11,6 +11,7 @@ function introSlides() {
     '01-intro/10-EXERCISE-BOOTSTRAPPING.md',
     '01-intro/04-DEEPER.md',
     '01-intro/05-JSX.md',
+    '01-intro/07-LIFECYCLE.md',
   ];
 }
 

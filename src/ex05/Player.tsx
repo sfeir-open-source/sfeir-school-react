@@ -7,7 +7,7 @@ type CarouselProps = {
   children: React.ReactElement[];
 };
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
+const Carousel = ({ children }) => {
   const childArray = React.Children.toArray(children) as React.ReactElement[];
   const [currentIndex, setCurrentIndex] = useState(0);
   const { pred, succ } = range(0, childArray.length - 1);
@@ -35,7 +35,7 @@ type PlayerProps = {
   people: People;
 };
 
-export const Player: React.FC<PlayerProps> = ({ people }) => {
+export const Player = ({ people }) => {
   return (
     <>
       <main>

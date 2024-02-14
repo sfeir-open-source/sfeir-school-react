@@ -7,16 +7,17 @@ type CarouselProps = {
   children: React.ReactElement[];
 };
 
-export const Carousel: React.FC<CarouselProps> = () => {
+export const Carousel: React.FC<CarouselProps> = ({ children }) => {
+  const [current, setCurrent] = useState(0);
+  const currentChild = React.Children.toArray(children)[current];
+  const { succ, pred } = range(0, children.length - 1);
   return (
     <div className="flex-row">
-      <Fab icon="skip_previous" mini />
+      <Fab icon="skip_previous" mini onClick={() => setCurrent(pred)} />
       <div className="carousel">
-        Display PersonCards here. The current needs to have className="current",
-        the previous "prev" and the next "next" respectively. Use
-        React.cloneElement to add className prop to children
+        {React.cloneElement(currentChild, { className: "current" })}
       </div>
-      <Fab icon="skip_next" mini />
+      <Fab icon="skip_next" mini onClick={() => setCurrent(succ)} />
     </div>
   );
 };

@@ -18,11 +18,7 @@ type PersonCardProps = {
   className?: string;
 };
 
-const PersonCard: React.FC<PersonCardProps> = ({
-  person,
-  actions,
-  className,
-}) => {
+const PersonCard = ({ person, actions, className }: PersonCardProps) => {
   const { useRouter } = useConfig();
 
   const PersonLink: React.FC<{

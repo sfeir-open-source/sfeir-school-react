@@ -6,11 +6,15 @@ import {
   TopAppBarActionItem,
   TopAppBarFixedAdjust,
 } from "@rmwc/top-app-bar";
-import { Route, RouteChildrenProps } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import logo from "../images/Header.logo.svg";
 
-export const Header: React.FC = ({ children }) => (
+type HeaderProps = {
+  children?: React.ReactNode;
+};
+
+export const Header = ({ children }: HeaderProps) => (
   <>
     <TopAppBar>
       <TopAppBarRow>
@@ -24,12 +28,14 @@ export const Header: React.FC = ({ children }) => (
   </>
 );
 
-export const HeaderActionItem: React.FC<{
+type HeaderActionItemProps = {
   to: string;
   icon: string;
-}> = ({ to, icon }) => (
+};
+
+export const HeaderActionItem = ({ to, icon }: HeaderActionItemProps) => (
   <Route path={to}>
-    {({ history, match }: RouteChildrenProps) => (
+    {({ history, match }) => (
       <TopAppBarActionItem
         icon={icon}
         onClick={() => !match && history.push(to)}

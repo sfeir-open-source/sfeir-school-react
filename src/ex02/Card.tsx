@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 export const Card: React.FC = ({ children }) => (
   <section className="mdc-card">
@@ -6,20 +6,43 @@ export const Card: React.FC = ({ children }) => (
   </section>
 );
 
-// implement these subcomponents
-
-export const CardImage: React.FC<{
+type CardImageProps = {
   url: string;
   desc: string;
-}> = () => null;
+};
+
+// implement these subcomponents
+
+export const CardImage = ({ url, desc }: CardImageProps) => (
+  <figure>
+    <img src={url} alt={desc} />
+  </figure>
+);
 
 export const CardHeader: React.FC<{
   title: React.ReactNode;
   subTitle: React.ReactNode;
-}> = () => null;
+}> = ({ title, subTitle }) => (
+  <header>
+    <h1 className="mdc-typography--headline5">{title}</h1>
+    <h2 className="mdc-typography--subtitle1">{subTitle}</h2>
+  </header>
+);
 
-export const CardInfo: React.FC<{
+type CardInfoProps = {
   icon: string;
   desc?: string;
-  children: React.ReactNode;
-}> = () => null;
+  children?: ReactNode;
+};
+
+export const CardInfo = ({ icon, desc, children }: CardInfoProps) => (
+  <p>
+    <i
+      className="rmwc-icon material-icons rmwc-icon--size-small"
+      title={desc ?? icon}
+    >
+      {icon}
+    </i>
+    &nbsp;{children}
+  </p>
+);

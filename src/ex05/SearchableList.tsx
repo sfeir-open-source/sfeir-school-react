@@ -1,4 +1,10 @@
-import React from "react";
+import React, {
+  useCallback,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from "react";
 import { TextField } from "@rmwc/textfield";
 
 import { PersonCard } from "../solution/PersonCard";
@@ -19,14 +25,33 @@ type SearchableListProps = {
 };
 
 export const SearchableList: React.FC<SearchableListProps> = ({ people }) => {
+  const [query, setQuery] = useState("");
+  // const [filtered, setFiltered] = useState(people);
+  const filtered = useMemo(
+    () => people.filter((p) => p.firstname.includes(query)),
+    [people, query]
+  );
+  const clear = useCallback((ev) => {
+    setQuery("");
+  }, []);
   return (
     <>
-      <main>{people.map(toPersonCard)}</main>
+      <main>{filtered.map(toPersonCard)}</main>
       <footer>
         <TextField
           icon="search"
-          trailingIcon={{ icon: "close" }}
+          trailingIcon={{
+            icon: "close",
+            onClick: clear,
+          }}
           label="search by name"
+          value={query}
+          onChange={(ev) => {
+            setQuery(ev.currentTarget.value);
+            // setFiltered(
+            //   people.filter((p) => p.firstname.includes(ev.currentTarget.value))
+            // );
+          }}
         />
       </footer>
     </>

@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  cloneElement,
-  createRef,
-  useImperativeHandle,
-  forwardRef,
-} from "react";
+import React, { useState, cloneElement } from "react";
 import { Fab } from "@rmwc/fab";
 import { range } from "../utils";
 import { PersonCard } from "../solution/PersonCard";
@@ -13,10 +7,7 @@ type CarouselProps = {
   children: React.ReactElement[];
 };
 
-type CarouselApi = {
-  next: () => void;
-};
-const Carousel = forwardRef<CarouselApi, CarouselProps>(({ children }, ref) => {
+const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const childArray = React.Children.toArray(children) as React.ReactElement[];
   const [currentIndex, setCurrentIndex] = useState(0);
   const { pred, succ } = range(0, childArray.length - 1);
@@ -26,10 +17,6 @@ const Carousel = forwardRef<CarouselApi, CarouselProps>(({ children }, ref) => {
     [currentIndex, "current"],
     [pred(currentIndex), "prev"],
   ];
-
-  useImperativeHandle(ref, () => ({
-    next: () => setCurrentIndex(succ),
-  }));
 
   return (
     <div className="flex-row">
@@ -42,26 +29,24 @@ const Carousel = forwardRef<CarouselApi, CarouselProps>(({ children }, ref) => {
       <Fab icon="skip_next" mini onClick={() => setCurrentIndex(succ)} />
     </div>
   );
-});
+};
 
 type PlayerProps = {
   people: People;
 };
 
 export const Player: React.FC<PlayerProps> = ({ people }) => {
-  const playerRef = createRef<CarouselApi>();
-  const goNext = () => playerRef.current.next();
   return (
     <>
       <main>
-        <Carousel ref={playerRef}>
+        <Carousel>
           {people.map((person) => (
             <PersonCard person={person} key={person.id} />
           ))}
         </Carousel>
       </main>
       <footer>
-        <Fab icon="skip_next" onClick={goNext} />
+        <Fab icon="skip_next" />
       </footer>
     </>
   );

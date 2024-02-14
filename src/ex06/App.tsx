@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TopAppBarActionItem } from "@rmwc/top-app-bar";
 
 import { Header } from "../solution/Header";
@@ -6,7 +6,6 @@ import { Loading } from "../solution/Loading";
 import { SearchableList } from "../solution/SearchableList";
 
 import { Player } from "./Player";
-import { loadPeople } from "../utils";
 // import { Player } from "../solution/Player";
 
 export const App: React.FC = () => {
@@ -16,15 +15,7 @@ export const App: React.FC = () => {
 
   // get people from http://localhost:3000/people
   // you can use loadPeople in ../utils.js
-  const [people, setPeople] = useState<People>([]);
-
-  useEffect(() => {
-    console.log("Running effect", showList);
-    if (showList) {
-      console.log("Loading people");
-      loadPeople().then(setPeople);
-    }
-  }, [showList]);
+  const people = [];
 
   const CurrentView: React.ComponentType<{ people: People }> =
     people.length === 0 ? Loading : showList ? SearchableList : Player;

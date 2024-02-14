@@ -19,9 +19,7 @@ export const Player: React.FC<PlayerProps> = ({ people }) => {
   const triptych = [pred(currentIndex), currentIndex, succ(currentIndex)].map(
     (i) => people[i]
   );
-  if (people.length === 0) {
-    console.error("Warning ! This player does not support empty people array");
-  }
+
   return PlayerView({ triptych, onNext, onPrev });
 };
 

@@ -1,29 +1,26 @@
 import React from "react";
 import { Card, CardImage, CardHeader, CardInfo } from "./Card";
 
-type PersonCardProps = {
-  person: Person;
-};
+type PersonCardProps = {};
 
-export const PersonCard: React.FC<PersonCardProps> = ({ person }) => (
+export const PersonCard: React.FC<PersonCardProps> = () => (
   <Card>
-    <CardImage url={person.photo} desc={"face of " + person.firstname} />
+    <CardImage
+      url="https://randomuser.me/portraits/women/85.jpg"
+      desc="face of Leanne"
+    />
     <CardHeader
-      title={
-        <a href={"/person/" + person.id}>
-          {person.firstname} {person.lastname}
-        </a>
-      }
-      subTitle={person.position}
+      title={<a href="/person/5763cd4d9d2a4f259b53c901">Leanne Woodard</a>}
+      subTitle="Developer"
     />
     <CardInfo icon="email">
-      <a href={`mailto:${person.email}`}>{person.email}</a>
+      <a href="mailto:Leanne.Woodard@BIOSPAN.com">woodard.l@acme.com</a>
     </CardInfo>
     <CardInfo icon="phone">
-      <a href={"tel:" + person.phone}>{person.phone}</a>
+      <a href="tel:0784112248">0784112248</a>
     </CardInfo>
     <CardInfo icon="supervisor_account" desc="manager">
-      <a href={"/person/" + person.managerId}>{person.manager}</a>
+      <a href="/person/5763cd4d3b57c672861bfa1f">Erika</a>
     </CardInfo>
   </Card>
 );

@@ -1,0 +1,138 @@
+
+:root {
+  --mdc-theme-background: #fafafa;
+  --mdc-theme-primary: #0168ab;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+header.mdc-top-app-bar a {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  margin: 0 0.5em;
+}
+header.mdc-top-app-bar a header.mdc-top-app-bar a.active {
+  text-decoration: underline;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+footer > .mdc-fab + .mdc-fab {
+  margin-left: 1rem;
+}
+.mdc-fab {
+  background-color: var(--mdc-theme-primary);
+}
+.mdc-top-app-bar {
+  background-image: url("./app-ba-bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+img[alt="People logo"] {
+  height: 40px;
+}
+a {
+  text-decoration: none;
+  color: var(--mdc-theme-primary);
+}
+.mdc-card {
+  margin: 1rem;
+}
+.mdc-card .card-content {
+  padding: 1.3em;
+}
+.mdc-card .content-type-person-info {
+  width: 420px;
+  min-height: 150px;
+}
+.mdc-card .content-type-person-info > figure {
+  float: right;
+  margin: 0;
+}
+.mdc-card .content-type-person-info > figure > img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+}
+.mdc-card .content-type-person-info > header > h1 {
+  margin: 0;
+}
+.mdc-card .content-type-person-info > header > h2 {
+  margin: 0;
+  color: var(--mdc-theme-text-secondary-on-background);
+}
+.mdc-card .content-type-person-info > p {
+  margin: 0.5em 0;
+  white-space: nowrap;
+}
+.mdc-card .content-type-person-info > p > .rmwc-icon {
+  vertical-align: text-bottom;
+  color: var(--mdc-theme-text-secondary-on-background);
+}
+.mdc-card .content-type-person-form {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.mdc-card .content-type-person-form .mdc-select-helper-text::before,
+.mdc-card .content-type-person-form .mdc-text-field-helper-text::before {
+  vertical-align: top;
+  height: 1.25rem;
+}
+.mdc-card .content-type-person-form .mdc-text-field + .mdc-text-field,
+.mdc-card .content-type-person-form .mdc-text-field + .mdc-select,
+.mdc-card .content-type-person-form .mdc-select + .mdc-text-field {
+  margin-top: 1.25rem;
+}
+.mdc-text-field--focused:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) .mdc-floating-label,
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+  color: var(--mdc-theme-primary);
+}
+.carousel {
+  position: relative;
+  flex-grow: 1;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel > .mdc-card {
+  position: absolute;
+  margin: 0;
+  display: none;
+}
+.carousel > .mdc-card.current,
+.carousel > .mdc-card.prev,
+.carousel > .mdc-card.next {
+  display: initial;
+  transition: transform 0.5s ease;
+}
+.carousel > .mdc-card.prev {
+  transform: scale(0.6) translateY(150px);
+  z-index: -1;
+}
+.carousel > .mdc-card.next {
+  transform: scale(0.6) translateY(-150px);
+  z-index: -1;
+}

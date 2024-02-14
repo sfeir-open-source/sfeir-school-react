@@ -1,6 +1,6 @@
 <!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="react" -->
 
-# **Welcome to SFEIR School**
+# **Welcome to SFEIR Institute**
 
 ## **React**
 
@@ -22,6 +22,6 @@ Credentials
 <!-- .element: class="center" -->
 <br>
 
-![sfeir-icons big](user)<!-- .element: style="--icon-color:var(--light-grey);" --> SSID
+![sfeir-icons big](user)<!-- .element: style="--icon-color:var(--light-grey);" --> sfeirlille_guest
 
-![sfeir-icons big](lock)<!-- .element: style="--icon-color:var(--light-grey);" --> PWD
+![sfeir-icons big](lock)<!-- .element: style="--icon-color:var(--light-grey);" --> welcome@sfeir

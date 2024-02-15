@@ -5,6 +5,12 @@
 
 ## Lab
 
+```shell
+$ cd ex01
+$ npm i
+$ npm run dev
+```
+
 <small>
 
 * create two function components: Header and Card

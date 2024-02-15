@@ -134,6 +134,7 @@ const institute = [
       '04-route-props-02',
       '05-switch-and-redirect',
       '06-link-and-navlink',
+      '06.1-react-router-6',
       '07-exercise7-navigation',
       '08-TITLE-CONTEXT',
       // '08-solution',

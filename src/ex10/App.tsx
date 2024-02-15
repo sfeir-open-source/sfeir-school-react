@@ -1,13 +1,11 @@
 import React from "react";
-import { Switch, Route, Redirect, RouteComponentProps } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 
 import { Header, HeaderActionItem } from "../solution/Header";
 import { SearchableList } from "../solution/SearchableList";
 import { Player } from "../solution/Player";
 import { Loading } from "../solution/Loading";
 import { Person } from "../solution/EditablePerson";
-
-import { usePeople } from "./usePeople";
 
 const ContextualList: React.FC = () => {
   const people = [];
@@ -19,17 +17,16 @@ const ContextualPlayer: React.FC = () => {
   return <Player people={people} />;
 };
 
-const ContextualPerson: React.FC<RouteComponentProps<{
-  id: string;
-}>> = ({ match }) => {
+const ContextualPerson = () => {
+  const { id } = useParams();
   const people = [];
-  const person = people.find((p) => p.id === match.params.id);
+  const person = people.find((p) => p.id === id);
 
   // TODO: call mutateAsync function from useMutation
   const onUpdate = (updated: Person) => {
     console.log("updated person:", updated);
     return Promise.resolve();
-  }
+  };
   return <Person person={person} onUpdate={onUpdate} />;
 };
 
@@ -45,12 +42,11 @@ export const App: React.FC = () => {
       {people.length === 0 ? (
         <Loading />
       ) : (
-        <Switch>
-          <Route path="/list" component={ContextualList} />
-          <Route path="/player" component={ContextualPlayer} />
-          <Route path="/person/:id" component={ContextualPerson} />
-          <Redirect to="/list" />
-        </Switch>
+        <Routes>
+          <Route path="/list" element={<ContextualList />} />
+          <Route path="/player" element={<ContextualPlayer />} />
+          <Route path="/person/:id" element={<ContextualPerson />} />
+        </Routes>
       )}
     </>
   );

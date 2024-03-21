@@ -2,16 +2,19 @@
 
 # Présentation
 
-![speaker](./assets/images/jf.jpg)
-![badge](./assets/images/gde.png)
+![speaker](./assets/images/speakers/JHE.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
-## Jean-François Garreau
+## Julien Hery
 
-### CTO front
+### Developer & EM
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### @jefbinomed
+### @HeryDev
 
 <!-- .element: class="icon-twitter icon-second" -->
+
+### hery.j@sfeir.com
+
+<!-- .element: class="icon-mail icon-third" -->

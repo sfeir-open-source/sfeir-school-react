@@ -1,8 +1,8 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="xxx" -->
+<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="react" -->
 
 # **Welcome to SFEIR School**
 
-## **XXX 200**
+## **React**
 
 ##==##
 
@@ -40,4 +40,8 @@ Tour de table ...
 
 **Feuille de présence (obligatoire)** <!-- .element: class="center" -->
 
-https://bit.ly/sfeir-xxx <!-- .element: class="center" -->
+##==##
+
+# Repository
+
+https://github.com/sfeir-open-source/sfeir-school-react <!-- .element: class="center" -->

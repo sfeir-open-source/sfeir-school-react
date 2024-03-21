@@ -1,3 +1,5 @@
 <!-- .slide: class="transition bg-pink" -->
 
-# Introduction
+# Lifecycle & DOM
+
+Notes: 2h00

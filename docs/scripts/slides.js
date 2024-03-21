@@ -11,11 +11,18 @@ function schoolSlides() {
     '00-school/10-speaker-jta.md',
     '00-school/10-speaker-rto.md',
     '00-school/11-tour-de-table.md',
+    '00-school/20-what-we-will-do',
   ];
 }
 
 function introSlides() {
-  return ['01-intro/00-TITLE.md'];
+  return [
+    '01-intro/00-TITLE.md',
+    '01-intro/10-app-discovery.md',
+    '01-intro/20-what-is-react.md',
+    '01-intro/30-virtual-dom.md',
+    '01-intro/40-jsx.md',
+  ];
 }
 
 function noeudsElementsComposantsSlides() {
@@ -52,7 +59,6 @@ function bibliothequesDeComposantsTestingSlides() {
 
 function formation() {
   return [
-    //
     ...schoolSlides(), //
     ...introSlides(), //
     ...noeudsElementsComposantsSlides(), //

@@ -1,3 +1,0 @@
-# Controlled components
-
-# Demo

@@ -68,11 +68,3 @@ typings/
 
 #Dev
 docs/test.html
-
-# IDE
-.idea/
-
-# Misc
-.cache/
-.parcel-cache/
-/dist/

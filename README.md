@@ -1,71 +1,53 @@
-# React 200
+# SFEIR School React
 
-A SFEIR School
+<p align="center">
+ <img style="display:block" width="20%" height="20%" src="./docs/assets/images/sfeir-school-logo.png" alt="SFEIR School logo">
+</p>
+
+<br/>
+
+[Discover the SFEIR Schools](https://www.sfeir.com/fr/contenus-dexperts/sfeir-school)
 
 # Slides
 
 You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/).
 
-# Plan & Exercises
+## Develop
 
-## Fundamentals
+To run docs locally, go in directory `docs` and run `npx serve` of if you don't have node, you can use docker `docker-compose up`, and open slides on http://localhost:3000/.
 
-### Intro JSX, Elements, Components as functions, Props
+## Workshop
 
-- ex01 - HandsOn (JSX and props)
+Workshops are in directory `steps` :
 
-### Component composition, Component Tree, Elements as Props, Children
+- two directories per workshop :
+  - one with source file to complete
+  - a second directory suffixed with `-solution` which contains source file with solutions.
 
-- ex02 - Components (composition and children)
+> Note: You may open steps folder with your editor (especially VSCode)
 
-### Local State and Simple Events
+### Start a lab
 
-- ex03 - Local state and clicks (get interactive)
-- ex03bis -> Introduction to hooks (useState)
-
-### Lists, Conditional rendering, more about children
-
-- ex04 - Conditional, Lists (show 'em all)
-
-## More advanced concepts
-
-### Input / Refs / controlled and uncontrolled components
-
-- ex05 - Controlled Components - Input (search)
-
-### Lifecycle, Effects and lifting state up
-
-- ex06 - Lifecycle and Effects (async ftw)
-
-### Routing and Context
-
-- ex07 - Navigation
-- ex08 - Context
-
-### Forms - the problem statement
-
-- ex09 - forms
-
-# runtime
-
-```shell
-$ npm start
+```bash
+npm install
+npm run client -- exo01
+# for the solution
+npm run client -- exo01-solution
 ```
 
-Launches 3 servers :
+## Contributing
 
-- demos and index at http://localhost:8080, in watch mode
-- exercises at http://localhost:1234, in watch mode
-- API at http://localhost:3000/people
+### Contributing Guidelines
 
-# School: Expert
+Read through our [contributing guidelines][contributing] to learn about our submission process, coding rules and more.
 
-Looking for school expert ? PLease see README at `./src/expert/{school_name}/README.md`.
+### Want to Help?
 
-## Hooks
+Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>help wanted</kbd> or <kbd>good first issue</kbd>.
 
-```shell
-$ npm run start:hooks
-```
+### Code of Conduct
 
-For more information, please see `./src/expert/hooks/README.md`.
+Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
+
+[contributing]: CONTRIBUTING.md
+[codeofconduct]: https://github.com/sfeir-open-source/.github/blob/main/CODE_OF_CONDUCT.md

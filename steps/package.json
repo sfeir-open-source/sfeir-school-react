@@ -1,0 +1,19 @@
+{
+  "workspaces": [
+    "01-jsx",
+    "01-jsx-solution",
+    "02-composition",
+    "02-composition-solution",
+    "api"
+  ],
+  "scripts": {
+    "01-jsx": "concurrently \"npm:api\" \"npm run dev --workspace=01-jsx\"",
+    "01-jsx-solution": "concurrently \"npm:api\" \"npm run dev --workspace=01-jsx-solution\"",
+    "02-composition": "concurrently \"npm:api\" \"npm run dev --workspace=02-composition\"",
+    "02-composition-solution": "concurrently \"npm:api\" \"npm run dev --workspace=02-composition-solution\"",
+    "api": "npm run api --workspace=api"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

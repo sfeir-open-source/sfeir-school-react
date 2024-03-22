@@ -1,3 +1,7 @@
-
+.reveal .slides section.with-code pre.big-code:not(.literal) code,
+.reveal .slides section.with-code-dark pre.big-code:not(.literal) code,
+.reveal .slides section.with-code-bg-dark pre.big-code:not(.literal) code {
+  line-height: 1.8em;
+}
 
 /*# sourceMappingURL=slides.css.map */

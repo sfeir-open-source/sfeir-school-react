@@ -1,0 +1,72 @@
+:root {
+  --theme--color-main: #0168ab;
+  --theme--color-background: #fafafa;
+  --theme--color-secondary-background: #757575;
+}
+
+body {
+  background-color: var(--theme--color-background);
+}
+
+body > #root > header {
+  background-color: var(--theme--color-main);
+  display: flex;
+  padding: 0.125rem 2rem;
+  justify-content: space-between;
+
+  section > img {
+    height: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme--color-main);
+}
+
+article.MuiCard-root {
+  width: 420px;
+  min-height: 150px;
+  margin: 1rem;
+  padding: 1.3em;
+  display: grid;
+  grid:
+    'header avatar' min-content
+    'main avatar' 1fr
+    / 1fr 128px;
+
+  header {
+    grid-area: header;
+    &,
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  figure {
+    grid-area: avatar;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    & > img {
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
+    }
+  }
+  main.MuiCardContent-root.content-type-person-info {
+    grid-area: main;
+    padding: 0;
+
+    & > p {
+      margin: 0.5em 0;
+      white-space: nowrap;
+
+      & > svg.MuiSvgIcon-root {
+        vertical-align: text-bottom;
+        color: var(--theme--color-secondary-background);
+      }
+    }
+  }
+}

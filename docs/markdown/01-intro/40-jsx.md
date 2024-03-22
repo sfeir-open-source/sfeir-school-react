@@ -8,7 +8,7 @@
 
 <!-- .slide: class="with-code" -->
 
-```javascript
+```typescript
 const element = <h1>Hello JSX</h1>;
 
 function testResult(condition) {
@@ -34,7 +34,7 @@ Notes:
 
 # Hello JSX
 
-```javascript
+```typescript
 function wrapWithHeader(elmt) {
   return <header>{elmt}</header>;
 }
@@ -53,7 +53,7 @@ you can receive them as parameter
 
 # Hello JSX
 
-```javascript
+```typescript
 const el4 = <div>the response is {2 * 3 * 7}</div>;
 
 const big = (message) => <h1>{message.toUpperCase()}</h1>;
@@ -74,7 +74,7 @@ Notes:
 
 # Hello JSX
 
-```javascript
+```typescript
 const image = <img src={imgUrl} alt="an image"></img>;
 
 const input = <input tabIndex="1" type="text" value={value} />;
@@ -99,7 +99,7 @@ Notes:
 
 # Hello JSX
 
-```javascript
+```typescript
 const valid = [<p>first paragraph</p>, <p>second paragraph</p>];
 
 const fragment = (
@@ -122,7 +122,7 @@ Notes:
 
 # Hello JSX
 
-```javascript
+```typescript
 const fragment = (
   <>
     <p>first paragraph</p>

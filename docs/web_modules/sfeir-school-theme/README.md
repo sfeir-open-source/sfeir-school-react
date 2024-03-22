@@ -6,25 +6,25 @@ This repository is an Open Source theme for RevealJS presentations. It respect t
 
 You can preview it here : https://sfeir-school-theme.netlify.com/
 
--   [How to use it](https://github.com/sfeir-open-source/sfeir-school-theme/#how-to-use-it)
--   [Features](https://github.com/sfeir-open-source/sfeir-school-theme/#features)
-    -   [Play with mode theme](https://github.com/sfeir-open-source/sfeir-school-theme/#play-with-mode-theme)
-    -   [I18N your slides](https://github.com/sfeir-open-source/sfeir-school-theme/#i18n-your-slides)
-    -   [Specifics Slides](https://github.com/sfeir-open-source/sfeir-school-theme/#specifics-slides)
-        -   [First slide](https://github.com/sfeir-open-source/sfeir-school-theme/#first-slide)
-        -   [Speaker Slide](https://github.com/sfeir-open-source/sfeir-school-theme/#speaker-slide)
-        -   [Transitions slides](https://github.com/sfeir-open-source/sfeir-school-theme/#transitions-slides)
-        -   [Quotes slides](https://github.com/sfeir-open-source/sfeir-school-theme/#quotes-slides)
-        -   [Blur area slides](https://github.com/sfeir-open-source/sfeir-school-theme/#blur-area-slides)
-    -   [Custom Backgrounds](https://github.com/sfeir-open-source/sfeir-school-theme/#specifics-colors-backgrounds)
-    -   [Different Layout](https://github.com/sfeir-open-source/sfeir-school-theme/#different-layout)
-    -   [Slides with code](https://github.com/sfeir-open-source/sfeir-school-theme/#slides-with-code)
-    -   [Exercices](https://github.com/sfeir-open-source/sfeir-school-theme/#exercices)
-    -   [Helpers](https://github.com/sfeir-open-source/sfeir-school-theme/#helpers)
-        -   [List with fragments ](https://github.com/sfeir-open-source/sfeir-school-theme/#list-with-fragments)
-        -   [Feather icons ](https://github.com/sfeir-open-source/sfeir-school-theme/#feather-icons)
-    -   [Print the slides](https://github.com/sfeir-open-source/sfeir-school-theme/#print-the-slides)
--   [Releases Notes](https://github.com/sfeir-open-source/sfeir-school-theme/wiki/Releases-Notes)
+- [How to use it](https://github.com/sfeir-open-source/sfeir-school-theme/#how-to-use-it)
+- [Features](https://github.com/sfeir-open-source/sfeir-school-theme/#features)
+  - [Play with mode theme](https://github.com/sfeir-open-source/sfeir-school-theme/#play-with-mode-theme)
+  - [I18N your slides](https://github.com/sfeir-open-source/sfeir-school-theme/#i18n-your-slides)
+  - [Specifics Slides](https://github.com/sfeir-open-source/sfeir-school-theme/#specifics-slides)
+    - [First slide](https://github.com/sfeir-open-source/sfeir-school-theme/#first-slide)
+    - [Speaker Slide](https://github.com/sfeir-open-source/sfeir-school-theme/#speaker-slide)
+    - [Transitions slides](https://github.com/sfeir-open-source/sfeir-school-theme/#transitions-slides)
+    - [Quotes slides](https://github.com/sfeir-open-source/sfeir-school-theme/#quotes-slides)
+    - [Blur area slides](https://github.com/sfeir-open-source/sfeir-school-theme/#blur-area-slides)
+  - [Custom Backgrounds](https://github.com/sfeir-open-source/sfeir-school-theme/#specifics-colors-backgrounds)
+  - [Different Layout](https://github.com/sfeir-open-source/sfeir-school-theme/#different-layout)
+  - [Slides with code](https://github.com/sfeir-open-source/sfeir-school-theme/#slides-with-code)
+  - [Exercices](https://github.com/sfeir-open-source/sfeir-school-theme/#exercices)
+  - [Helpers](https://github.com/sfeir-open-source/sfeir-school-theme/#helpers)
+    - [List with fragments ](https://github.com/sfeir-open-source/sfeir-school-theme/#list-with-fragments)
+    - [Feather icons ](https://github.com/sfeir-open-source/sfeir-school-theme/#feather-icons)
+  - [Print the slides](https://github.com/sfeir-open-source/sfeir-school-theme/#print-the-slides)
+- [Releases Notes](https://github.com/sfeir-open-source/sfeir-school-theme/wiki/Releases-Notes)
 
 # How to use it:
 
@@ -50,41 +50,37 @@ In your index.html add the following lines:
 ```html
 ...
 <head>
-    ...
-    <!-- SFEIR Theme includes -->
-    <script type="module" src="./scripts/slides.js"></script>
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="./web_modules/sfeir-school-theme/sfeir-school-theme.css"
-        id="theme" />
+  ...
+  <!-- SFEIR Theme includes -->
+  <script type="module" src="./scripts/slides.js"></script>
+  <link rel="stylesheet" type="text/css" href="./web_modules/sfeir-school-theme/sfeir-school-theme.css" id="theme" />
 </head>
 <body>
-    <div class="reveal">
-        <!-- Any section element inside of this container is displayed as a slide -->
-        <div class="slides" data-type-show="prez"></div>
-    </div>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" data-type-show="prez"></div>
+  </div>
 </body>
 ...
 ```
 
 and a basic `slides.js`:
 
-```JavaScript
-import { SfeirThemeInitializer } from "../web_modules/sfeir-school-theme/sfeir-school-theme.mjs";
+```typescript
+import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
 
 // One method per module
 function schoolSlides() {
   return [
-    "00_intro.md",
-    "01_speaker.md",
-    "10_chapter1.md",
-    "11_layouts.md",
-    "15_vertical.md",
-    "20_specifics_slides.md",
-    "30_code_slides.md",
-    "40_helpers.md",
-    "50_modes.md",
+    '00_intro.md',
+    '01_speaker.md',
+    '10_chapter1.md',
+    '11_layouts.md',
+    '15_vertical.md',
+    '20_specifics_slides.md',
+    '30_code_slides.md',
+    '40_helpers.md',
+    '50_modes.md',
   ];
 }
 
@@ -110,22 +106,22 @@ You can still use RevealJS API by importing `Reveal` object in `import { Reveal 
 
 # Features
 
--   Specifics slides management:
-    -   First Slide
-    -   Speaker Slide
-    -   Transitions Slides
-    -   Multiples backgrounds
-    -   Code Higlighting (sequential highlighting will come after)
-        -   Choice of Dark code or Light code
-        -   Choice of font
-        -   Progess Highlithing
-    -   Two columns layout
-    -   Somes helpers for images
-    -   Compatibility with feather icons
-    -   Easyer management of restitution slides.
-    -   Expose some custom properties corresponding to the theme.
-    -   As it's controlled by class, it's compatible with markdown syntax or html
-    -   Three theme mode available : institute, school or conf
+- Specifics slides management:
+  - First Slide
+  - Speaker Slide
+  - Transitions Slides
+  - Multiples backgrounds
+  - Code Higlighting (sequential highlighting will come after)
+    - Choice of Dark code or Light code
+    - Choice of font
+    - Progess Highlithing
+  - Two columns layout
+  - Somes helpers for images
+  - Compatibility with feather icons
+  - Easyer management of restitution slides.
+  - Expose some custom properties corresponding to the theme.
+  - As it's controlled by class, it's compatible with markdown syntax or html
+  - Three theme mode available : institute, school or conf
 
 ## Play with mode theme
 
@@ -133,8 +129,8 @@ Lots of trainings given by SFEIR School program are also available with the paid
 
 To this end, you have two possibilities:
 
--   Use HTML attribute `data-theme-slides`;
--   Use URL parameter `theme`.
+- Use HTML attribute `data-theme-slides`;
+- Use URL parameter `theme`.
 
 Below are `index.html` and URL examples for the available themes.
 
@@ -142,9 +138,9 @@ Below are `index.html` and URL examples for the available themes.
 
 ```html
 <body>
-    <div class="reveal">
-        <div class="slides" data-theme-slides="institute">...</div>
-    </div>
+  <div class="reveal">
+    <div class="slides" data-theme-slides="institute">...</div>
+  </div>
 </body>
 ```
 
@@ -154,9 +150,9 @@ https://sfeir-school-theme.netlify.app/index.html?theme=institute#/
 
 ```html
 <body>
-    <div class="reveal">
-        <div class="slides" data-theme-slides="school">...</div>
-    </div>
+  <div class="reveal">
+    <div class="slides" data-theme-slides="school">...</div>
+  </div>
 </body>
 ```
 
@@ -166,9 +162,9 @@ https://sfeir-school-theme.netlify.app/index.html?theme=school#/
 
 ```html
 <body>
-    <div class="reveal">
-        <div class="slides" data-theme-slides="conf">...</div>
-    </div>
+  <div class="reveal">
+    <div class="slides" data-theme-slides="conf">...</div>
+  </div>
 </body>
 ```
 
@@ -192,12 +188,12 @@ Here is an example of first slide according to if you set mode to institute or n
 
 Here are the impacts of the mode :
 
--   Change the first slide
--   If you use SFEIR background (`transition-bg-sfeir-1` to `transition-bg-sfeir-3`), the background use will be green or blue
--   The underline of titles in transitions slides
--   The exercice slide
--   The color of feather icons
--   The header of tables
+- Change the first slide
+- If you use SFEIR background (`transition-bg-sfeir-1` to `transition-bg-sfeir-3`), the background use will be green or blue
+- The underline of titles in transitions slides
+- The exercice slide
+- The color of feather icons
+- The header of tables
 
 ## I18N your slides
 
@@ -211,16 +207,16 @@ To resume, asking `FR` langage will serve you default markdown files.
 
 To specify the langage you want to use, you have two options :
 
--   define the langage in the index.html
--   adding a parameter specifying the langage
+- define the langage in the index.html
+- adding a parameter specifying the langage
 
 ### Configuration in the index.html
 
 ```html
 <body>
-    <div class="reveal">
-        <div class="slides" data-lang="EN">...</div>
-    </div>
+  <div class="reveal">
+    <div class="slides" data-lang="EN">...</div>
+  </div>
 </body>
 ```
 
@@ -242,8 +238,8 @@ Simply add a query parameter in the URL `data-lang` with the wanted langage afte
 
 ![](./docs/images/first-slide.png)
 
--   Attribute: `sfeir-level` could change from 1 to 3
--   Attribute: `sfeir-techno` display the technology of the SFEIR school in the badge of SFEIR school.
+- Attribute: `sfeir-level` could change from 1 to 3
+- Attribute: `sfeir-techno` display the technology of the SFEIR school in the badge of SFEIR school.
 
 ### Speaker Slide
 
@@ -291,16 +287,16 @@ You can also change the number of badge (one -> three) `first-badge` | `second-b
 
 You can use those class for transitions slides :
 
--   `blue`: the text underline of transition will be set to blue
--   `green`: the text underline of transition will be set to blue
--   `left`: the text will be left aligned
--   `right`: the text will be right aligned
--   `top`: the text will be stick to the top
--   `bottom`: the text will be stick to the bottom
--   `bg-white` / `bg-blue` / `bg-green` : the background will be in a different color
--   `transition-bg-sfeir-1` -> `transition-bg-sfeir-3` : different background images linked to theme mode (school or institute)
--   `transition-bg-green-1` -> `transition-bg-green-6` : different green backgrounds images
--   `transition-bg-blue-1` -> `transition-bg-blue-3` : different blue backgrounds images
+- `blue`: the text underline of transition will be set to blue
+- `green`: the text underline of transition will be set to blue
+- `left`: the text will be left aligned
+- `right`: the text will be right aligned
+- `top`: the text will be stick to the top
+- `bottom`: the text will be stick to the bottom
+- `bg-white` / `bg-blue` / `bg-green` : the background will be in a different color
+- `transition-bg-sfeir-1` -> `transition-bg-sfeir-3` : different background images linked to theme mode (school or institute)
+- `transition-bg-green-1` -> `transition-bg-green-6` : different green backgrounds images
+- `transition-bg-blue-1` -> `transition-bg-blue-3` : different blue backgrounds images
 
 ## Transition with background text in blue or green
 
@@ -326,15 +322,15 @@ or in `green`
 
 ![](./docs/images/transition-left.png)
 
--   `transition right` for right text aligned
+- `transition right` for right text aligned
 
 ![](./docs/images/transition-right.png)
 
--   `transition top` for top text aligned
+- `transition top` for top text aligned
 
 ![](./docs/images/transition-top.png)
 
--   `transition bottom` for bottom text aligned
+- `transition bottom` for bottom text aligned
 
 ![](./docs/images/transition-bottom.png)
 
@@ -348,22 +344,22 @@ Here is the list of possible backgrounds:
 # Transition
 ```
 
--   `bg-white`
-    ![](./docs/images/sfeir-bg-white.png)
+- `bg-white`
+  ![](./docs/images/sfeir-bg-white.png)
 
--   `bg-blue`
-    ![](./docs/images/sfeir-bg-blue.png)
+- `bg-blue`
+  ![](./docs/images/sfeir-bg-blue.png)
 
--   `bg-green`
-    ![](./docs/images/sfeir-bg-green.png)
+- `bg-green`
+  ![](./docs/images/sfeir-bg-green.png)
 
 ## Transition background SFEIR and green and blue
 
 Here is the list of possible grey background
 
--   bg-sfeir-1 = bg-green-1 or bg-blue-1
--   bg-sfeir-2 = bg-green-2 or bg-blue-2
--   bg-sfeir-3 = bg-green-3 or bg-blue-3
+- bg-sfeir-1 = bg-green-1 or bg-blue-1
+- bg-sfeir-2 = bg-green-2 or bg-blue-2
+- bg-sfeir-3 = bg-green-3 or bg-blue-3
 
 ```md
 <!-- .slide: class="transition-bg-sfeir-1" -->
@@ -371,35 +367,35 @@ Here is the list of possible grey background
 # SFEIR bg SFEIR 1
 ```
 
--   `transition-bg-sfeir-1`
-    ![](./docs/images/sfeir-bg-sfeir-1.png)
+- `transition-bg-sfeir-1`
+  ![](./docs/images/sfeir-bg-sfeir-1.png)
 
--   `transition-bg-green-1`
-    ![](./docs/images/sfeir-bg-green-1.png)
+- `transition-bg-green-1`
+  ![](./docs/images/sfeir-bg-green-1.png)
 
--   `transition-bg-green-2`
-    ![](./docs/images/sfeir-bg-green-2.png)
+- `transition-bg-green-2`
+  ![](./docs/images/sfeir-bg-green-2.png)
 
--   `transition-bg-green-3`
-    ![](./docs/images/sfeir-bg-green-3.png)
+- `transition-bg-green-3`
+  ![](./docs/images/sfeir-bg-green-3.png)
 
--   `transition-bg-green-4`
-    ![](./docs/images/sfeir-bg-green-4.png)
+- `transition-bg-green-4`
+  ![](./docs/images/sfeir-bg-green-4.png)
 
--   `transition-bg-green-5`
-    ![](./docs/images/sfeir-bg-green-5.png)
+- `transition-bg-green-5`
+  ![](./docs/images/sfeir-bg-green-5.png)
 
--   `transition-bg-green-6`
-    ![](./docs/images/sfeir-bg-green-6.png)
+- `transition-bg-green-6`
+  ![](./docs/images/sfeir-bg-green-6.png)
 
--   `transition-bg-blue-1`
-    ![](./docs/images/sfeir-bg-blue-1.png)
+- `transition-bg-blue-1`
+  ![](./docs/images/sfeir-bg-blue-1.png)
 
--   `transition-bg-blue-2`
-    ![](./docs/images/sfeir-bg-blue-2.png)
+- `transition-bg-blue-2`
+  ![](./docs/images/sfeir-bg-blue-2.png)
 
--   `transition-bg-blue-3`
-    ![](./docs/images/sfeir-bg-blue-3.png)
+- `transition-bg-blue-3`
+  ![](./docs/images/sfeir-bg-blue-3.png)
 
 ## Transition with custom Image
 
@@ -509,8 +505,8 @@ A paragraph with some text and a [link](http://hakim.se).
 
 ## Slide 2
 
--   Item 2
--   Item 3
+- Item 2
+- Item 3
 ```
 
 ![](./docs/images/two-col-basic.png)
@@ -540,8 +536,8 @@ If text is set on over the background, the default color is white
 
 ## Slide 2
 
--   Item 2
--   Item 3
+- Item 2
+- Item 3
 ```
 
 ![](./docs/images/two-col-bg-right.png)
@@ -557,8 +553,8 @@ If text is set on over the background, the default color is white
 
 ## Slide 2
 
--   Item 2
--   Item 3
+- Item 2
+- Item 3
 ```
 
 Usefull when the background image has to much light
@@ -596,25 +592,25 @@ You should use triple **\`** sufix by the langage. Code slides in Reveal are bas
 
 You can also use class to customise the slide:
 
--   `with-code-dark`: to use a dark theme (default is light theme)
-    ![](./docs/images/slide-with-code-dark.png)
+- `with-code-dark`: to use a dark theme (default is light theme)
+  ![](./docs/images/slide-with-code-dark.png)
 
--   `with-code-bg-dark`: to use a dark theme for code bloc (default is light theme)
-    ![](./docs/images/slide-with-code-bg-dark.png)
+- `with-code-bg-dark`: to use a dark theme for code bloc (default is light theme)
+  ![](./docs/images/slide-with-code-bg-dark.png)
 
--   `consolas`: will use consolas font
-    ![](./docs/images/slide-with-code-consolas.png)
+- `consolas`: will use consolas font
+  ![](./docs/images/slide-with-code-consolas.png)
 
--   `inconsolata`: will use inconsolata font
-    ![](./docs/images/slide-with-code-inconsolata.png)
+- `inconsolata`: will use inconsolata font
+  ![](./docs/images/slide-with-code-inconsolata.png)
 
--   `big-code`: will use a big size of font
+- `big-code`: will use a big size of font
 
-    ![](./docs/images/slide-with-code-big.png)
+  ![](./docs/images/slide-with-code-big.png)
 
--   `max-height`: make the code block of the slide take all vertical space. This class should be define on the second as a complement of `with-code` or `with-code-dark` classes.
+- `max-height`: make the code block of the slide take all vertical space. This class should be define on the second as a complement of `with-code` or `with-code-dark` classes.
 
-    ![](./docs/images/slide-with-code-max-height.png)
+  ![](./docs/images/slide-with-code-max-height.png)
 
 The additional class `alone` will position the code in the center of screen instead of relative to its parent.
 
@@ -677,10 +673,10 @@ HighlightJS propose lots of themes that could use.
 // To override the highlightJS theme you can do like this
 
 .with-code {
-    @import '../../../node_modules/highlight.js/styles/tomorrow';
+  @import '../../../node_modules/highlight.js/styles/tomorrow';
 }
 .with-code-dark {
-    @import '../../../node_modules/highlight.js/styles/darcula';
+  @import '../../../node_modules/highlight.js/styles/darcula';
 }
 ```
 
@@ -784,10 +780,10 @@ Else revealJS will add some '<p>' tags and destroy the layout -->
 
 Some selectors are add to the theme to easily fix size of images in the slide. Note that RevealJS use a mecanism of perspective to preserve size. If you ask to your presentation to be with resolutions 1920x1080, all size you set in your slides will respect that, even if you are on a 1024 screen or bigger.
 
--   `w-N`: your image will have a with of **N** (N between 50px and 1000px by steps of 50px)
--   `h-N`: your image will have a height of **N** (N between 50px and 1000px by steps of 50px)
--   `wm-N`: your image will have a with-max of **N** (N between 50px and 1000px by steps of 50px)
--   `hm-N`: your image will have a height-max of **N** (N between 50px and 1000px by steps of 50px)
+- `w-N`: your image will have a with of **N** (N between 50px and 1000px by steps of 50px)
+- `h-N`: your image will have a height of **N** (N between 50px and 1000px by steps of 50px)
+- `wm-N`: your image will have a with-max of **N** (N between 50px and 1000px by steps of 50px)
+- `hm-N`: your image will have a height-max of **N** (N between 50px and 1000px by steps of 50px)
 
 you can use thoses helpers in `alt` or `class` of your elements
 
@@ -819,8 +815,8 @@ Div background:
 
 Some selectors are add to the theme to easily fix margin-top/bottom of images in the slide to easily trick for the position.
 
--   `mt-N`: your image will have a magin-top of **N** (N between 10px and 1000px by steps of 10px)
--   `mb-N`: your image will have a margin-bottom of **N** (N between 10px and 1000px by steps of 10px)
+- `mt-N`: your image will have a magin-top of **N** (N between 10px and 1000px by steps of 10px)
+- `mb-N`: your image will have a margin-bottom of **N** (N between 10px and 1000px by steps of 10px)
 
 you can use thoses helpers in `alt` or `class` of your elements
 
@@ -918,9 +914,9 @@ With this configuration option you can easily create content that is different b
 
 ```html
 <body>
-    <div class="reveal">
-        <div class="slides" data-type-show="prez">...</div>
-    </div>
+  <div class="reveal">
+    <div class="slides" data-type-show="prez">...</div>
+  </div>
 </body>
 ```
 
@@ -967,11 +963,11 @@ Sometimes, you will need to use revealJS fragments (animation to reveal an eleme
 1. List Item 1
 2. List Item 2
 3. List Item 3
- <!-- .element: class="list-fragment" -->
+<!-- .element: class="list-fragment" -->
 
--   Item 1
--   Item 2
--   **Item 3**
+- Item 1
+- Item 2
+- **Item 3**
 <!-- .element: class="list-fragment" -->
 ```
 
@@ -1001,12 +997,12 @@ The "hacky" way plays with mardown image syntax : `![tagList](sourceOfImage)`. S
 
 We introduce some extensible capabilities :
 
--   Add `small` or `big` attribute to change the size :
-    -   Without `small` or `big` : default size is `48px`
-    -   With `small` : size is `24px`
-    -   With `big` : size is `96px`
--   You can define your own custom size using html custom properties in the style of image (see example after) : `--icon-size`
--   By default, the color of icons follow the mode of presentation (school (green) or institute (blue)). You can add your custom colors using custom properties in the style of image (see example after) : `--icon-color`
+- Add `small` or `big` attribute to change the size :
+  - Without `small` or `big` : default size is `48px`
+  - With `small` : size is `24px`
+  - With `big` : size is `96px`
+- You can define your own custom size using html custom properties in the style of image (see example after) : `--icon-size`
+- By default, the color of icons follow the mode of presentation (school (green) or institute (blue)). You can add your custom colors using custom properties in the style of image (see example after) : `--icon-color`
 
 ```md
 ## Use Feathers icons

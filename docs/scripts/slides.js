@@ -79,7 +79,63 @@ function nodesElementsComponentsSlides() {
 }
 
 function gestionEtatEtEventsSlides() {
-  return ['03-gestion-etat-et-events/00-TITLE.md'];
+  function stateSlides() {
+    return [
+      '03-states-and-events/10-states.md',
+      '03-states-and-events/11-component-flavours.md',
+      '03-states-and-events/12-class-component-state.md',
+      '03-states-and-events/13-function-component-state.md',
+    ];
+  }
+  function eventHandlersSlides() {
+    return [
+      '03-states-and-events/20-events.md',
+      '03-states-and-events/21-handling-events-name.md',
+      '03-states-and-events/22-handling-events-default.md',
+      '03-states-and-events/23-synthetic-event.md',
+    ];
+  }
+  function setStateSlides() {
+    return [
+      '03-states-and-events/30-how-to-change-state.md',
+      '03-states-and-events/31-set-state.md',
+      '03-states-and-events/32-set-state-async.md',
+      '03-states-and-events/33-events-and-state-summary.md',
+      '03-states-and-events/35-lab-state-clicks.md',
+    ];
+  }
+  function fetchSlides() {
+    return [
+      '03-states-and-events/40-fetch.md',
+      '03-states-and-events/41-fetch-basis.md',
+      '03-states-and-events/42-fetch-method.md',
+      '03-states-and-events/43-fetch-body.md',
+      '03-states-and-events/44-fetch-headers.md',
+    ];
+  }
+  function effectsSlides() {
+    return [
+      '03-states-and-events/50-effects.md',
+      '03-states-and-events/51-side-effect-without-useeffect.md',
+      '03-states-and-events/52-useeffect.md',
+    ];
+  }
+  function fetchListAndEffectLabSlides() {
+    return ['03-states-and-events/55-lab-list-and-fetch.md'];
+  }
+  function basicReactQuerySlides() {
+    return ['03-states-and-events/60-react-query-intro.md'];
+  }
+  return [
+    '03-states-and-events/00-TITLE.md',
+    ...stateSlides(),
+    ...eventHandlersSlides(),
+    ...setStateSlides(),
+    ...fetchSlides(),
+    ...effectsSlides(),
+    ...fetchListAndEffectLabSlides(),
+    ...basicReactQuerySlides(),
+  ];
 }
 
 function lifecycleEtDomSlides() {

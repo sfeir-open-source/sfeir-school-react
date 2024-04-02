@@ -1,5 +1,5 @@
 <!-- .slide: class="transition bg-pink" -->
 
-# Noeuds, éléments et composants
+# States & Events
 
 Notes: 2h30

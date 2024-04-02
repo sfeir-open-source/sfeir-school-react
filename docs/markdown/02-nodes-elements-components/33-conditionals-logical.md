@@ -4,10 +4,12 @@
 
 ## or a **logical operator**
 
+<!-- prettier-ignore -->
 ```typescript
 const Inbox = ({ messages, unread }) => (
   <div>
-    {unread.length > 0 && <header>You have {unread.length} unread messages</header>}
+    {unread.length > 0 && 
+      <header>You have {unread.length} unread messages</header>}
     <main>{messages}</main>
   </div>
 );

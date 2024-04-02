@@ -19,6 +19,12 @@ body > #root > header {
   }
 }
 
+body > #root > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
   color: var(--theme--color-main);
@@ -69,4 +75,15 @@ article.MuiCard-root {
       }
     }
   }
+}
+
+section.carousel {
+  display: flex;
+  align-items: center;
+}
+
+section.people-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

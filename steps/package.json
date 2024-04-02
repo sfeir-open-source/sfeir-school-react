@@ -4,6 +4,10 @@
     "01-jsx-solution",
     "02-composition",
     "02-composition-solution",
+    "03-state-and-clicks",
+    "03-state-and-clicks-solution",
+    "04-list-and-fetch",
+    "04-list-and-fetch-solution",
     "api"
   ],
   "scripts": {
@@ -11,6 +15,10 @@
     "01-jsx-solution": "concurrently \"npm:api\" \"npm run dev --workspace=01-jsx-solution\"",
     "02-composition": "concurrently \"npm:api\" \"npm run dev --workspace=02-composition\"",
     "02-composition-solution": "concurrently \"npm:api\" \"npm run dev --workspace=02-composition-solution\"",
+    "03-state-and-clicks": "concurrently \"npm:api\" \"npm run dev --workspace=03-state-and-clicks\"",
+    "03-state-and-clicks-solution": "concurrently \"npm:api\" \"npm run dev --workspace=03-state-and-clicks-solution\"",
+    "04-list-and-fetch": "concurrently \"npm:api\" \"npm run dev --workspace=04-list-and-fetch\"",
+    "04-list-and-fetch-solution": "concurrently \"npm:api\" \"npm run dev --workspace=04-list-and-fetch-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

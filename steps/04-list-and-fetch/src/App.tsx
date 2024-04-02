@@ -1,13 +1,12 @@
 import { Header } from './components/Header';
 import { PersonCard } from './components/PersonCard';
+import { Carousel } from './components/Carousel';
+import { people } from '../../api/people.json';
 
 import './App.css';
+import { PeopleGrid } from './components/PeopleGrid';
 
-type AppProps = {
-  people: People;
-};
-
-function App({ people }: AppProps) {
+function App() {
   const randomPerson = people[Math.floor(Math.random() * people.length)];
 
   return (
@@ -15,6 +14,8 @@ function App({ people }: AppProps) {
       <Header />
       <main>
         <PersonCard person={randomPerson} />
+        <Carousel people={people} />
+        <PeopleGrid>{/* Put here all PersonCard */}</PeopleGrid>
       </main>
     </>
   );

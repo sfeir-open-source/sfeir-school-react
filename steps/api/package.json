@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "api": "json-server --quiet --delay=500 ./people.json"
+    "api": "json-server --quiet --port 3000 --delay=500 ./people.json"
   },
   "dependencies": {
     "json-server": "^0.17.4"

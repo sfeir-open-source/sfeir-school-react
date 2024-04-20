@@ -10,6 +10,10 @@
     "04-list-and-fetch-solution",
     "05-better-carousel",
     "05-better-carousel-solution",
+    "06-custom-hooks",
+    "06-custom-hooks-solution",
+    "07-hoc",
+    "07-hoc-solution",
     "api"
   ],
   "scripts": {
@@ -23,6 +27,10 @@
     "04-list-and-fetch-solution": "concurrently \"npm:api\" \"npm run dev --workspace=04-list-and-fetch-solution\"",
     "05-better-carousel": "concurrently \"npm:api\" \"npm run dev --workspace=05-better-carousel\"",
     "05-better-carousel-solution": "concurrently \"npm:api\" \"npm run dev --workspace=05-better-carousel-solution\"",
+    "06-custom-hooks": "concurrently \"npm:api\" \"npm run dev --workspace=06-custom-hooks\"",
+    "06-custom-hooks-solution": "concurrently \"npm:api\" \"npm run dev --workspace=06-custom-hooks-solution\"",
+    "07-hoc": "concurrently \"npm:api\" \"npm run dev --workspace=07-hoc\"",
+    "07-hoc-solution": "concurrently \"npm:api\" \"npm run dev --workspace=07-hoc-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

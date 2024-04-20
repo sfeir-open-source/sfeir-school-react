@@ -8,9 +8,36 @@ interface CarouselProps {
   people: People;
 }
 
+export function Carousel({ people }: CarouselProps) {
+  const { currentPerson, carouselState, onPreviousClick, onNextClick, onPlayClick, onPauseClick } = useCarousel(people);
+
+  return (
+    <section className="carousel">
+      <MuiFab size="small" color="default" aria-label="previous" onClick={onPreviousClick}>
+        <ArrowBack />
+      </MuiFab>
+      <PersonCard person={currentPerson} />
+      <MuiStack spacing={1}>
+        {carouselState === 'PLAY' ? (
+          <MuiFab size="small" color="default" aria-label="pause" onClick={onPauseClick}>
+            <Pause />
+          </MuiFab>
+        ) : (
+          <MuiFab size="small" color="default" aria-label="play" onClick={onPlayClick}>
+            <PlayArrow />
+          </MuiFab>
+        )}
+        <MuiFab size="small" color="default" aria-label="next" onClick={onNextClick}>
+          <ArrowForward />
+        </MuiFab>
+      </MuiStack>
+    </section>
+  );
+}
+
 type CarouselState = 'PLAY' | 'PAUSE';
 
-export function Carousel({ people }: CarouselProps) {
+function useCarousel(people: Person[]) {
   const [currentPersonIndex, setCurrentPersonIndex] = useState(0);
   const currentPerson = people[currentPersonIndex];
   const [carouselState, setCarouselState] = useState<CarouselState>('PLAY');
@@ -22,6 +49,8 @@ export function Carousel({ people }: CarouselProps) {
     () => setCurrentPersonIndex(currentPersonIndex === people.length - 1 ? 0 : currentPersonIndex + 1),
     [currentPersonIndex, people.length]
   );
+  const onPauseClick = () => setCarouselState('PAUSE');
+  const onPlayClick = () => setCarouselState('PLAY');
 
   useEffect(() => {
     if (carouselState === 'PLAY') {
@@ -35,26 +64,5 @@ export function Carousel({ people }: CarouselProps) {
     }
   }, [carouselState, playIntervalRef, onNextClick]);
 
-  return (
-    <section className="carousel">
-      <MuiFab size="small" color="default" aria-label="previous" onClick={onPreviousClick}>
-        <ArrowBack />
-      </MuiFab>
-      <PersonCard person={currentPerson} />
-      <MuiStack spacing={1}>
-        {carouselState === 'PLAY' ? (
-          <MuiFab size="small" color="default" aria-label="pause" onClick={() => setCarouselState('PAUSE')}>
-            <Pause />
-          </MuiFab>
-        ) : (
-          <MuiFab size="small" color="default" aria-label="play" onClick={() => setCarouselState('PLAY')}>
-            <PlayArrow />
-          </MuiFab>
-        )}
-        <MuiFab size="small" color="default" aria-label="next" onClick={onNextClick}>
-          <ArrowForward />
-        </MuiFab>
-      </MuiStack>
-    </section>
-  );
+  return { currentPerson, carouselState, onPreviousClick, onNextClick, onPlayClick, onPauseClick };
 }

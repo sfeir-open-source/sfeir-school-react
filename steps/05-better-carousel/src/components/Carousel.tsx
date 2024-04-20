@@ -22,28 +22,24 @@ export function Carousel({ people }: CarouselProps) {
 
   return (
     <section className="carousel">
-      <ActionButton Icon={ArrowBack} label="previous" onClick={onPreviousClick} />
+      <MuiFab size="small" color="default" aria-label="previous" onClick={onPreviousClick}>
+        <ArrowBack />
+      </MuiFab>
       <PersonCard person={currentPerson} />
       <MuiStack spacing={1}>
-        {carouselState}
-        <ActionButton Icon={Pause} label="pause" onClick={() => {}} />
-        <ActionButton Icon={PlayArrow} label="play" onClick={() => {}} />
-        <ActionButton Icon={ArrowForward} label="next" onClick={onNextClick} />
+        {carouselState === 'PLAY' ? (
+          <MuiFab size="small" color="default" aria-label="pause" onClick={() => {}}>
+            <Pause />
+          </MuiFab>
+        ) : (
+          <MuiFab size="small" color="default" aria-label="play" onClick={() => {}}>
+            <PlayArrow />
+          </MuiFab>
+        )}
+        <MuiFab size="small" color="default" aria-label="next" onClick={onNextClick}>
+          <ArrowForward />
+        </MuiFab>
       </MuiStack>
     </section>
-  );
-}
-
-interface ActionButtonProps {
-  label: string;
-  Icon: React.ComponentType;
-  onClick: VoidFunction;
-}
-
-function ActionButton({ label, onClick, Icon }: ActionButtonProps) {
-  return (
-    <MuiFab size="small" color="default" aria-label={label} onClick={onClick}>
-      <Icon />
-    </MuiFab>
   );
 }

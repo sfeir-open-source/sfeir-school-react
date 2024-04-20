@@ -147,7 +147,11 @@ function lifecycleEtDomSlides() {
     ];
   }
   function refsAndDOMSlides() {
-    return ['04-lifecycle-et-dom/20-refs.md'];
+    return [
+      '04-lifecycle-et-dom/20-refs.md',
+      '04-lifecycle-et-dom/21-refs-with-interval.md',
+      '04-lifecycle-et-dom/21-refs-with-dom.md',
+    ];
   }
   function refsLabSlides() {
     return ['04-lifecycle-et-dom/30-lab-better-carousel.md'];
@@ -161,7 +165,30 @@ function lifecycleEtDomSlides() {
 }
 
 function customHooksAndHocSlides() {
-  return ['05-custom-hooks-and-hoc/00-TITLE.md'];
+  function customHooksSlides() {
+    return ['05-custom-hooks-and-hoc/10-custom-hooks.md'];
+  }
+  function customHooksLabSlides() {
+    return ['05-custom-hooks-and-hoc/15-lab-custom-hooks.md'];
+  }
+  function hocSlides() {
+    return [
+      '05-custom-hooks-and-hoc/20-HOC.md',
+      '05-custom-hooks-and-hoc/21-HOF.md',
+      '05-custom-hooks-and-hoc/22-what-is-HOC.md',
+      '05-custom-hooks-and-hoc/23-hoc-ideas.md',
+    ];
+  }
+  function hocLabSlides() {
+    return ['05-custom-hooks-and-hoc/25-lab-hoc.md'];
+  }
+  return [
+    '05-custom-hooks-and-hoc/00-TITLE.md',
+    ...customHooksSlides(),
+    ...customHooksLabSlides(),
+    ...hocSlides(),
+    ...hocLabSlides(),
+  ];
 }
 
 function routingContextSuspensSlides() {

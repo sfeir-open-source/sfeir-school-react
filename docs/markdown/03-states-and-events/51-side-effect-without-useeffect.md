@@ -3,7 +3,7 @@
 # Fetch in a component ?
 
 ```TypeScript
-function Peoples() {
+function People() {
   let people: Person[] = [];
   fetch('http://localhost:3000/people')
     .then((res): Promise<Person[]> => res.json())
@@ -28,7 +28,7 @@ Notes:
 # Fetch in a component ?
 
 ```TypeScript
-function Peoples() {
+function People() {
   let people: Person[] = [];
   fetch('http://localhost:3000/people')
     .then((res): Promise<Person[]> => res.json())
@@ -57,11 +57,11 @@ Notes:
 # Fetch in a component ?
 
 ```TypeScript [2,5]
-function Peoples() {
-  const [people, setState] = useState<Person[]>([]);
+function People() {
+  const [people, setPeople] = useState<Person[]>([]);
   fetch('http://localhost:3000/people')
     .then((res): Promise<Person[]> => res.json())
-    .then((newPeople) => (setState(newPeople)));
+    .then((newPeople) => (setPeople(newPeople)));
 
     return <ul>{people.map(person => (
         <li>{person.firstname} {person.lastname}</li>

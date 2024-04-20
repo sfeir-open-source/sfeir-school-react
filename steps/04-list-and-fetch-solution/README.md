@@ -1,10 +1,10 @@
-# 03-state-and-clicks instructions
+# 04-list-and-fetch instructions
 
 ## How to run?
 
 ```Bash
 cd ./steps
-npm run 03-state-and-clicks
+npm run 04-list-and-fetch
 ```
 
 ## TODO

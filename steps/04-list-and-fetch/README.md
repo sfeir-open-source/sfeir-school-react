@@ -1,20 +1,22 @@
-# 03-state-and-clicks instructions
+# 04-list-and-fetch instructions
 
 ## How to run?
 
 ```Bash
 cd ./steps
-npm run 03-state-and-clicks
+npm run 04-list-and-fetch
 ```
 
 ## TODO
 
-1. Edit only the `src/components/Carousel.tsx` component
+1. No more import people but fetch them with an HTTP call
 
-   - Display the first person in the people list at start
+   - Edit only the `src/components/App.tsx` component
+   - remove the line `import { people } from '../../api/people.json';`
+   - use `fetch('http://localhost:3000/people')` to grab people instead
 
-2. Bind the click of the previous/next button
+2. Display nothing will the list is not loaded
 
-   - When clicking on the previous button, we should display the previous person
-   - When clicking on the next button, we should display the next person
-   - Cycle through people
+3. Show all people as list
+
+   - Add a list with all peoples as grid

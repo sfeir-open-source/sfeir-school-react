@@ -8,6 +8,8 @@
     "03-state-and-clicks-solution",
     "04-list-and-fetch",
     "04-list-and-fetch-solution",
+    "05-better-carousel",
+    "05-better-carousel-solution",
     "api"
   ],
   "scripts": {
@@ -19,6 +21,8 @@
     "03-state-and-clicks-solution": "concurrently \"npm:api\" \"npm run dev --workspace=03-state-and-clicks-solution\"",
     "04-list-and-fetch": "concurrently \"npm:api\" \"npm run dev --workspace=04-list-and-fetch\"",
     "04-list-and-fetch-solution": "concurrently \"npm:api\" \"npm run dev --workspace=04-list-and-fetch-solution\"",
+    "05-better-carousel": "concurrently \"npm:api\" \"npm run dev --workspace=05-better-carousel\"",
+    "05-better-carousel-solution": "concurrently \"npm:api\" \"npm run dev --workspace=05-better-carousel-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

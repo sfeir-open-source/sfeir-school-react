@@ -139,7 +139,25 @@ function gestionEtatEtEventsSlides() {
 }
 
 function lifecycleEtDomSlides() {
-  return ['04-lifecycle-et-dom/00-TITLE.md'];
+  function lifecycleSlides() {
+    return [
+      '04-lifecycle-et-dom/10-lifecycle.md',
+      '04-lifecycle-et-dom/11-component-did-mount.md',
+      '04-lifecycle-et-dom/12-component-will-unmount.md',
+    ];
+  }
+  function refsAndDOMSlides() {
+    return ['04-lifecycle-et-dom/20-refs.md'];
+  }
+  function refsLabSlides() {
+    return ['04-lifecycle-et-dom/30-lab-better-carousel.md'];
+  }
+  return [
+    '04-lifecycle-et-dom/00-TITLE.md', //
+    ...lifecycleSlides(), //
+    ...refsAndDOMSlides(), //
+    ...refsLabSlides(), //
+  ];
 }
 
 function customHooksAndHocSlides() {

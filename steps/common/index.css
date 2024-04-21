@@ -1,5 +1,6 @@
 :root {
   --theme--color-main: #0168ab;
+  --theme--color-pink: #f08080;
   --theme--color-background: #fafafa;
   --theme--color-secondary-background: #757575;
 }
@@ -9,13 +10,42 @@ body {
 }
 
 body > #root > header {
-  background-color: var(--theme--color-main);
   display: flex;
   padding: 0.125rem 2rem;
   justify-content: space-between;
 
-  section > img {
+  &.theme-blue,
+  &:not(.theme-pink) {
+    background-color: var(--theme--color-main);
+  }
+  &.theme-pink {
+    background-color: var(--theme--color-pink);
+  }
+
+  section > img,
+  section > a > img {
     height: 3rem;
+  }
+
+  section.top-app-bar__section-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & > a {
+      display: flex;
+      align-items: center;
+      & > svg {
+        color: white;
+      }
+    }
+  }
+
+  svg.variant-blue {
+    color: var(--theme--color-main);
+  }
+  svg.variant-pink {
+    color: var(--theme--color-pink);
   }
 }
 

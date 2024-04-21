@@ -15,6 +15,6 @@ document.title = packageJson.name;
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <CssBaseline />
-    <App id={'5763cd4d9d2a4f259b53c901'} />
+    <App />
   </React.StrictMode>
 );

@@ -191,8 +191,36 @@ function customHooksAndHocSlides() {
   ];
 }
 
-function routingContextSuspensSlides() {
-  return ['06-routing-context-suspens/00-TITLE.md'];
+function routingContextSuspenseSlides() {
+  function routingSlides() {
+    return [
+      '06-routing-context-suspense/10-routing.md',
+      '06-routing-context-suspense/11-client-side-routing.md',
+      '06-routing-context-suspense/12-history-api.md',
+      '06-routing-context-suspense/13-react-router.md',
+      '06-routing-context-suspense/14-other-routers.md',
+    ];
+  }
+  function routingLabSlides() {
+    return ['06-routing-context-suspense/15-lab-routing.md'];
+  }
+  function contextSlides() {
+    return ['06-routing-context-suspense/20-context.md'];
+  }
+  function contextLabSlides() {
+    return ['06-routing-context-suspense/25-lab-context.md'];
+  }
+  function suspenseSlides() {
+    return ['06-routing-context-suspense/30-suspense.md'];
+  }
+  return [
+    '06-routing-context-suspense/00-TITLE.md',
+    ...routingSlides(),
+    ...routingLabSlides(),
+    ...contextSlides(),
+    ...contextLabSlides(),
+    ...suspenseSlides(),
+  ];
 }
 
 function formulairesSlides() {
@@ -209,16 +237,16 @@ function bibliothequesDeComposantsTestingSlides() {
 
 function formation() {
   return [
-    ...schoolSlides(), //
-    ...introSlides(), //
-    ...nodesElementsComponentsSlides(), //
-    ...gestionEtatEtEventsSlides(), //
-    ...lifecycleEtDomSlides(), //
-    ...customHooksAndHocSlides(), //
-    ...routingContextSuspensSlides(), //
-    ...formulairesSlides(), //
-    ...statesSlides(), //
-    ...bibliothequesDeComposantsTestingSlides(), //
+    ...schoolSlides(),
+    ...introSlides(),
+    ...nodesElementsComponentsSlides(),
+    ...gestionEtatEtEventsSlides(),
+    ...lifecycleEtDomSlides(),
+    ...customHooksAndHocSlides(),
+    ...routingContextSuspenseSlides(),
+    ...formulairesSlides(),
+    ...statesSlides(),
+    ...bibliothequesDeComposantsTestingSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });

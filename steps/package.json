@@ -18,6 +18,8 @@
     "08-routing-solution",
     "09-context",
     "09-context-solution",
+    "10-forms",
+    "10-forms-solution",
     "api"
   ],
   "scripts": {
@@ -39,6 +41,8 @@
     "08-routing-solution": "concurrently \"npm:api\" \"npm run dev --workspace=08-routing-solution\"",
     "09-context": "concurrently \"npm:api\" \"npm run dev --workspace=09-context\"",
     "09-context-solution": "concurrently \"npm:api\" \"npm run dev --workspace=09-context-solution\"",
+    "10-forms": "concurrently \"npm:api\" \"npm run dev --workspace=10-forms\"",
+    "10-forms-solution": "concurrently \"npm:api\" \"npm run dev --workspace=10-forms-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

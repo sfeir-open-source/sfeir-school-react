@@ -224,7 +224,37 @@ function routingContextSuspenseSlides() {
 }
 
 function formulairesSlides() {
-  return ['07-formulaires/00-TITLE.md'];
+  function inputFieldSlides() {
+    return [
+      '07-formulaires/10-vanilla.md', //
+      '07-formulaires/11-field.md', //
+      '07-formulaires/12-form.md', //
+    ];
+  }
+  function uncontrolledVsControlledFieldSlides() {
+    return [
+      '07-formulaires/20-uncontrolled.md',
+      '07-formulaires/21-controlled.md',
+      '07-formulaires/22-uncontroller-vs-controlled.md',
+    ];
+  }
+  function reactHookFormSlides() {
+    return ['07-formulaires/30-react-hook-form.md'];
+  }
+  function formikSlides() {
+    return ['07-formulaires/40-formik.md'];
+  }
+  function formLabSlides() {
+    return ['07-formulaires/55-lab-form.md'];
+  }
+  return [
+    '07-formulaires/00-TITLE.md',
+    ...inputFieldSlides(),
+    ...uncontrolledVsControlledFieldSlides(),
+    ...reactHookFormSlides(),
+    ...formikSlides(),
+    ...formLabSlides(),
+  ];
 }
 
 function statesSlides() {

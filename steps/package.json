@@ -14,6 +14,10 @@
     "06-custom-hooks-solution",
     "07-hoc",
     "07-hoc-solution",
+    "08-routing",
+    "08-routing-solution",
+    "09-context",
+    "09-context-solution",
     "api"
   ],
   "scripts": {
@@ -31,6 +35,10 @@
     "06-custom-hooks-solution": "concurrently \"npm:api\" \"npm run dev --workspace=06-custom-hooks-solution\"",
     "07-hoc": "concurrently \"npm:api\" \"npm run dev --workspace=07-hoc\"",
     "07-hoc-solution": "concurrently \"npm:api\" \"npm run dev --workspace=07-hoc-solution\"",
+    "08-routing": "concurrently \"npm:api\" \"npm run dev --workspace=08-routing\"",
+    "08-routing-solution": "concurrently \"npm:api\" \"npm run dev --workspace=08-routing-solution\"",
+    "09-context": "concurrently \"npm:api\" \"npm run dev --workspace=09-context\"",
+    "09-context-solution": "concurrently \"npm:api\" \"npm run dev --workspace=09-context-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

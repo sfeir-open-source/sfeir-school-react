@@ -21,3 +21,5 @@ npm run 05-better-carousel
 
    - If state is `PLAY`, the Carousel should show next person automatically after 2 seconds
    - If state is `PAUSE`, the interval should be cleared
+
+> Note: Maybe you will need [`useCallback`](https://react.dev/reference/react/useCallback) hook

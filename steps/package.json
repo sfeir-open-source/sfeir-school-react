@@ -20,6 +20,10 @@
     "09-context-solution",
     "10-forms",
     "10-forms-solution",
+    "11-use-reducer",
+    "11-use-reducer-solution",
+    "12-redux",
+    "12-redux-solution",
     "api"
   ],
   "scripts": {
@@ -43,6 +47,10 @@
     "09-context-solution": "concurrently \"npm:api\" \"npm run dev --workspace=09-context-solution\"",
     "10-forms": "concurrently \"npm:api\" \"npm run dev --workspace=10-forms\"",
     "10-forms-solution": "concurrently \"npm:api\" \"npm run dev --workspace=10-forms-solution\"",
+    "11-use-reducer": "concurrently \"npm:api\" \"npm run dev --workspace=11-use-reducer\"",
+    "11-use-reducer-solution": "concurrently \"npm:api\" \"npm run dev --workspace=11-use-reducer-solution\"",
+    "12-redux": "concurrently \"npm:api\" \"npm run dev --workspace=12-redux\"",
+    "12-redux-solution": "concurrently \"npm:api\" \"npm run dev --workspace=12-redux-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

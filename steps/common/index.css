@@ -102,6 +102,8 @@ article.MuiCard-root {
 
       & > svg.MuiSvgIcon-root {
         vertical-align: text-bottom;
+        width: 24px;
+        height: 24px;
         color: var(--theme--color-secondary-background);
       }
     }

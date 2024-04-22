@@ -2,4 +2,6 @@
 
 # Introduction
 
-Notes: 0h45
+Notes:
+
+0h45

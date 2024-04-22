@@ -259,7 +259,40 @@ function formulairesSlides() {
 }
 
 function statesSlides() {
-  return ['08-states/00-TITLE.md'];
+  function useReducerSlides() {
+    return [
+      '08-states/10-use-reduce-hook.md',
+      '08-states/15-lab-use-reduce-hook.md', //
+    ];
+  }
+  function reduxSlides() {
+    return [
+      '08-states/20-redux.md',
+      '08-states/21-redux-toolkit.md',
+      '08-states/22-react-redux.md',
+      '08-states/25-lab-redux.md',
+    ];
+  }
+  function asyncReduxSlides() {
+    return [
+      '08-states/30-redux-thunk.md',
+      '08-states/31-redux-saga.md',
+      '08-states/35-lab-redux-thunk.md', //
+    ];
+  }
+  function serverStateSlides() {
+    return [
+      '08-states/40-react-query.md',
+      '08-states/35-lab-react-query.md', //
+    ];
+  }
+  return [
+    '08-states/00-TITLE.md',
+    ...useReducerSlides(),
+    ...reduxSlides(),
+    ...asyncReduxSlides(),
+    ...serverStateSlides(),
+  ];
 }
 
 function bibliothequesDeComposantsTestingSlides() {

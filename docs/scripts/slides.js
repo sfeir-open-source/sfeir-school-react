@@ -11,7 +11,7 @@ function schoolSlides() {
     '00-school/10-speaker-jta.md',
     '00-school/10-speaker-rto.md',
     '00-school/11-tour-de-table.md',
-    '00-school/20-what-we-will-do',
+    '00-school/20-what-we-will-do.md',
   ];
 }
 
@@ -51,10 +51,11 @@ function nodesElementsComponentsSlides() {
   function conditionnalDisplaySlides() {
     return [
       '02-nodes-elements-components/30-conditionnal-display.md',
-      '02-nodes-elements-components/31-conditionals-if-switch.md',
-      '02-nodes-elements-components/32-conditionals-variable.md',
-      '02-nodes-elements-components/33-conditionals-logical.md',
-      '02-nodes-elements-components/34-conditionals-ternary.md',
+      '02-nodes-elements-components/31-just-expression.md',
+      '02-nodes-elements-components/32-conditionals-if-switch.md',
+      '02-nodes-elements-components/33-conditionals-variable.md',
+      '02-nodes-elements-components/34-conditionals-logical.md',
+      '02-nodes-elements-components/35-conditionals-ternary.md',
     ];
   }
 
@@ -63,7 +64,7 @@ function nodesElementsComponentsSlides() {
       '02-nodes-elements-components/40-lists.md',
       '02-nodes-elements-components/41-list-use-map.md',
       '02-nodes-elements-components/42-list-key-warning.md',
-      '02-nodes-elements-components/44-list-key-explaination.md',
+      '02-nodes-elements-components/43-list-key-schema.md',
       '02-nodes-elements-components/44-list-key-explaination.md',
       '02-nodes-elements-components/45-react-children.md',
     ];
@@ -150,7 +151,7 @@ function lifecycleEtDomSlides() {
     return [
       '04-lifecycle-et-dom/20-refs.md',
       '04-lifecycle-et-dom/21-refs-with-interval.md',
-      '04-lifecycle-et-dom/21-refs-with-dom.md',
+      '04-lifecycle-et-dom/22-refs-with-dom.md',
     ];
   }
   function refsLabSlides() {

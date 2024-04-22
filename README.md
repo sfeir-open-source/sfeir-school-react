@@ -29,10 +29,19 @@ Workshops are in directory `steps` :
 ### Start a lab
 
 ```bash
+cd steps
 npm install
 npm run client -- exo01
 # for the solution
 npm run client -- exo01-solution
+```
+
+### Start the slide
+
+```bash
+cd docs
+npm install
+npm run start
 ```
 
 ## Contributing

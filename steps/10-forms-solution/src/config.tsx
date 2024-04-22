@@ -5,7 +5,7 @@ export interface AppConfig {
   theme: 'blue' | 'pink';
 }
 
-const defaultConfig: AppConfig = { apiBaseUrl: 'http://localhost:3000', theme: 'blue' };
+const defaultConfig: AppConfig = { apiBaseUrl: '/api', theme: 'blue' };
 
 const AppConfigContext = createContext<{ config: AppConfig; setConfig(newConfig: AppConfig): void }>({
   config: defaultConfig,

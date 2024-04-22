@@ -13,7 +13,7 @@ npm run 04-list-and-fetch
 
    - Edit only the `src/components/App.tsx` component
    - remove the line `import { people } from '../../api/people.json';`
-   - use `fetch('http://localhost:3000/people')` to grab people instead
+   - use `fetch('/api/people')` to grab people instead
 
 2. Display nothing will the list is not loaded
 

@@ -11,7 +11,7 @@ function App() {
   const [people, setPeople] = useState<Person[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/people')
+    fetch('/api/people')
       .then((res): Promise<Person[]> => res.json())
       .then((newPeople) => setPeople(newPeople));
   }, []);

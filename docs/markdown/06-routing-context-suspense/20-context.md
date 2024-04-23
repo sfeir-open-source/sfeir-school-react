@@ -121,3 +121,26 @@ export ThemeProvider() {
 ```
 
 <!-- .element: class="big-code" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Use theme everywhere!
+
+```TypeScript [1|3-6|8-11]
+import { useTheme } from './useTheme';
+
+function ShowColorTheme() {
+    const { theme } = useTheme();
+    return <p>{theme}</p>
+}
+
+function ThemeSwitcher() {
+    const { theme, setTheme } = useTheme();
+    const nextTheme = theme === 'light' ? 'dark' : 'light';
+    return <button onClick={() => setTheme(nextTheme)}>Active {nextTheme}</button>;
+}
+```
+
+<!-- .element: class="big-code" -->

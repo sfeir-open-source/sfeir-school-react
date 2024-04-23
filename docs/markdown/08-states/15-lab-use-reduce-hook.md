@@ -4,11 +4,11 @@
 
 ## Lab
 
-<small>
+<br/>
 
 - Rewrite Carousel to use useReduce to handle all Carousel state
 
-</small>
+<br>
 
 ### npm run 11-use-reducer
 

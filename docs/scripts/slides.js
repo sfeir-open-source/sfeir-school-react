@@ -275,15 +275,16 @@ function statesSlides() {
   }
   function asyncReduxSlides() {
     return [
-      '08-states/30-redux-thunk.md',
-      '08-states/31-redux-saga.md',
+      '08-states/30-redux-and-async.md',
+      '08-states/31-redux-thunk.md',
+      '08-states/32-redux-saga.md',
       '08-states/35-lab-redux-thunk.md', //
     ];
   }
   function serverStateSlides() {
     return [
       '08-states/40-react-query.md',
-      '08-states/35-lab-react-query.md', //
+      '08-states/45-lab-react-query.md', //
     ];
   }
   return [

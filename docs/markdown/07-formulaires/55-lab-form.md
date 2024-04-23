@@ -4,13 +4,13 @@
 
 ## Lab
 
-<small>
+<br/>
 
 - Create people filter form
 
 - Make person infos editable
 
-</small>
+</br>
 
 ### npm run 10-forms
 

@@ -4,7 +4,7 @@
 
 ## Lab
 
-<small>
+<br/>
 
 - (Install the Redux extension)
 - Setup the store
@@ -12,7 +12,7 @@
 - Rewrite Carousel `useCarousel` to use Redux
 - Pause and reset to the first person the carousel on navigate to another page
 
-</small>
+<br/>
 
 ### npm run 12-redux
 

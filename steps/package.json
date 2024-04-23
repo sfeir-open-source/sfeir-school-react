@@ -24,6 +24,8 @@
     "11-use-reducer-solution",
     "12-redux",
     "12-redux-solution",
+    "13-redux-thunk",
+    "13-redux-thunk-solution",
     "api"
   ],
   "scripts": {
@@ -51,6 +53,8 @@
     "11-use-reducer-solution": "concurrently \"npm:api\" \"npm run dev --workspace=11-use-reducer-solution\"",
     "12-redux": "concurrently \"npm:api\" \"npm run dev --workspace=12-redux\"",
     "12-redux-solution": "concurrently \"npm:api\" \"npm run dev --workspace=12-redux-solution\"",
+    "13-redux-thunk": "concurrently \"npm:api\" \"npm run dev --workspace=13-redux-thunk\"",
+    "13-redux-thunk-solution": "concurrently \"npm:api\" \"npm run dev --workspace=13-redux-thunk-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

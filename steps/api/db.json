@@ -152,7 +152,10 @@
     }
   ],
   "messages": [
-    { "id": "59b53c9015763cd4d9d2a4f2", "type": "info", "text": "New mission for Leanne Woodard at Planet Express" }
-  ],
-  "config": { "apiBaseUrl": "/api", "theme": "pink" }
+    {
+      "id": "59b53c9015763cd4d9d2a4f2",
+      "type": "info",
+      "text": "New mission for Leanne Woodard at Planet Express"
+    }
+  ]
 }

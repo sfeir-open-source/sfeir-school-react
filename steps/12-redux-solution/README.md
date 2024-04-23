@@ -34,3 +34,10 @@ npm run 12-redux
    - Edit only `useCarousel` from `src/components/Carousel.tsx`
    - You should not change the API (states and functions) returned by the `useCarousel` hook, only change its implementation
    - Use `useEffect` to dispatch new people array to the store
+
+4. Pause and reset to the first person the carousel on navigate to another page
+
+   - Create in `src/store/actions.ts` an action `navigateTo`
+   - Dispatch this action at every router navigation
+   - Add an `extraReducer` to `carouselSlice` to pause and reset the carousel state when navigating outside the home page (pathname === '/')
+   - play when navigating to home page

@@ -84,3 +84,55 @@ store.dispatch(todosActions.add('Easier with Redux Toolkit!'));
 ```
 
 <!-- .element: class="big-code" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Actions without slice?
+
+```typescript
+export const navigateTo = createAction<string>('navigateTo');
+```
+
+<!-- .element: class="big-code" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Extra reducer
+
+```typescript [7,13|8,12|9-11|7-13]
+export const todosSlice = createSlice({
+  name: 'todos',
+  initialState: { todos: [] },
+  reducers: {
+    /* ... */
+  },
+  extraReducers: (builder) => {
+    builder.addCase(navigateTo, (state, action) => {
+      if (action.payload === '/logout') {
+        state.todos = [];
+      }
+    });
+  },
+});
+```
+
+<!-- .element: class="big-code" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Need a unique id?
+
+```typescript
+import { nanoid } from '@reduxjs/toolkit';
+
+const defaultSizeId: string = nanoid();
+const customSizeId: string = nanoid(10);
+```
+
+<!-- .element: class="big-code" -->

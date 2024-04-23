@@ -1,11 +1,13 @@
-import React from 'react';
 import { Header } from '../components/Header';
+import { Outlet } from 'react-router-dom';
 
-export function Layout({ children }: React.PropsWithChildren) {
+export function Layout() {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }

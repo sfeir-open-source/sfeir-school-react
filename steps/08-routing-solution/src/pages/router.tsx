@@ -2,19 +2,23 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { HomePage } from './HomePage';
 import { PeopleGridPage } from './PeopleGridPage';
 import { NotFoundPage } from './NotFoundPage';
+import { Layout } from './Layout';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    Component: HomePage,
-  },
-  {
-    path: 'people',
-    Component: PeopleGridPage,
-  },
-  {
-    path: '*',
-    Component: NotFoundPage,
+    Component: Layout,
+    children: [
+      { index: true, Component: HomePage },
+      {
+        path: 'people',
+        Component: PeopleGridPage,
+      },
+      {
+        path: '*',
+        Component: NotFoundPage,
+      },
+    ],
   },
 ]);
 

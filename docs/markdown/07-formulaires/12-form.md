@@ -32,8 +32,8 @@ type MyFormProps = {
 function MyForm({ initialValue = '', onChange, onSubmit }: MyFormProps) {
     const [value, setValue] = useState(initialValue);
     const handleChange = (event: ChangeEvent<HtmlInputElement>) => { /* ... */ };
-    return <form onSubmit={() => onSubmit({ input: event.target.value })}>
-        <input defaultValue={initialValue} onChange={handleChange} />
+    return <form onSubmit={() => onSubmit({ input: value })}>
+        <input defaultValue={value} onChange={handleChange} />
         <button type="submit">Send</button>
     </form>;
 }

@@ -54,6 +54,9 @@ describe('every lab should use a lab slide', () => {
   });
 });
 
+describe.todo('every image found in slide should exists');
+describe.todo('every image found in image folder should be in a slide');
+
 const slides: string[] = (await import(getSlidesJsImport())).default().map((slide) => slide.path);
 const labSlides = slides.filter((path) => path.includes('-lab-'));
 

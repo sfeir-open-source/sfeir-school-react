@@ -28,6 +28,9 @@
     "13-redux-thunk-solution",
     "14-react-query",
     "14-react-query-solution",
+    "15-unit-tests",
+    "16-component-tests",
+    "17-e2e",
     "api"
   ],
   "scripts": {
@@ -59,6 +62,9 @@
     "13-redux-thunk-solution": "concurrently \"npm:api\" \"npm run dev --workspace=13-redux-thunk-solution\"",
     "14-react-query": "concurrently \"npm:api\" \"npm run dev --workspace=14-react-query\"",
     "14-react-query-solution": "concurrently \"npm:api\" \"npm run dev --workspace=14-react-query-solution\"",
+    "15-unit-tests": "concurrently \"npm run test --workspace=15-unit-tests\"",
+    "16-component-tests": "concurrently \"npm run test --workspace=16-component-tests\"",
+    "17-e2e": "concurrently  \"npm run dev --workspace=17-e2e\" \"npm run test-e2e --workspace=17-e2e\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

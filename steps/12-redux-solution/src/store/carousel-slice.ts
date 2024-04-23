@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import type { RootState } from './index';
+import { navigateTo } from './actions';
 
 type CarouselStatus = 'PLAY' | 'PAUSE';
 
@@ -10,7 +11,7 @@ export interface CarouselReducerState {
   status: CarouselStatus;
 }
 
-const initialState: CarouselReducerState = { people: [], currentIndex: -1, currentPerson: undefined, status: 'PLAY' };
+const initialState: CarouselReducerState = { people: [], currentIndex: -1, currentPerson: undefined, status: 'PAUSE' };
 
 export const carouselSlice = createSlice({
   name: 'carousel',
@@ -35,6 +36,17 @@ export const carouselSlice = createSlice({
     pause: (state) => {
       state.status = 'PAUSE';
     },
+  },
+  extraReducers(builder) {
+    builder.addCase(navigateTo, (state, action) => {
+      if (action.payload.pathname === '/') {
+        state.status = 'PLAY';
+      } else {
+        state.currentIndex = 0;
+        state.currentPerson = state.people[0];
+        state.status = 'PAUSE';
+      }
+    });
   },
 });
 

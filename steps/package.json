@@ -26,6 +26,8 @@
     "12-redux-solution",
     "13-redux-thunk",
     "13-redux-thunk-solution",
+    "14-react-query",
+    "14-react-query-solution",
     "api"
   ],
   "scripts": {
@@ -55,6 +57,8 @@
     "12-redux-solution": "concurrently \"npm:api\" \"npm run dev --workspace=12-redux-solution\"",
     "13-redux-thunk": "concurrently \"npm:api\" \"npm run dev --workspace=13-redux-thunk\"",
     "13-redux-thunk-solution": "concurrently \"npm:api\" \"npm run dev --workspace=13-redux-thunk-solution\"",
+    "14-react-query": "concurrently \"npm:api\" \"npm run dev --workspace=14-react-query\"",
+    "14-react-query-solution": "concurrently \"npm:api\" \"npm run dev --workspace=14-react-query-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

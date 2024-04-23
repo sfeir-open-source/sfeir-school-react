@@ -14,6 +14,7 @@ npm run 08-routing
    - Create file `src/pages/router.tsx`
    - Use `createBrowserRouter` to create a router instance (with 3 routes: /, /people and "not found")
    - Add `RouterProvider` in the `App` component (`src/App.tsx`)
+   - Replace `<App/>` in `src/main.tsx` with `<RouterProvider router={router}/>`
 
 2. Create three pages component: `HomePage`, `PeopleGridPage` and `NotFoundPage`
 

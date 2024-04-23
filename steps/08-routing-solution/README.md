@@ -13,7 +13,8 @@ npm run 08-routing
 
    - Create file `src/pages/router.tsx`
    - Use `createBrowserRouter` to create a router instance (with 3 routes: /, /people and "not found")
-   - Add `RouterProvider` instead of the `App` component in `src/main.tsx`
+   - Add `RouterProvider` in the `App` component (`src/App.tsx`)
+   - Replace `<App/>` in `src/main.tsx` with `<RouterProvider router={router}/>`
 
 2. Create three pages component: `HomePage`, `PeopleGridPage` and `NotFoundPage`
 
@@ -21,7 +22,5 @@ npm run 08-routing
    - Use these page components in the router
    - Move the random `PersonCard` and the `Carousel` from `App` to the `HomePage` component
    - Move the `PeopleGrid` from `App` to the `PeopleGridPage` component
-   - Transform `App` component to `Layout` component (should accept `children`)
-     - Put all your page content inside the `Layout`
 
-3. Create link in the top bar with the `Link` component from React Router
+3. Create link in the top bar on the icons with the `Link` component from React Router

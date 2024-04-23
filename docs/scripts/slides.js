@@ -296,8 +296,46 @@ function statesSlides() {
   ];
 }
 
-function bibliothequesDeComposantsTestingSlides() {
-  return ['09-bibliotheques-de-composants-testing/00-TITLE.md'];
+function componentsLibraryAndTestingSlides() {
+  function componentsLibrarySlides() {
+    return [
+      '09-components-library-and-testing/10-component-library.md',
+      '09-components-library-and-testing/11-storybook.md',
+      '09-components-library-and-testing/12-known-storybooks.md',
+    ];
+  }
+
+  function unitTestsSlides() {
+    return [
+      '09-components-library-and-testing/20-unit-test.md',
+      '09-components-library-and-testing/21-vitest.md',
+      '09-components-library-and-testing/25-lab-unit-test.md',
+    ];
+  }
+
+  function componentTestsSlides() {
+    return [
+      '09-components-library-and-testing/30-component-tests.md',
+      '09-components-library-and-testing/31-testing-library.md',
+      '09-components-library-and-testing/35-lab-component-test.md',
+    ];
+  }
+
+  function e2eTestsSlides() {
+    return [
+      '09-components-library-and-testing/40-end-to-end-tests.md',
+      '09-components-library-and-testing/41-cypress.md',
+      '09-components-library-and-testing/42-lab-e2e.md',
+    ];
+  }
+
+  return [
+    '09-components-library-and-testing/00-TITLE.md',
+    ...componentsLibrarySlides(),
+    ...unitTestsSlides(),
+    ...componentTestsSlides(),
+    ...e2eTestsSlides(),
+  ];
 }
 
 function formation() {
@@ -311,7 +349,7 @@ function formation() {
     ...routingContextSuspenseSlides(),
     ...formulairesSlides(),
     ...statesSlides(),
-    ...bibliothequesDeComposantsTestingSlides(),
+    ...componentsLibraryAndTestingSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });

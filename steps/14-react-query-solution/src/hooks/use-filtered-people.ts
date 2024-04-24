@@ -1,5 +1,8 @@
 export function useFilteredPeople(people: Person[], filter: string) {
-  const words = filter.split(' ').filter((word) => word != undefined && word.length > 0);
+  const words = filter
+    ?.toLocaleLowerCase()
+    .split(' ')
+    .filter((word) => word != undefined && word.length > 0);
   return people.filter(isPersonIncludingWords(words));
 }
 

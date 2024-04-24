@@ -31,6 +31,7 @@
     "15-unit-tests",
     "15-unit-tests-solution",
     "16-component-tests",
+    "16-component-tests-solution",
     "17-e2e",
     "api"
   ],
@@ -66,6 +67,7 @@
     "15-unit-tests": "concurrently \"npm run test --workspace=15-unit-tests\"",
     "15-unit-tests-solution": "concurrently \"npm run test --workspace=15-unit-tests-solution\"",
     "16-component-tests": "concurrently \"npm run test --workspace=16-component-tests\"",
+    "16-component-tests-solution": "concurrently \"npm run test --workspace=16-component-tests-solution\"",
     "17-e2e": "concurrently  \"npm run dev --workspace=17-e2e\" \"npm run test-e2e --workspace=17-e2e\"",
     "api": "npm run api --workspace=api"
   },

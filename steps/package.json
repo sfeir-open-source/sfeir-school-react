@@ -33,6 +33,7 @@
     "16-component-tests",
     "16-component-tests-solution",
     "17-e2e",
+    "17-e2e-solution",
     "api"
   ],
   "scripts": {
@@ -68,7 +69,8 @@
     "15-unit-tests-solution": "concurrently \"npm run test --workspace=15-unit-tests-solution\"",
     "16-component-tests": "concurrently \"npm run test --workspace=16-component-tests\"",
     "16-component-tests-solution": "concurrently \"npm run test --workspace=16-component-tests-solution\"",
-    "17-e2e": "concurrently  \"npm run dev --workspace=17-e2e\" \"npm run test-e2e --workspace=17-e2e\"",
+    "17-e2e": "concurrently \"npm:api\" \"npm run dev --workspace=17-e2e\" \"npm run test-e2e --workspace=17-e2e\"",
+    "17-e2e-solution": "concurrently \"npm:api\" \"npm run dev --workspace=17-e2e-solution\" \"npm run test-e2e --workspace=17-e2e-solution\"",
     "api": "npm run api --workspace=api"
   },
   "dependencies": {

@@ -23,8 +23,8 @@ describe('useFilteredPeople', () => {
     ['att', [people[1]]],
     ['att', [people[1]]],
     ['tt', [people[1], people[3]]],
-    ['Doctor', people],
-  ])('should filter correctly %s => %o', (/* TODO add parameters */) => {
-    /* TODO add the expect */
+    ['doctor', people],
+  ])('should filter correctly %s => %o', (filter: string, expectedPeople: Person[]) => {
+    expect(useFilteredPeople(people, filter)).toEqual(expectedPeople);
   });
 });

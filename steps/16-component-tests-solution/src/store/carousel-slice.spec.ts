@@ -183,7 +183,7 @@ describe('carouselSlice', () => {
       expect(carouselSlice.reducer(initialState, action)).toEqual(expectedState);
     });
   });
-  describe(carouselActions.play.type, () => {
+  describe(carouselActions.pause.type, () => {
     it('should set the status to PAUSE when status is PLAY', () => {
       const initialState: CarouselReducerState = {
         people: [person({ id: 'A' }), person({ id: 'B' }), person({ id: 'C' })],

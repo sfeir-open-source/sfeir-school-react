@@ -1,3 +1,3 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
 # Basis

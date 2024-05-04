@@ -1,6 +1,6 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
-# Redux Thunk
+# Redux Saga
 
 ##==##
 

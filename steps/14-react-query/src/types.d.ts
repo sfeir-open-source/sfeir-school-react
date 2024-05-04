@@ -12,6 +12,12 @@ type Person = {
 
 type People = Person[];
 
+interface Message {
+  id: string;
+  text: string;
+  type: 'info' | 'error' | 'success';
+}
+
 declare module '*.svg' {
   const path: string;
   export default path;

@@ -1,4 +1,4 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
 # React Hook Form
 
@@ -50,7 +50,7 @@ function MyForm({ initialValue = {}, onSubmit }: MyFormProps) {
         defaultValues:initialValue });
     return <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("firstname")} />;
-        <input {...register("lastname"), { required: true }} />;
+        <input {...register("lastname", { required: true })} />;
         {errors.lastnameRequired && <span>Lastname field is required</span>}
         <button type="submit">Save</button>
     </form>
@@ -77,7 +77,7 @@ function MyForm({ initialValue = {}, onSubmit }: MyFormProps) {
     const onSubmit: SubmitHandler<Inputs> = onSubmit;
     return <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("firstname")} />;
-        <input {...register("lastname"), { required: true }} />;
+        <input {...register("lastname", { required: true })} />;
         {errors.lastnameRequired && <span>Lastname field is required</span>}
         <button type="submit">Save</button>
     </form>

@@ -1,4 +1,4 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
 # Testing Library
 
@@ -45,7 +45,7 @@ test('loads and displays greeting', async () => {
 ```TypeScript []
 screen.getByText('Load Greeting');
 screen.findByText('Load Greeting');
-screen.getByLabel('Load Greeting');
+screen.getByLabelText('Load Greeting');
 screen.findByLabel('Load Greeting');
 screen.getByRole('button');
 screen.findByRole('textbox');
@@ -62,8 +62,8 @@ screen.findByRole('textbox');
 
 ```TypeScript []
 await userEvent.click(screen.getByText('Load Greeting'));
-await userEvent.type(screen.getByLabel('Search'), 'Matt');
-await userEvent.paste(screen.getByLabel('Search'), 'Matt');
+await userEvent.type(screen.getByLabelText('Search'), 'Matt');
+await userEvent.paste(screen.getByLabelText('Search'), 'Matt');
 ```
 
 <!-- .element: class="big-code" -->

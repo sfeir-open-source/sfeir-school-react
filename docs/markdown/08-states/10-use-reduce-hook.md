@@ -1,4 +1,4 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
 # useReducer
 
@@ -30,7 +30,7 @@ function Button() => {
 type ButtonReducerState = { clickCount: number };
 
 function Button() => {
-  const [state, dispatch] = useReducer<ButtonReducerState>(reducer, { clickCount: 0 });
+  const [state, dispatch] = useReducer(reducer, { clickCount: 0 });
 
   return <button onClick={() => dispatch('CLICK')}>
         clicked {state.clickCount} times

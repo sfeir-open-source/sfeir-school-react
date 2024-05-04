@@ -44,7 +44,7 @@ describe('carouselSlice', () => {
     it('should set the status to PLAY when status is PAUSE');
     it('should do nothing when already on the PLAY status');
   });
-  describe(carouselActions.play.type, () => {
+  describe(carouselActions.pause.type, () => {
     it('should set the status to PAUSE when status is PLAY');
     it('should do nothing when already on the PAUSE status');
   });

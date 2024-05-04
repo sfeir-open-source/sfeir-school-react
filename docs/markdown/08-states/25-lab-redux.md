@@ -19,3 +19,6 @@
 Notes:
 
 - LIVE CODING
+- Debug: show state with Redux DevTools
+  - Chrome: https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
+  - Firefox: https://addons.mozilla.org/fr/firefox/addon/reduxdevtools/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search

@@ -18,3 +18,5 @@
 Notes:
 
 - LIVE CODING
+- Debug: show query DevTools
+  - https://tanstack.com/query/latest/docs/framework/react/devtools

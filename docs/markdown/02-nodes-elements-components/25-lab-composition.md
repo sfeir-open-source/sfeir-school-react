@@ -12,3 +12,9 @@
 <br>
 
 ### npm run 02-composition
+
+Notes:
+
+- Debug: Show component tree with React DevTools
+  - Chrome: https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+  - Firefox: https://addons.mozilla.org/fr/firefox/addon/react-devtools/

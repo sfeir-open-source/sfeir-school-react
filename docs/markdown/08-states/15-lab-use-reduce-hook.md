@@ -15,3 +15,6 @@
 Notes:
 
 - LIVE CODING
+- Debug: show useReduce state with React Context DevTools
+  - Chrome: https://chromewebstore.google.com/detail/react-context-devtool/oddhnidmicpefilikhgeagedibnefkcf
+  - Firefox: https://addons.mozilla.org/fr/firefox/addon/react-context-devtool/

@@ -36,6 +36,8 @@ npm run client -- exo01
 npm run client -- exo01-solution
 ```
 
+> Steps require at least you have node v18 installed
+
 ### Start the slide
 
 ```bash

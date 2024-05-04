@@ -2,6 +2,4 @@
 
 # Lists
 
-<div style="height:300px; width:60%; margin: 50px auto;">
-    <img class="full-height" src="./assets/images/keys.png">
-</div>
+![full-center h-300](assets/images/keys.png)

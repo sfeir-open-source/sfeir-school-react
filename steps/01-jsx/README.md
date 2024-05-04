@@ -3,8 +3,8 @@
 ## How to run?
 
 ```Bash
-cd ./steps/01-jsx
-npm run dev
+cd ./steps
+npm run 01-jsx
 ```
 
 ## TODO

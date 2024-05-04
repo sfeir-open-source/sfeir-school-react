@@ -1,4 +1,5 @@
 {
+  "name": "api",
   "scripts": {
     "api": "json-server ./db.json"
   },

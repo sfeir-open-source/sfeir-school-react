@@ -1,4 +1,4 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
 # Redux Thunk
 
@@ -69,7 +69,7 @@ const fetchTodosById = createAsyncThunk('todos/fetchById',
 ```typescript [7,13|8,12|9-11|7-13]
 export const todosSlice = createSlice({
   name: 'todos',
-  initialState: { todos: [] },
+  initialState: { todos: [] } as TodosReducerState,
   reducers: {
     /* ... */
   },

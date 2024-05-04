@@ -12,5 +12,3 @@ npx create-next-app
 
 Server side rendering let you generate a client-side rendering application or universal application into HTML, then
 make it interactive by executing the client side Javascript
-
-<!-- .element: class="important" -->

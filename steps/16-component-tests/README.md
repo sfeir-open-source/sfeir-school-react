@@ -1,10 +1,10 @@
-# 15-unit-tests instructions
+# 16-component-tests instructions
 
 ## How to run?
 
 ```Bash
 cd ./steps
-npm run 15-unit-tests
+npm run 16-component-tests
 ```
 
 ## TODO

@@ -17,3 +17,7 @@
 Notes:
 
 - LIVE CODING
+
+- Debug: Show state updated with fetch in React DevTools
+  - Chrome: https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+  - Firefox: https://addons.mozilla.org/fr/firefox/addon/react-devtools/

@@ -1,4 +1,4 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition" -->
 
 # Redux Toolkit
 
@@ -50,7 +50,7 @@ interface TodosReducerState {
 
 export const todosSlice = createSlice({
   name: 'todos',
-  initialState: { todos: [] },
+  initialState: { todos: [] } as TodosReducerState,
   reducers: {
     add: (state, action: PayloadAction<string>) => {
       state.todos.push({ text: action.payload });
@@ -106,7 +106,7 @@ export const navigateTo = createAction<string>('navigateTo');
 ```typescript [7,13|8,12|9-11|7-13]
 export const todosSlice = createSlice({
   name: 'todos',
-  initialState: { todos: [] },
+  initialState: { todos: [] } as TodosReducerState,
   reducers: {
     /* ... */
   },

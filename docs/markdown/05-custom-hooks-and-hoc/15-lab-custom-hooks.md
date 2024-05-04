@@ -19,3 +19,7 @@
 Notes:
 
 - LIVE CODING
+
+- Debug: Show how custom hook is shown in React DevTools
+  - Chrome: https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+  - Firefox: https://addons.mozilla.org/fr/firefox/addon/react-devtools/

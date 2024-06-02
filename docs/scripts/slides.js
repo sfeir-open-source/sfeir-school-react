@@ -343,6 +343,20 @@ function componentsLibraryAndTestingSlides() {
   ];
 }
 
+function optimization() {
+  function memo() {
+    return ['10-optimization/10-memo.md'];
+  }
+  function useMemoHook() {
+    return ['10-optimization/20-use-memo.md'];
+  }
+  return [
+    '10-optimization/00-TITLE.md', //
+    ...memo(), //
+    ...useMemoHook(), //
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -355,6 +369,7 @@ function formation() {
     ...formulairesSlides(),
     ...statesSlides(),
     ...componentsLibraryAndTestingSlides(),
+    ...optimization(),
   ].map((slidePath) => {
     return { path: slidePath };
   });

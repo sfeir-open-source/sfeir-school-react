@@ -30,54 +30,25 @@ Notes:
 
 ##==##
 
-<!-- .slide: class="with-code" -->
-
-# How to create custom hooks?
-
-Notes:
-
-- Ask: how to create custom hooks?
+# Remember the Hook Rules!
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+# Remember the Hook Rules!
 
-# Custom hooks are just functions!
-
-```TypeScript
-function usePeople() {
-    const [people, setPeople] = useState<Person[]>([]);
-    useEffect(() => {
-        fetch('http://localhost:3000/people')
-            .then((res): Promise<Person[]> => res.json())
-            .then((newPeople) => (setPeople(newPeople)));
-    }, []);
-    return people;
-}
-```
-
-<!-- .element: class="big-code" -->
-
-Notes:
-
-- no overload to use custom hooks
-- do not hesitate to group business logic with custom hooks!
+- No hook call in conditions or loop
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+# Remember the Hook Rules!
 
-# Custom hooks are just functions!
+- No hook call in conditions or loop
+- No hook call in inner function
 
-```TypeScript
-function People() {
-    const people = usePeople();
-    return <ul>{
-        people.map(person => (
-            <li>{person.firstname} {person.lastname}</li>
-        ))
-    }</ul>
-}
-```
+##==##
 
-<!-- .element: class="big-code" -->
+# Remember the Hook Rules!
+
+- No hook call in conditions or loop
+- No hook call in inner function
+- No hook call in classical JS function

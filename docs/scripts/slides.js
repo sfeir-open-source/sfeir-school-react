@@ -167,7 +167,12 @@ function lifecycleEtDomSlides() {
 
 function customHooksAndHocSlides() {
   function customHooksSlides() {
-    return ['05-custom-hooks-and-hoc/10-custom-hooks.md'];
+    return [
+      '05-custom-hooks-and-hoc/10-custom-hooks.md',
+      '05-custom-hooks-and-hoc/11-how-to-create-hook.md',
+      '05-custom-hooks-and-hoc/12-hooks-are-just-functions.md',
+      '05-custom-hooks-and-hoc/13-why-create-custom-hook.md',
+    ];
   }
   function customHooksLabSlides() {
     return ['05-custom-hooks-and-hoc/15-lab-custom-hooks.md'];

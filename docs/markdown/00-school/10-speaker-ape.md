@@ -4,6 +4,7 @@
 
 ![speaker](./assets/images/speakers/APE.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)
+![badge](./assets/images/speakers/angular-devs-france.webp)
 
 ## Anthony PENA
 

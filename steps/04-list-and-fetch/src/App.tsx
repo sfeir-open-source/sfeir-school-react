@@ -1,7 +1,7 @@
 import { Header } from './components/Header';
 import { PersonCard } from './components/PersonCard';
 import { Carousel } from './components/Carousel';
-import { people } from '../../api/people.json';
+import { people } from '../../api/db.json';
 
 import './App.css';
 import { PeopleGrid } from './components/PeopleGrid';

@@ -12,7 +12,7 @@ npm run 04-list-and-fetch
 1. No more import people but fetch them with an HTTP call
 
    - Edit only the `src/components/App.tsx` component
-   - remove the line `import { people } from '../../api/people.json';`
+   - remove the line `import { people } from '../../api/db.json';`
    - use `fetch('/api/people')` to grab people instead
 
 2. Display nothing will the list is not loaded

@@ -10,6 +10,7 @@ function schoolSlides() {
     '00-school/10-speaker-jhe.md',
     '00-school/10-speaker-jta.md',
     '00-school/10-speaker-rto.md',
+    '00-school/10-speaker-tsl.md',
     '00-school/11-tour-de-table.md',
     '00-school/20-what-we-will-do.md',
   ];

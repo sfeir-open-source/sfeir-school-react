@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import CssBaseline from '@mui/material/CssBaseline';
 import App from './App.tsx';
 import packageJson from '../package.json';
-import { people } from '../../api/people.json';
+import { people } from '../../api/db.json';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';

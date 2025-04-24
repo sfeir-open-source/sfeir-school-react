@@ -20,3 +20,11 @@ npm run 01-jsx
 - display it in Card
 
 3. Find out how to express style in JSX
+
+4. (Bonus) Use Mui components for the card
+
+```typescript
+import MuiCard from '@mui/material/Card';
+import MuiCardContent from '@mui/material/CardContent';
+import MuiTypography from '@mui/material/Typography';
+```

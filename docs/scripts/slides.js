@@ -5,8 +5,6 @@ function schoolSlides() {
   const dir = '00-school';
   return [
     `${dir}/00-TITLE.md`,
-    `${dir}/01-wifi.md`,
-    `${dir}/02-repository.md`,
     `${dir}/10-speaker-ape.md`,
     `${dir}/10-speaker-jhe.md`,
     `${dir}/10-speaker-jta.md`,
@@ -14,6 +12,10 @@ function schoolSlides() {
     `${dir}/10-speaker-tsl.md`,
     `${dir}/10-speaker-ari.md`,
     `${dir}/11-tour-de-table.md`,
+    `${dir}/12-information.md`,
+    `${dir}/13-requirements.md`,
+    `${dir}/14-wifi.md`,
+    `${dir}/15-repository.md`,
     `${dir}/20-what-we-will-do.md`,
   ];
 }

@@ -10,7 +10,7 @@
 
 # Slides
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react/).
+You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-react?theme=institute).
 
 ## Develop
 

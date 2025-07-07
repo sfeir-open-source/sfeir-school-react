@@ -12,6 +12,7 @@ function schoolSlides() {
     `${dir}/10-speaker-jta.md`,
     `${dir}/10-speaker-rto.md`,
     `${dir}/10-speaker-tsl.md`,
+    `${dir}/10-speaker-ari.md`,
     `${dir}/11-tour-de-table.md`,
     `${dir}/20-what-we-will-do.md`,
   ];

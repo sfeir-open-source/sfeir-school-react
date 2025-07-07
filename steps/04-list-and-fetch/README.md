@@ -15,7 +15,7 @@ npm run 04-list-and-fetch
    - remove the line `import { people } from '../../api/db.json';`
    - use `fetch('/api/people')` to grab people instead
 
-2. Display nothing will the list is not loaded
+2. Display nothing while the list is not loaded
 
 3. Show all people as list
 

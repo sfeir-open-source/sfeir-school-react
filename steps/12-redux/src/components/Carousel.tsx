@@ -69,15 +69,12 @@ function useCarousel(people: Person[]) {
 
   useEffect(() => {
     if (state.playState === 'PLAY') {
-      playIntervalRef.current = setInterval(() => dispatch({ type: 'NEXT' }), 2_000);
-      return () => {
-        clearInterval(playIntervalRef.current);
-        playIntervalRef.current = -1;
-      };
-    } else if (playIntervalRef.current != -1) {
+      playIntervalRef.current = window.setInterval(() => dispatch({ type: 'NEXT' }), 2_000);
+      return () => clearInterval(playIntervalRef.current);
+    } else {
       clearInterval(playIntervalRef.current);
     }
-  }, [state.playState, playIntervalRef, dispatch]);
+  }, [state.playState, dispatch]);
 
   return {
     currentPerson: state.currentPerson,

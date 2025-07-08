@@ -2,7 +2,7 @@ import { ArrowBack, ArrowForward, Pause, PlayArrow } from '@mui/icons-material';
 import MuiFab from '@mui/material/Fab';
 import MuiStack from '@mui/material/Stack';
 import { PersonCard } from './PersonCard';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface CarouselProps {
   people: People;
@@ -10,7 +10,6 @@ interface CarouselProps {
 
 export function Carousel({ people }: CarouselProps) {
   const { currentPerson, carouselState, onPreviousClick, onNextClick, onPlayClick, onPauseClick } = useCarousel(people);
-
   return (
     <section className="carousel">
       <MuiFab size="small" color="default" aria-label="previous" onClick={onPreviousClick}>
@@ -45,24 +44,22 @@ function useCarousel(people: Person[]) {
 
   const onPreviousClick = () =>
     setCurrentPersonIndex(currentPersonIndex === 0 ? people.length - 1 : currentPersonIndex - 1);
-  const onNextClick = useCallback(
-    () => setCurrentPersonIndex(currentPersonIndex === people.length - 1 ? 0 : currentPersonIndex + 1),
-    [currentPersonIndex, people.length]
-  );
+  const onNextClick = () =>
+    setCurrentPersonIndex(currentPersonIndex === people.length - 1 ? 0 : currentPersonIndex + 1);
+
   const onPauseClick = () => setCarouselState('PAUSE');
   const onPlayClick = () => setCarouselState('PLAY');
 
   useEffect(() => {
     if (carouselState === 'PLAY') {
-      playIntervalRef.current = setInterval(onNextClick, 2_000);
-      return () => {
-        clearInterval(playIntervalRef.current);
-        playIntervalRef.current = -1;
-      };
-    } else if (playIntervalRef.current != -1) {
+      playIntervalRef.current = window.setInterval(() => {
+        setCurrentPersonIndex((prevIndex) => (prevIndex === people.length - 1 ? 0 : prevIndex + 1));
+      }, 2_000);
+      return () => clearInterval(playIntervalRef.current);
+    } else {
       clearInterval(playIntervalRef.current);
     }
-  }, [carouselState, playIntervalRef, onNextClick]);
+  }, [people.length, carouselState]);
 
   return { currentPerson, carouselState, onPreviousClick, onNextClick, onPlayClick, onPauseClick };
 }

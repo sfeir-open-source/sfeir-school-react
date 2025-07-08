@@ -1,7 +1,7 @@
 import { ArrowBack, ArrowForward, Pause, PlayArrow } from '@mui/icons-material';
 import MuiStack from '@mui/material/Stack';
 import { PersonCard } from './PersonCard';
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { withFab } from './withFab';
 import { useDispatch, useSelector } from 'react-redux';
 import { carouselActions, selectCurrentPerson, selectPlayStatus } from '../store/carousel-slice';
@@ -42,15 +42,12 @@ function useCarousel(people: Person[]) {
 
   useEffect(() => {
     if (carouselState === 'PLAY') {
-      playIntervalRef.current = setInterval(() => dispatch(carouselActions.next()), 2_000);
-      return () => {
-        clearInterval(playIntervalRef.current);
-        playIntervalRef.current = -1;
-      };
-    } else if (playIntervalRef.current != -1) {
+      playIntervalRef.current = window.setInterval(() => dispatch(carouselActions.next()), 2_000);
+      return () => clearInterval(playIntervalRef.current);
+    } else {
       clearInterval(playIntervalRef.current);
     }
-  }, [carouselState, playIntervalRef, dispatch]);
+  }, [carouselState, dispatch]);
 
   return {
     currentPerson,

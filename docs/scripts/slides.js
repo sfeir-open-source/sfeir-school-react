@@ -314,6 +314,12 @@ function optimization() {
   ];
 }
 
+function conclusion() {
+  return [
+    `11-conclusion/00-TITLE.md`, //
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -327,6 +333,7 @@ function formation() {
     ...statesSlides(),
     ...componentsLibraryAndTestingSlides(),
     ...optimization(),
+    ...conclusion(),
   ].map((slidePath) => {
     return { path: slidePath };
   });
